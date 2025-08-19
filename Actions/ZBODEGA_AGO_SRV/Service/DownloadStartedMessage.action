@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.ProgressBanner",
+	"OnSuccess": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadOffline.action",
+	"Message": "Descarga en proceso (ERP)...",
+	"CompletionMessage": "Descarga Exitosa",
+	"CompletionTimeout": 3
+}

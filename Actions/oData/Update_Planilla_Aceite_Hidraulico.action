@@ -1,0 +1,35 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_Planilla_Aceite_Hidraulico"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error: {#ActionResults:Update_Planilla_Aceite_Hidraulico/error}",
+			"Title": "Error",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Se ha enviado la planilla correctamente",
+			"Title": "Envío Exitoso",
+			"OKCaption": "Aceptar",
+			"OnOK": "/appconsumos_mb/Rules/Aceites/Cerrar_Planilla_Aceite_Hidraulico.js"
+		}
+	},
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Enviando Planilla Aceites...",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "PlanillasAceites",
+		"QueryOptions": "$filter=id eq {{#Page:Filtro_Aceites/#ClientData/data_planilla_hidraulico/id}}"
+	},
+	"Properties": {
+		"contador_fin": "/appconsumos_mb/Rules/Aceites/get_contador_final_Hidraulico.js",
+		"estado": "Enviado",
+		"total": "/appconsumos_mb/Rules/Aceites/get_Total_Consumos_Hidraulico.js"
+	}
+}

@@ -1,0 +1,149 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Módulo Consumo de Aceites y Lubricantes",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading",
+						"Styles": {
+							"ObjectHeader": "HeaderAdmin",
+							"HeadlineText": "HeaderAdminTitle"
+						}
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "almacen_aceites",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Almacén",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleccione un Almacén",
+							"HelperText": "Debes seleccionar un almacén para continuar",
+							"OnValueChange": "/appconsumos_mb/Rules/Aceites/Select_Almacen_Aceites.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "AlmacenesApp",
+									"QueryOptions": "$filter=sociedad eq '{{#Page:Main/#ClientData/info_user/sociedad}}' and tipo eq 'CAMPO'&$orderby=almacen"
+								},
+								"ObjectCell": {
+									"PreserveIconStackSpacing": false,
+									"Subhead": "{centro}",
+									"Title": "{almacen} - {almacen_desc}",
+									"Visible": true
+								},
+								"ReturnValue": "{almacen}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "btn_crear",
+							"IsVisible": "/appconsumos_mb/Rules/Aceites/setVisible_Crear_Registrar_Planillas.js",
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Crear Planilla",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://create-form",
+							"ImagePosition": "Leading",
+							"Enabled": false,
+							"OnPress": "/appconsumos_mb/Rules/Aceites/NavTo_Crear_Planilla.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "btn_registrar",
+							"IsVisible": "/appconsumos_mb/Rules/Aceites/setVisible_Crear_Registrar_Planillas.js",
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Consumo Diario Aceites",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-activity-2",
+							"ImagePosition": "Leading",
+							"Enabled": false,
+							"OnPress": "/appconsumos_mb/Rules/Aceites/NavTo_Crear_Registro_Consumo.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "btn_validar",
+							"IsVisible": "/appconsumos_mb/Rules/Aceites/isVisible_Btn_Validar_Registros.js",
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Planillas Consumos Aceites",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://approvals",
+							"ImagePosition": "Leading",
+							"Enabled": false,
+							"OnPress": "/appconsumos_mb/Rules/Aceites/NavTo_Planillas_Consumo_Aceites.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Filtro_Aceites",
+	"OnReturning": "/appconsumos_mb/Rules/Aceites/Select_Almacen_Aceites.js",
+	"OnResume": "/appconsumos_mb/Rules/Aceites/Select_Almacen_Aceites.js",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar8",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Aceites y Lubricantes"
+	}
+}

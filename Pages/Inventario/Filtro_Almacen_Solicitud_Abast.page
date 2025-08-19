@@ -1,0 +1,114 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Módulo de Abastecimiento de Materiales",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading",
+						"Styles": {
+							"ObjectHeader": "HeaderAdmin",
+							"HeadlineText": "HeaderAdminTitle"
+						}
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker_Almacen_Reabast",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Almacén",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un Almacén",
+							"HelperText": "Debes seleccionar un almacén para continuar",
+							"OnValueChange": "/appconsumos_mb/Rules/Inventario/Select_Almacen_Sol_Abast.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Enabled": true
+							},
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "AlmacenesApp",
+									"QueryOptions": "$filter=sociedad eq '{{#Page:Main/#ClientData/info_user/sociedad}}' and tipo eq 'CAMPO'&$orderby=almacen"
+								},
+								"ObjectCell": {
+									"PreserveIconStackSpacing": false,
+									"Subhead": "{centro}",
+									"SubstatusText": "{sociedad}",
+									"Title": "{almacen} - {almacen_desc}",
+									"Visible": true
+								},
+								"ReturnValue": "{almacen}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton_Solicitudes",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Solicitudes de Abastecimiento",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://approvals",
+							"ImagePosition": "Leading",
+							"Enabled": false,
+							"OnPress": "/appconsumos_mb/Rules/Inventario/NavTo_List_Abastecimiento.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Filtro_Almacen_Solicitud_Abast",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar7",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Almacén"
+	}
+}

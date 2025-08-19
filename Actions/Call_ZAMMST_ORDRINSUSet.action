@@ -1,0 +1,16 @@
+{
+	"_Type": "Action.Type.RestService.SendRequest",
+	"ActionResult": {
+		"_Name": "Call_ZAMMST_ORDRINSUSet"
+	},
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Cargando PDF...",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/ZAMANAGE_LOGISTIC.service",
+		"Path": "/ZAMMST_ORDRINSUSet",
+		"RequestProperties": {
+			"Method": "GET",
+			"FetchCSRF": true
+		}
+	}
+}

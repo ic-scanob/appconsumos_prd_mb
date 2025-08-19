@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.ProgressBanner",
+	"OnSuccess": "/appconsumos_mb/Actions/Application/AppUpdate.action",
+	"Message": "Buscando actualizaciones...",
+	"CompletionTimeout": 3,
+	"Animated": true
+}

@@ -1,0 +1,375 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"StatusText": "Centro: {almacen_centro}",
+						"SubstatusText": "{almacen_sociedad}",
+						"DetailImageIsCircular": false,
+						"Tags": [
+							{
+								"Color": "/appconsumos_mb/Rules/Inventario/Color_Estado_Abast.js",
+								"Text": "{estado}"
+							}
+						],
+						"HeadlineText": "Almacén: {almacen_almacen} - {almacen/almacen_desc}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"KeyAndValues": [
+						{
+							"Value": "por {operario_ficha} - {operario/nombre}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue0",
+							"KeyName": "Solicitado el $(DT,{fecha_creacion},'es-CO','',{format:'medium'})",
+							"Visible": true
+						},
+						{
+							"Value": "{correo_creacion}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue1",
+							"KeyName": "Correo de Creación Solicitud",
+							"Visible": true
+						},
+						{
+							"Value": "por {aprobador/nombre}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue2",
+							"KeyName": "Revisado el $(DT,{fecha_revision},'es-CO','',{format:'medium'})",
+							"Visible": true
+						},
+						{
+							"Value": "por {autorizador/nombre}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue3",
+							"KeyName": "Autorizado el $(DT,{fecha_autorizado},'es-CO','',{format:'medium'})",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "{observaciones_tec}",
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "FormCellNote0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Observaciones Técnico",
+							"PlaceHolder": "No hay comentarios registrados",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{comentarios_aux}",
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "FormCellNote1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Observaciones Auxiliar",
+							"PlaceHolder": "No hay comentarios registrados",
+							"Enabled": true,
+							"IsEditable": false
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Materiales de la Solicitud"
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "ComponentesSolicitud",
+						"QueryOptions": "/appconsumos_mb/Rules/Inventario/Query_Detalle_Componentes_Abast.js",
+						"ReadLink": "{@odata.readLink}"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+						"Subhead": "/appconsumos_mb/Rules/get_ConfirmacionTec.js",
+						"Footnote": "Tomado de: {almacen_almacen} - {almacen/almacen_desc}",
+						"Description": "{material/material_desc}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cant. Solicitada: {cantidad_tomada} {material/und/und_vz}",
+						"SubstatusText": "Cant. Aprobada: {cantidad_aprobada} {material/und/und_vz}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "Grey",
+								"Text": "Registrado"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://product"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "ComponentesSolicitud",
+						"QueryOptions": "/appconsumos_mb/Rules/Inventario/Query_Detalle_Componentes_Abast_Nuevo.js",
+						"ReadLink": "{@odata.readLink}"
+					},
+					"_Name": "SectionObjectTable1",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+						"Subhead": "/appconsumos_mb/Rules/get_ConfirmacionTec.js",
+						"Footnote": "Tomado de: {almacen_almacen} - {almacen/almacen_desc}",
+						"Description": "{mat_nuevo_desc}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cant. Solicitada: {cantidad_tomada} {mat_nuevo_und}",
+						"SubstatusText": "Cant. Aprobada: {cantidad_aprobada} {mat_nuevo_und}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "Indigo",
+								"Text": "Nuevo"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://product"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Detalle_Solicitud_Reabastecimieto",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar16",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Detalle Solicitud Abastecimiento"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": "/appconsumos_mb/Rules/set_VisibleBtnRevisar.js",
+				"Title": "Revisar",
+				"Styles": {
+					"Image": "Button",
+					"Button": "Button"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Inventario/NavTo_RevisionSolicitudAbast.js",
+				"Image": "sap-icon://write-new-document",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			},
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem1",
+				"Visible": "/appconsumos_mb/Rules/set_VisibleBtnAutorizar.js",
+				"Title": "Autorizar",
+				"Styles": {
+					"Image": "Button",
+					"Button": "Button"
+				},
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+					"Properties": {
+						"PageToOpen": "/appconsumos_mb/Pages/Inventario/Autorizar_Solicitud_Reabastecimiento.page",
+						"ModalPage": true,
+						"ModalPageFullscreen": true
+					}
+				},
+				"Image": "sap-icon://accounting-document-verification",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			},
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem2",
+				"Visible": "/appconsumos_mb/Rules/set_VisibleBtnNetear.js",
+				"Title": "Salida",
+				"Styles": {
+					"Image": "Button",
+					"Button": "Button"
+				},
+				"Image": "sap-icon://arrow-right",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			},
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem3",
+				"Visible": "/appconsumos_mb/Rules/set_VisibleBtnConfirmar.js",
+				"Title": "Confirmar Materiales",
+				"Styles": {
+					"Image": "Button",
+					"Button": "Button"
+				},
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+					"Properties": {
+						"PageToOpen": "/appconsumos_mb/Pages/Inventario/Confirmar_Solicitud_Rebastecimiento.page",
+						"ModalPage": true,
+						"ModalPageFullscreen": true
+					}
+				},
+				"Image": "sap-icon://sys-enter-2",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

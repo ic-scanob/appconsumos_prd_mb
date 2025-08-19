@@ -1,0 +1,180 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": true,
+				"FastFilters": [
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter4",
+						"Label": "Estado",
+						"DisplayValue": "Activo",
+						"ReturnValue": "estado eq 'Activo'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter5",
+						"Label": "Estado",
+						"DisplayValue": "Inactivo",
+						"ReturnValue": "estado eq 'Inactivo'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter0",
+						"DisplayValue": "Administradores",
+						"ReturnValue": "isAdmin eq true",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter1",
+						"DisplayValue": "Auxiliares",
+						"ReturnValue": "rol eq 'Auxiliar'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter2",
+						"DisplayValue": "Autorizadores",
+						"ReturnValue": "rol eq 'Autorizador'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter3",
+						"DisplayValue": "Técnicos",
+						"ReturnValue": "rol eq 'Técnico'",
+						"FilterType": "Filter"
+					}
+				],
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "EmpleadosApp"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No existen usuarios registrados aún.",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{ficha}",
+						"Subhead": "{nombre}",
+						"Footnote": "{cargo}",
+						"Description": "{correo}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "/appconsumos_mb/Rules/Administracion/get_Rol_Admin_List.js",
+						"SubstatusText": "{sociedad}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"AccessoryButtonIcon": "sap-icon://edit",
+						"Tags": [
+							{
+								"Color": "/appconsumos_mb/Rules/Administracion/Color_Estado_Usuarios.js",
+								"Text": "{estado}"
+							},
+							{
+								"Color": "Grey",
+								"Text": "{sapUsr}"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://customer"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"OnAccessoryButtonPress": {
+							"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+							"Properties": {
+								"PageToOpen": "/appconsumos_mb/Pages/Administracion/Editar_Usuarios.page",
+								"ModalPage": true,
+								"ModalPageFullscreen": false
+							}
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"Search": {
+						"Mode": "Persistent",
+						"Enabled": true,
+						"Placeholder": "Buscar empleado ...",
+						"BarcodeScanner": true
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"LoadingIndicatorText": "Cargando usuarios...",
+						"PageSize": 50
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Lista_Usuarios",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Agregar Usuarios",
+				"Icon": "sap-icon://add-employee",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+					"Properties": {
+						"PageToOpen": "/appconsumos_mb/Pages/Administracion/Agregar_Usuarios.page",
+						"ModalPage": true
+					}
+				}
+			}
+		],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Lista Usuarios"
+	}
+}

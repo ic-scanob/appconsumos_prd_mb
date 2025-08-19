@@ -1,0 +1,209 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"KeyAndValues": [
+						{
+							"Value": "{contador_ini}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_inicial",
+							"KeyName": "Contador Inicial",
+							"Visible": true
+						},
+						{
+							"Value": "{contador_fin}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_final",
+							"KeyName": "Contador Final",
+							"Visible": true
+						},
+						{
+							"Value": "{estado}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_estado",
+							"KeyName": "Estado",
+							"Visible": true
+						},
+						{
+							"Value": "{total}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_consumo",
+							"KeyName": "Total Consumo",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "PlanillasAceites",
+						"QueryOptions": "$expand=almacen,operario&$filter=id eq {{#Page:Filtro_Aceites/#ClientData/data_planilla_motor/id}}"
+					},
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Consumos de Aceite Motor"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "ItemPlanillasAceites",
+						"QueryOptions": "/appconsumos_mb/Rules/Aceites/Query_Detalle_Planilla_Id_Motor.js"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay elementos para mostrar...",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{equipo_equipo}",
+						"Subhead": "{op_ficha} - {op_nombre}",
+						"Footnote": "{equipo/equipo_desc} ",
+						"Description": "{obs_text} ",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cont Inicial: {contador_ini}",
+						"SubstatusText": "Cont Final: {contador_fin}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "Grey",
+								"Text": "Consumo: {consumo} "
+							},
+							{
+								"Color": "/appconsumos_mb/Rules/Aceites/Color_Aceites_Tipo.js",
+								"Text": "{tipo}"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://measurement-document"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"LoadingIndicatorText": "Cargando datos...",
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Detalle_Aceite_Motor",
+	"OnLoaded": "/appconsumos_mb/Rules/Aceites/Redraw_Detalle_Planillas.js",
+	"OnReturning": "/appconsumos_mb/Rules/Aceites/Redraw_Detalle_Planillas.js",
+	"OnResume": "/appconsumos_mb/Rules/Aceites/Redraw_Detalle_Planillas.js",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar20",
+		"_Type": "Control.Type.ActionBar"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": "/appconsumos_mb/Rules/Aceites/setVisible_RevisarAceiteMotor.js",
+				"Title": "Revisar",
+				"Styles": {
+					"Image": "Button",
+					"Button": "Button"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Aceites/NavTo_RevisarPlanillaAceiteMotor.js",
+				"Image": "sap-icon://write-new-document",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			},
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem1",
+				"Visible": "/appconsumos_mb/Rules/Aceites/set_VisibleBtnAutorizar_Aceites.js",
+				"Title": "Autorizar",
+				"Styles": {
+					"Image": "Button",
+					"Button": "Button"
+				},
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+					"Properties": {
+						"PageToOpen": "/appconsumos_mb/Pages/Aceites/Aprobar_Aceite_Motor.page"
+					}
+				},
+				"Image": "sap-icon://accounting-document-verification",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

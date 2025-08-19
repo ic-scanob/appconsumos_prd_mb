@@ -1,0 +1,21 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_Planilla_Aceites"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error al crear la solicitud {#ActionResults:Create_Planilla_Aceites/error}",
+			"Title": "No creada",
+			"OKCaption": "Ok"
+		}
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "PlanillasAceites"
+	},
+	"Properties": {
+		"id": ""
+	}
+}

@@ -1,0 +1,112 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Módulo de Consulta de Inventario",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading",
+						"Styles": {
+							"ObjectHeader": "HeaderAdmin",
+							"HeadlineText": "HeaderAdminTitle"
+						}
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker_Almacen_Inv",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": true,
+							"AllowEmptySelection": true,
+							"Caption": "Almacén",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un Almacén",
+							"HelperText": "Debes seleccionar un almacén para continuar",
+							"OnValueChange": "/appconsumos_mb/Rules/Inventario/Select_Almacen_Filtro_Inventario.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": false,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "AlmacenesApp",
+									"QueryOptions": "/appconsumos_mb/Rules/Inventario/Filtro_Centro_Material_Inv.js"
+								},
+								"ObjectCell": {
+									"Description": "{tipo}",
+									"PreserveIconStackSpacing": false,
+									"Subhead": "{almacen}",
+									"Title": "{almacen_desc}",
+									"Visible": true
+								},
+								"ReturnValue": "{almacen}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "btn_inventario",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Consultar Inventario",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://browse-folder",
+							"ImagePosition": "Leading",
+							"Enabled": false,
+							"OnPress": "/appconsumos_mb/Rules/Inventario/NavTo_ConsultarInv_Almacen.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Filtro_Almacen_Inventario",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar5",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Almacén"
+	}
+}

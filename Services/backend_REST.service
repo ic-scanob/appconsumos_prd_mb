@@ -1,0 +1,6 @@
+{
+	"DestinationName": "app.consumos.prd",
+	"OfflineEnabled": false,
+	"SourceType": "Mobile",
+	"RestService": true
+}

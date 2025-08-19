@@ -1,0 +1,170 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"FastFilters": [
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter0",
+						"DisplayValue": "Enviados",
+						"ReturnValue": "estado eq 'Enviado'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter1",
+						"DisplayValue": "Autorizados",
+						"ReturnValue": "estado eq 'Autorizado'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter2",
+						"DisplayValue": "Aprobados",
+						"ReturnValue": "estado eq 'Aprobado'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter3",
+						"DisplayValue": "Rechazados",
+						"ReturnValue": "estado eq 'Rechazado'",
+						"FilterType": "Filter"
+					},
+					{
+						"_Type": "Control.Type.FastFilterItem",
+						"_Name": "FastFilter4",
+						"DisplayValue": "Tramitados",
+						"ReturnValue": "estado eq 'Tramitado'",
+						"FilterType": "Filter"
+					}
+				],
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "Solicitudes",
+						"QueryOptions": "/appconsumos_mb/Rules/Campo/Target_Lista_Historico_Campo.js"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No tienes solicitudes para mostrar",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "/appconsumos_mb/Rules/formatOrdenId.js",
+						"Subhead": "$(DT,{fecha_creacion})",
+						"Footnote": "{orden/orden_desc}",
+						"Description": "{equipo_equipo} - {equipo/equipo_desc}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "res: {reserva}",
+						"SubstatusText": "{almacen_almacen} - {almacen_sociedad}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "/appconsumos_mb/Rules/Campo/Color_Estado_Sol_Campo.js",
+								"Text": "{estado}"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://form"
+								}
+							],
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"OnPress": {
+							"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+							"Properties": {
+								"PageToOpen": "/appconsumos_mb/Pages/Campo/Detalle_Historico_Campo.page"
+							}
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"Search": {
+						"Mode": "Persistent",
+						"Enabled": true,
+						"Placeholder": "Buscar solicitud...",
+						"Options": {
+							"CaseSensitive": false,
+							"NumberSearch": {
+								"Enabled": true
+							},
+							"UseSearchOverFilter": {
+								"Enabled": false
+							}
+						}
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			],
+			"LoadingIndicator": {
+				"Enabled": true
+			},
+			"Filters": "/appconsumos_mb/Rules/filter_Estado.js"
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Lista_Historico_Campo",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"Icon": "sap-icon://synchronize",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/appconsumos_mb/Actions/app_consumos_prd/Service/OnlySyncStartedMessage.action"
+			}
+		],
+		"_Name": "ActionBar5",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Histórico Campo"
+	}
+}

@@ -1,0 +1,14 @@
+{
+	"_Type": "Action.Type.RestService.SendRequest",
+	"ActionResult": {
+		"_Name": "Call_ZAMMST_RESERVASet"
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/ZAMANAGE_LOGISTIC.service",
+		"Path": "/ZAMMST_RESERVASet",
+		"RequestProperties": {
+			"Method": "GET",
+			"FetchCSRF": true
+		}
+	}
+}

@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.OpenDocument",
+	"ActionResult": {
+		"_Name": "openDocument"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "error - {#ActionResults:openDocument/error}",
+			"Title": "error abrir documento"
+		}
+	},
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Cargando archivo ...",
+	"Path": "\"\"",
+	"MimeType": "application/pdf"
+}

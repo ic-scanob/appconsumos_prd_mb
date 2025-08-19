@@ -1,0 +1,27 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_ComponentesSolicitudApp"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "#ActionResults:Create_ComponentesSolicitudApp/error",
+			"Title": "No se pudo crear la solicitud :C",
+			"OKCaption": "ok",
+			"OnOK": {
+				"Name": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action",
+				"Properties": {
+					"NavigateBackToPage": "Lista_Solicitudes_Reabastecimiento"
+				}
+			}
+		}
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "ComponentesSolicitud"
+	},
+	"Properties": {
+		"id": ""
+	}
+}

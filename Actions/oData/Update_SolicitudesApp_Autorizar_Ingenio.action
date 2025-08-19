@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_SolicitudesApp_Aprobar_Ingenio"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error actualizando la solicitud - {#ActionResults:Update_SolicitudesApp_Aprobar_Ingenio/error}",
+			"Title": "Error",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Ingenio/PDF_Ingenio.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes",
+		"QueryOptions": "$filter=id eq {{#Page:Autorizar_Solicitud_Ingenio/#ClientData/id_solicitud}}"
+	},
+	"Properties": {
+		"autorizador_ficha": "#Page:Main/#ClientData/info_user/ficha",
+		"estado": "Autorizado",
+		"fecha_autorizado": "/appconsumos_mb/Rules/get_Now_Datetime.js"
+	}
+}

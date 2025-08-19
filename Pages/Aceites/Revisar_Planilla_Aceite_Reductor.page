@@ -1,0 +1,374 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "No. Planilla: {#Page:Filtro_Aceites/#ClientData/data_planilla_reductor/numero}",
+						"Footnote": "{#Page:Filtro_Aceites/#ClientData/data_planilla_reductor/almacen_almacen} - {#Page:Filtro_Aceites/#ClientData/data_planilla_reductor/almacen/almacen_desc}",
+						"StatusText": "Inicial:  {#Page:Filtro_Aceites/#ClientData/data_planilla_reductor/contador_ini} ",
+						"SubstatusText": "Fin:  {#Page:Filtro_Aceites/#ClientData/data_planilla_reductor/contador_fin} ",
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Fecha: {#Page:Filtro_Aceites/#ClientData/data_planilla_reductor/fecha}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "FormCellNote0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Observaciones",
+							"PlaceHolder": "Ingresa observaciones de la revisión",
+							"MinNumberOfLines": 3,
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell1"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Label",
+							"_Name": "FormCellLabel0",
+							"IsVisible": true,
+							"Separator": true,
+							"Text": "Agregar Consumos",
+							"TextWrap": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "registro_consumo",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Listado de consumos",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un consumo",
+							"PlaceHolder": "Selecciona un consumo",
+							"HelperText": "Selecciona un consumo para vincular un movimiento",
+							"OnValueChange": "/appconsumos_mb/Rules/Aceites/onChange_RevisarPlanillaConsumo_Reductor.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": true,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "ItemPlanillasAceites",
+									"QueryOptions": "/appconsumos_mb/Rules/Aceites/Query_Revisar_Planilla_Consumos_Reductor.js"
+								},
+								"ObjectCell": {
+									"Description": "{equipo/equipo_desc}",
+									"Footnote": "Consumo: {consumo}",
+									"PreserveIconStackSpacing": false,
+									"StatusText": "Cont Inicial: {contador_ini}",
+									"Subhead": "{op_ficha} - {op_nombre}",
+									"SubstatusText": "Cont Final: {contador_fin}",
+									"Tags": [
+										{
+											"Color": "/appconsumos_mb/Rules/Aceites/Color_Aceites_Tipo.js",
+											"Text": "{tipo}"
+										}
+									],
+									"Title": "{pos}. {equipo_equipo}",
+									"Visible": true
+								},
+								"ReturnValue": "{id}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "orden_obj",
+							"IsVisible": false,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Clases de Movimiento",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona una clase de movimiento",
+							"PlaceHolder": "Selecciona una clase de movimiento ",
+							"HelperText": "Selecciona una clase de movimiento para el consumo selecccionado",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Enabled": true,
+								"Placeholder": " Buscar clase movimiento..."
+							},
+							"PickerItems": [
+								{
+									"DisplayValue": "261 - SM para orden",
+									"ReturnValue": "261"
+								},
+								{
+									"DisplayValue": "Y49 - SM orden costo maqui",
+									"ReturnValue": "Y49"
+								}
+							]
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": "/appconsumos_mb/Rules/Aceites/setVisible_formConsumosCambio.js",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell2",
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "pos_obj",
+							"IsVisible": false,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Posición",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona una posición",
+							"PlaceHolder": "Selecciona una posición",
+							"HelperText": "Selecciona una posición para el consumo selecccionado",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": true,
+							"IsEditable": true,
+							"Search": {
+								"Enabled": true,
+								"Placeholder": " Buscar posición..."
+							},
+							"PickerItems": "/appconsumos_mb/Rules/Aceites/get_Pos_Orden_Aceites.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Agregar Consumo",
+							"Alignment": "Right",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-product",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Aceites/Agregar_Consumos_Revision_Reductor.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Materiales de la Revisión"
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": "/appconsumos_mb/Rules/Aceites/Target_Revisar_Planilla_Aceite_Reductor.js",
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay elementos para mostrar",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{pos}. {equipo_equipo}",
+						"Subhead": "/appconsumos_mb/Rules/formatOrdenId.js",
+						"Footnote": "res: {reserva}",
+						"Description": "{equipo/equipo_desc}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cont Inicial: {contador_ini}",
+						"SubstatusText": "Cont Final: {contador_fin}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "Grey",
+								"Text": "Consumo: {consumo} "
+							},
+							{
+								"Color": "/appconsumos_mb/Rules/Aceites/Color_Aceites_Tipo.js",
+								"Text": "{tipo}"
+							},
+							{
+								"Color": "Indigo",
+								"Text": "{clase_mov}"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://measurement-document"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Revisar_Planilla_Aceite_Reductor",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"Icon": "sap-icon://decline",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action"
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Revisión Planilla Aceite de Reductor"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": true,
+				"Title": "Confirmar",
+				"Styles": {
+					"Image": "Button2",
+					"Button": "Button2"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Aceites/Confirmar_Planilla_Aceite_Reductor.js",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			},
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem1",
+				"Visible": true,
+				"Title": "Rechazar",
+				"Styles": {
+					"Image": "Button_Eliminar",
+					"Button": "Button_Eliminar"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Aceites/Rechazar_Planilla_Aceite_Reductor.js",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

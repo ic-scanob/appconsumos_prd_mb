@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/ZAMANAGE_LOGISTIC/Service/InitializeOfflineFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"Service": "/appconsumos_mb/Services/ZAMANAGE_LOGISTIC.service",
+	"DefiningRequests": [
+		{
+			"Name": "ZASDST_INVNTSet",
+			"Query": "ZASDST_INVNTSet",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}

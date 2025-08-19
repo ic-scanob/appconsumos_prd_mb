@@ -1,0 +1,10 @@
+{
+    "_Type": "Action.Type.OfflineOData.Close",
+    "Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+    "Force": true,
+    "ActionResult": {
+        "_Name": "close"
+    },
+    "OnSuccess": "/appconsumos_mb/Actions/app_consumos_prd/Service/CloseOfflineSuccessMessage.action",
+    "OnFailure": "/appconsumos_mb/Actions/app_consumos_prd/Service/CloseOfflineFailureMessage.action"
+}

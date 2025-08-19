@@ -1,0 +1,460 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Description": "Correo de Creación: {#Page:Main/#ClientData/info_user/correo}",
+						"StatusText": "{#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/centro} - {#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/sociedad}",
+						"DetailImageIsCircular": false,
+						"HeadlineText": "{#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/almacen} - {#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/almacen_desc}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty_Ficha",
+							"IsVisible": true,
+							"Separator": false,
+							"Caption": "Ficha Técnico *",
+							"PlaceHolder": "Ingresa el número de ficha",
+							"KeyboardType": "Number",
+							"AlternateInput": "Barcode",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "FormCellNote_Observaciones",
+							"IsVisible": true,
+							"Separator": false,
+							"Caption": "Observaciones",
+							"PlaceHolder": "Ingresa las observaciones de la solicitud",
+							"MinNumberOfLines": 3,
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton2",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Agregar Material Registrado",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://task",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Inventario/set_VisibleAgregarMaterialExistente.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton3",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Agregar Material Nuevo",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-document",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Inventario/Read_ZBIW_MARDT.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 2
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell3"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": true,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Label",
+							"_Name": "FormCellLabel0",
+							"IsVisible": true,
+							"Separator": true,
+							"Text": "Agregar Material Registrado",
+							"TextWrap": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker_Materiales",
+							"IsVisible": true,
+							"Separator": false,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Material *",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un material",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"AdditionalProperties": [
+									"material",
+									"material_desc"
+								],
+								"Enabled": true,
+								"Placeholder": "Buscar Material ..."
+							},
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "Inventario",
+									"QueryOptions": "$expand=almacen,und&$filter=almacen_almacen eq '{{#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/almacen}}' and almacen_sociedad eq '{{#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/sociedad}}'&$orderby=material"
+								},
+								"ObjectCell": {
+									"Description": "{material_desc}",
+									"Footnote": "Disponible: {stock_disponible} {und/und_vz} / Reservado: {stock_disponible} {und/und_vz}",
+									"PreserveIconStackSpacing": false,
+									"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+									"Visible": true
+								},
+								"ReturnValue": "{material}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty_Cantidad",
+							"IsVisible": true,
+							"Separator": false,
+							"Caption": "Cantidad *",
+							"PlaceHolder": "Ingresa la cantidad del material",
+							"KeyboardType": "Number",
+							"HelperText": "Debe ser un número mayor a 0",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton_Add_Material",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Agregar Material",
+							"Alignment": "Right",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-product",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Inventario/Agregar_Materiales_Solicitud_Reabas.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell1"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Label",
+							"_Name": "FormCellLabel1",
+							"IsVisible": true,
+							"Separator": true,
+							"Text": "Agregar Nuevo Material",
+							"TextWrap": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "FormCellListPicker_Materiales_Nuevo",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Nuevo Material *",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"LoadingIndicatorText": "Cargando datos...",
+								"PageSize": 25
+							},
+							"PickerPrompt": "Selecciona un material",
+							"HelperText": "Espera un segundo mientras se cargan las opciones disponibles.",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Mode": "Expandable",
+								"Options": {
+									"CaseSensitive": false,
+									"NumberSearch": {
+										"Enabled": false
+									},
+									"UseSearchOverFilter": {
+										"Enabled": false
+									}
+								},
+								"Enabled": true,
+								"Placeholder": "Escribe al menos 3 letras para buscar...",
+								"Delay": 2,
+								"MinimumCharacterThreshold": 3
+							},
+							"PickerItems": "/appconsumos_mb/Rules/Inventario/Get_List_Materiales_Nuevos.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "FormCellSimpleProperty_Cantidad_Nuevo",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Cantidad",
+							"PlaceHolder": "Ingresa la cantidad del material",
+							"KeyboardType": "Number",
+							"HelperText": "Debe ser un número mayor a 0",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton1",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Agregar Material",
+							"Alignment": "Right",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-product",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Inventario/Agregar_Materiales_Nuevos_Reabas.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell2"
+				},
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Materiales de la Solicitud"
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": "/appconsumos_mb/Rules/Inventario/Target_Lista_Materiales_Agregados.js",
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay materiales aún",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+						"Description": "{material_desc}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cant. Solicitada: {cant} {und}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"AccessoryButtonIcon": "sap-icon://delete",
+						"Tags": [
+							{
+								"Color": "/appconsumos_mb/Rules/Inventario/Color_Tipo_ListaMaterial.js",
+								"Text": "{tipo}"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://product"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"OnAccessoryButtonPress": "/appconsumos_mb/Rules/Inventario/Borrar_Material_Lista_Abaste.js",
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"Search": {
+						"Mode": "Expandable",
+						"Enabled": true,
+						"Placeholder": "Buscar Material..."
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Agregar_Solicitud_Reabastecimiento",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Cancelar",
+				"Icon": "sap-icon://decline",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+					"Properties": {
+						"Message": "¿Estás seguro que quieres salir?",
+						"Title": "Confirmación",
+						"OKCaption": "Aceptar",
+						"OnOK": {
+							"Name": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action",
+							"Properties": {
+								"NavigateBackToPage": "Lista_Solicitudes_Reabastecimiento"
+							}
+						},
+						"CancelCaption": "Cancelar"
+					}
+				}
+			}
+		],
+		"_Name": "ActionBar2",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Nueva Solicitud Abastecimiento"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": true,
+				"Title": "Crear Solicitud",
+				"Styles": {
+					"Image": "Button2",
+					"Button": "Button2"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Inventario/Validate_Create_Solicitud_Abast.js",
+				"Image": "sap-icon://save",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

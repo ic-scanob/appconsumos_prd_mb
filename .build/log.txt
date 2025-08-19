@@ -1,0 +1,2 @@
+Pass:
+Generated bundle file /home/user/projects/appconsumos_mb/.build/appconsumos_mb/.build/uploadBundle.zip

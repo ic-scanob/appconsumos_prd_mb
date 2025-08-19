@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"Message": "El servicio de datos REST se cerró correctamente",
+	"NumberOfLines": 1,
+	"Duration": 3,
+	"IsIconHidden": true,
+	"Animated": true
+}

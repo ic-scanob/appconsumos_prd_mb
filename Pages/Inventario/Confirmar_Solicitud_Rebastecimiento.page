@@ -1,0 +1,174 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Label",
+							"_Name": "FormCellLabel0",
+							"IsVisible": true,
+							"Separator": true,
+							"Text": "**Por favor, selecciona los materiales recibidos antes de confirmar.",
+							"TextWrap": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Materiales Aprobados de la Solicitud"
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "ComponentesSolicitud",
+						"QueryOptions": "/appconsumos_mb/Rules/Inventario/Query_Confirmar_Componentes_Abast.js",
+						"ReadLink": "{@odata.readLink}"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+						"Footnote": "Tomado de: {almacen_almacen} - {almacen/almacen_desc}",
+						"Description": "/appconsumos_mb/Rules/Inventario/getMaterialDesc_Confirmar_Abast.js",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cant. Solicitada: {cantidad_tomada}",
+						"SubstatusText": "Cant. Aprobada: {cantidad_aprobada}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "/appconsumos_mb/Rules/Inventario/getTipoColorMaterial_Confirmar_Abast.js",
+								"Text": "/appconsumos_mb/Rules/Inventario/getTipoMaterial_Confirmar_Abast.js"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://product"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": true
+					},
+					"Search": {
+						"Mode": "Persistent",
+						"Placeholder": "Buscar Material..."
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": true,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"Mode": "Multiple",
+						"LongPressToEnable": "None",
+						"ExitOnLastDeselect": false
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Confirmar_Solicitud_Rebastecimiento",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"Icon": "sap-icon://decline",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action",
+					"Properties": {
+						"NavigateBackToPage": "Detalle_Solicitud_Reabastecimieto"
+					}
+				}
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Confirmar Recepción de Materiales"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": true,
+				"Title": "Confirmar Recepción",
+				"Styles": {
+					"Image": "Button2",
+					"Button": "Button2"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Ingenio/ConfirmarMateriales_Abast.js",
+				"Image": "sap-icon://sys-enter-2",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

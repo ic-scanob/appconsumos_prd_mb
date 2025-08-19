@@ -1,0 +1,40 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_Empleados"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error al actualizar el empleado: {#ActionResults:Update_Empleados/error}",
+			"Title": "Error al actualizar"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"OnSuccess": {
+				"Name": "/appconsumos_mb/Actions/CloseModalPage_Complete.action",
+				"Properties": {
+					"NavigateBackToPage": "Lista_Usuarios"
+				}
+			},
+			"Message": "Empleado actualizado exitosamente",
+			"Title": "Actualización exitosa",
+			"OKCaption": "Ok"
+		}
+	},
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Actualizando empleado...",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "EmpleadosApp",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"correo": "/appconsumos_mb/Rules/Administracion/getCorreo_Admin.js",
+		"rol": "#Page:Editar_Usuarios/#Control:rol_edit/#Value/#First/DisplayValue",
+		"isAdmin": "#Page:Editar_Usuarios/#Control:isadmin_edit/#Value",
+		"estado": "/appconsumos_mb/Rules/Administracion/get_Estado.js"
+	}
+}

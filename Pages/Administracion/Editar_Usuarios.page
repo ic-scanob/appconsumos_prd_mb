@@ -1,0 +1,173 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "{nombre}",
+						"Footnote": "{sapUsr}",
+						"Description": "{cargo}",
+						"StatusText": "{sociedad}",
+						"DetailImage": "sap-icon://customer",
+						"DetailImageIsCircular": false,
+						"BodyText": "{correo}",
+						"HeadlineText": "{ficha}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": [
+								"{rol}"
+							],
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "rol_edit",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Rol",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un rol para el usuario",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"PickerItems": [
+								"Autorizador",
+								"Auxiliar",
+								"Técnico"
+							]
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "{correo}",
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "correo_user",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Correo usuario",
+							"PlaceHolder": "PlaceHolder",
+							"KeyboardType": "Email",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"Value": "/appconsumos_mb/Rules/Administracion/Bool_Estado_Usuarios.js",
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "estado_edit",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Estado",
+							"OnValueChange": "/appconsumos_mb/Rules/Administracion/Switch_Estado.js",
+							"HelperText": "{estado}",
+							"IsEditable": true
+						},
+						{
+							"Value": "{isAdmin}",
+							"_Type": "Control.Type.FormCell.Switch",
+							"_Name": "isadmin_edit",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "¿Usuario Administrador?",
+							"HelperText": "Si activas este campo el usuario será administrador de la aplicación",
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Button": "Button",
+								"Image":"Button"
+							},
+							"Title": "Actualizar Usuario",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Image":"sap-icon://save",
+							"Semantic": "Tint",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Actions/oData/Req_Update_Empleados.action"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell1"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Editar_Usuarios",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"Icon": "sap-icon://decline",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action",
+					"Properties": {
+						"NavigateBackToPage": "Lista_Usuarios"
+					}
+				}
+			}
+		],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Editar Usuario"
+	}
+}

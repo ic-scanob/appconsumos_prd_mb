@@ -1,0 +1,19 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_EmpleadosApp"
+	},
+	"ShowActivityIndicator": true,
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "EmpleadosApp"
+	},
+	"Properties": {
+		"ficha": "",
+		"nombre": "",
+		"correo": "",
+		"rol": "",
+		"cargo": "",
+		"sociedad": ""
+	}
+}

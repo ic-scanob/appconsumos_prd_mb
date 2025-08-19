@@ -1,0 +1,32 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_SolicitudApp_Abastecimiento"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error - {#ActionResults:Create_SolicitudApp_Abastecimiento/error}",
+			"Title": "Error al crear la solicitud",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Inventario/Create_Solicitud_Abastecimiento.js",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Creando Solicitud de Abastecimiento",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes"
+	},
+	"Properties": {
+		"id": "/appconsumos_mb/Rules/guid.js",
+		"operario_ficha": "#Page:Agregar_Solicitud_Reabastecimiento/#Control:FormCellSimpleProperty_Ficha/#Value",
+		"almacen_sociedad": "#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/sociedad",
+		"almacen_almacen": "#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/almacen",
+		"almacen_centro": "#Page:Filtro_Almacen_Solicitud_Abast/#ClientData/almacen_abast/centro",
+		"observaciones_tec": "#Page:Agregar_Solicitud_Reabastecimiento/#Control:FormCellNote_Observaciones/#Value",
+		"estado": "Enviado",
+		"correo_creacion": "#Page:Main/#ClientData/info_user/correo",
+		"tipo": "ABASTECIMIENTO"
+	}
+}

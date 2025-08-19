@@ -1,0 +1,93 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Módulo Administrador",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading",
+						"Styles": {
+							"ObjectHeader": "HeaderAdmin",
+							"HeadlineText": "HeaderAdminTitle"
+						}
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"DataSubscriptions": [],
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ContactCell",
+					"_Name": "SectionContactCell0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ContactCells": [
+						{
+							"ContactCell": {
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
+								"_Name": "ContactCellItem0",
+								"DetailImage": "sap-icon://user-edit",
+								"Headline": "Administrar Usuarios",
+								"Subheadline": "Configurar usuarios y roles",
+								"Description": "",
+								"Visible": true,
+								"OnPress": {
+									"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+									"Properties": {
+										"PageToOpen": "/appconsumos_mb/Pages/Administracion/Lista_Usuarios.page"
+									}
+								}
+							}
+						},
+						{
+							"ContactCell": {
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
+								"_Name": "ContactCellItem1",
+								"DetailImage": "sap-icon://home",
+								"Headline": "Administrar Almacenes",
+								"Subheadline": "Asignar almacenes a campo o ingenio",
+								"Description": "",
+								"Visible": true,
+								"OnPress": {
+									"Name": "/appconsumos_mb/Actions/GenericNavigation.action",
+									"Properties": {
+										"PageToOpen": "/appconsumos_mb/Pages/Administracion/Lista_Almacenes.page"
+									}
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Inicio_Admin",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar4",
+		"_Type": "Control.Type.ActionBar"
+	}
+}

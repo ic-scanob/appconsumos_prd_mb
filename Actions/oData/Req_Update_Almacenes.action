@@ -1,0 +1,27 @@
+{
+	"_Type": "Action.Type.CheckRequiredFields",
+	"ActionResult": {
+		"_Name": "Req_Update_Almacenes"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Debe de Seleccionar el tipo del Almacén",
+			"Title": "Error",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "¿Seguro que desea actualizar el almacén?",
+			"Title": "Actualizar",
+			"OKCaption": "Sí",
+			"OnOK": "/appconsumos_mb/Actions/oData/Update_Almacenes.action",
+			"CancelCaption": "No"
+		}
+	},
+	"RequiredFields": [
+		"FormCellListPicker_Tipo"
+	]
+}

@@ -1,0 +1,14 @@
+{
+	"_Type": "Action.Type.RestService.SendRequest",
+	"ActionResult": {
+		"_Name": "Call_FirmarPDF2"
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/backend_REST.service",
+		"Path": "/firmarPDF",
+		"RequestProperties": {
+			"Method": "POST",
+			"FetchCSRF": true
+		}
+	}
+}

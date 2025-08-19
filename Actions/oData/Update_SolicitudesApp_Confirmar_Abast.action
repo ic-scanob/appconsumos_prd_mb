@@ -1,0 +1,18 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_SolicitudesApp_Confirmar_Abast"
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Inventario/Confirmar_Sol_Abast_Revision_Items.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes",
+		"QueryOptions": "$filter=id eq {{#Page:Detalle_Solicitud_Reabastecimieto/#ClientData/id_de_solicitud}}"
+	},
+	"Properties": {
+		"aprobador_ficha": "#Page:Main/#ClientData/info_user/ficha",
+		"estado": "Aprobado",
+		"fecha_revision": "/appconsumos_mb/Rules/get_Now_Datetime.js",
+		"comentarios_aux": "#Page:Revision_Solicitud_Reabastecimiento/#Control:observaciones_abast/#Value"
+	}
+}

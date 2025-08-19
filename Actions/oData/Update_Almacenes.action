@@ -1,0 +1,33 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_Almacenes"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error al actualizar el almacén: {#ActionResults:Update_Almacenes/error}",
+			"Title": "Error al actualizar",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"OnSuccess": "/appconsumos_mb/Actions/CloseModalPage_Complete.action",
+			"Message": "Almacén Actualizado correctamente",
+			"Title": "Actualizado",
+			"OKCaption": "Ok"
+		}
+	},
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Actualizando Almacén...",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "AlmacenesApp",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"tipo": "#Page:Editar_Almacenes/#Control:FormCellListPicker_Tipo/#Value/#First/DisplayValue"
+	}
+}

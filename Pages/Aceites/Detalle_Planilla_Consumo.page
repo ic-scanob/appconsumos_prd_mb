@@ -1,0 +1,79 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Ficha: {operario_ficha} ",
+						"StatusText": "No. Planilla: {numero}",
+						"SubstatusText": "{almacen/almacen_desc}",
+						"DetailImageIsCircular": false,
+						"BodyText": "{operario/nombre}",
+						"HeadlineText": "Fecha: {fecha}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading",
+						"Target": {
+							"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+							"EntitySet": "PlanillasAceites",
+							"QueryOptions": "/appconsumos_mb/Rules/Aceites/Query_Detalle_Planilla_Motor.js"
+						}
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				}
+			]
+		},
+		{
+			"_Type": "Control.Type.Tabs",
+			"_Name": "Tabs0",
+			"Items": [
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Motor",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Detalle_Aceite_Motor.page",
+					"_Name": "Motor_Page"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Hidráulico",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Detalle_Aceite_Hidraulico.page",
+					"_Name": "Hidra_Page"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Diferencial",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Detalle_Aceite_Diferencial.page",
+					"_Name": "Diferen_Page"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Reductores",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Detalle_Aceite_Reductor.page",
+					"_Name": "Reductor_Page"
+				}
+			],
+			"Position": "Top",
+			"TabStripType": "Normal",
+			"SwipeEnabled": true
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Detalle_Planilla_Consumo",
+	"OnLoaded": "/appconsumos_mb/Rules/Aceites/Redraw_Detalle_Planillas.js",
+	"OnReturning": "/appconsumos_mb/Rules/Aceites/Redraw_Detalle_Planillas.js",
+	"OnResume": "/appconsumos_mb/Rules/Aceites/Redraw_Detalle_Planillas.js",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar8",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Detalle Planilla Consumos de Aceite"
+	}
+}

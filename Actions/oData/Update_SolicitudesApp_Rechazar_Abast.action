@@ -1,0 +1,26 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_SolicitudesApp_Rechazar_Abast"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error actualizando la solicitud - {#ActionResults:Update_SolicitudesApp_Rechazar_Abast/error}",
+			"Title": "Error",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Inventario/Rechazar_Solicitud_Abast.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes",
+		"QueryOptions": "$filter=id eq {{#Page:Detalle_Solicitud_Reabastecimieto/#ClientData/id_de_solicitud}}"
+	},
+	"Properties": {
+		"aprobador_ficha": "#Page:Main/#ClientData/info_user/ficha",
+		"estado": "Rechazado",
+		"fecha_revision": "/appconsumos_mb/Rules/get_Now_Datetime.js",
+		"comentarios_aux": "#Page:Revision_Solicitud_Reabastecimiento/#Control:observaciones_abast/#Value"
+	}
+}

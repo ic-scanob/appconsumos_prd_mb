@@ -1,0 +1,34 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_Planilla_Aceite_Rechazar_Servotransmisor"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error rechazando la planilla - {#ActionResults:Update_Planilla_Aceite_Rechazar_Servotransmisor/error}",
+			"Title": "Error",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"OnSuccess": "/appconsumos_mb/Rules/Aceites/Rechazar_Planillas_ClientData_Aceites.js",
+			"Message": "La planilla No.{{#Page:Filtro_Aceites/#ClientData/data_planilla_servotrans/numero}} de Aceite Servotransmisor fue rechazada exitosamente",
+			"Title": "Planilla Rechazada",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "PlanillasAceites",
+		"QueryOptions": "$filter=id eq {{#Page:Filtro_Aceites/#ClientData/QueryRevisarPlanilla}}"
+	},
+	"Properties": {
+		"estado": "Rechazada",
+		"comentarios_aux": "#Page:Filtro_Aceites/#ClientData/obsRevisarPlanilla",
+		"fecha_revision": "/appconsumos_mb/Rules/get_Now_Datetime.js",
+		"aprobador_ficha": "#Page:Main/#ClientData/info_user/ficha"
+	}
+}

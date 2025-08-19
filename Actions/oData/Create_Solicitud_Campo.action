@@ -1,0 +1,37 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_Solicitud_Campo"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error - {#ActionResults:Create_Solicitud_Campo/error}  ",
+			"Title": "Error al crear la solicitud ",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Campo/Create_Componentes_Solicitud.js",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Creando Solicitud de Campo",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes"
+	},
+	"Properties": {
+		"id": "/appconsumos_mb/Rules/guid.js",
+		"operario_ficha": "#Page:Agregar_Solicitud_Campo/#Control:ficha/#Value",
+		"almacen_sociedad": "#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/sociedad",
+		"almacen_almacen": "#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/almacen",
+		"almacen_centro": "#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/centro",
+		"equipo_equipo": "{equipo}",
+		"orden_orden": "{orden}",
+		"reserva": "{reserva}",
+		"observaciones_tec": "#Page:Agregar_Solicitud_Campo/#Control:observaciones/#Value",
+		"estado": "Enviado",
+		"correo_creacion": "#Page:Main/#ClientData/info_user/correo",
+		"tipo": "CAMPO",
+		"horometro": "#Page:Agregar_Solicitud_Campo/#Control:horometro/#Value",
+		"reabastecer": "#Page:Agregar_Solicitud_Campo/#Control:switch_reabastecer/#Value"
+	}
+}

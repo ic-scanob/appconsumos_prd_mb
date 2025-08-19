@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.ProgressBanner",
+	"OnSuccess": "/appconsumos_mb/Actions/app_consumos_prd/Service/OnlyDownloadOffline.action",
+	"Message": "Sincronización en proceso...",
+	"CompletionMessage": "Sincronización Exitosa",
+	"CompletionTimeout": 4
+}

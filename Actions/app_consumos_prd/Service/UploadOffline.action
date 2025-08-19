@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/app_consumos_prd/Service/SyncFailureMessage.action",
+	"OnSuccess": "/appconsumos_mb/Actions/app_consumos_prd/Service/DownloadStartedMessage.action",
+	"Service": "/appconsumos_mb/Services/app_consumos_prd.service"
+}

@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"Message": "Actualización de la aplicación completada",
+	"Duration": 2,
+	"Animated": true
+}

@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.ToastMessage",
+	"Message": "Falló al cerrar el servicio de datos - {#ActionResults:close/error}",
+	"NumberOfLines": 1,
+	"Duration": 3,
+	"IsIconHidden": true,
+	"Animated": true
+}

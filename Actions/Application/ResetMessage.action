@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.Message",
+	"Message": "Esta acción eliminará todos los datos y regresará a la pantalla de bienvenida. Se perderán todos los datos locales. ¿Seguro que desea continuar?",
+	"Title": "Reset",
+	"OKCaption": "Yes",
+	"OnOK": "/appconsumos_mb/Rules/Application/ResetAppSettingsAndLogout.js",
+	"CancelCaption": "No"
+}

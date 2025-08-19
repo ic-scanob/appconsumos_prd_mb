@@ -1,0 +1,33 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_Solicitud_Ingenio"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error - {#ActionResults:Create_Solicitud_Ingenio/error}  ",
+			"Title": "Error al crear la solicitud ",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Ingenio/Create_Componentes_Solicitud_Ingenio.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes"
+	},
+	"Properties": {
+		"id": "/appconsumos_mb/Rules/guid.js",
+		"operario_ficha": "#Page:Agregar_Solicitud_Ingenio/#Control:ficha/#Value",
+		"almacen_sociedad": "#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/sociedad",
+		"almacen_almacen": "#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/almacen",
+		"almacen_centro": "#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/centro",
+		"equipo_equipo": "#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/equipo",
+		"orden_orden": "#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/orden",
+		"reserva": "#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/reserva",
+		"observaciones_tec": "#Page:Agregar_Solicitud_Ingenio/#Control:observaciones/#Value",
+		"estado": "Enviado",
+		"correo_creacion": "#Page:Main/#ClientData/info_user/correo",
+		"tipo": "INGENIO"
+	}
+}

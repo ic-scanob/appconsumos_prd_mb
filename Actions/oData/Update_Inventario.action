@@ -1,0 +1,11 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_Inventario"
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Inventario",
+		"ReadLink": "{@odata.readLink}"
+	}
+}

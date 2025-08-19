@@ -1,0 +1,38 @@
+{
+	"_Type": "Action.Type.CheckRequiredFields",
+	"ActionResult": {
+		"_Name": "Req_Update_Usuarios"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Debes seleccionar un rol para el usuario",
+			"Title": "Alerta",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnInvalid": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "El correo ingresado no es válido. Verifícalo e inténtalo de nuevo.",
+			"Title": "Correo Inválido",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "¿Estás seguro que deseas actualizar el empleado?",
+			"Title": "Confirmación",
+			"OKCaption": "Actualizar",
+			"OnOK": "/appconsumos_mb/Actions/oData/Update_Empleados.action",
+			"CancelCaption": "Cancelar"
+		}
+	},
+	"ValidationRule": "/appconsumos_mb/Rules/Administracion/validate_Correo.js",
+	"ShowActivityIndicator": true,
+	"RequiredFields": [
+		"rol_edit",
+		"correo_user"
+	]
+}

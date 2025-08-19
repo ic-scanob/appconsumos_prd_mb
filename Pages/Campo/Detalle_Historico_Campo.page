@@ -1,0 +1,258 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Reserva: {reserva}",
+						"Footnote": "Horometro: {horometro}",
+						"Description": "{equipo_equipo} - {equipo/equipo_desc}",
+						"StatusText": "{almacen_almacen}- {almacen/almacen_desc}",
+						"SubstatusText": "Sociedad: {almacen_sociedad}",
+						"DetailImageIsCircular": false,
+						"Tags": [
+							{
+								"Color": "/appconsumos_mb/Rules/Campo/Color_Estado_Sol_Campo.js",
+								"Text": "Estado: {estado}"
+							}
+						],
+						"BodyText": "{orden/orden_desc}",
+						"HeadlineText": "/appconsumos_mb/Rules/formatOrdenId.js",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"KeyAndValues": [
+						{
+							"Value": "por {operario_ficha} - {operario/nombre}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue0",
+							"KeyName": "Solicitado el $(DT,{fecha_creacion},'es-CO','',{format:'medium'})",
+							"Visible": true
+						},
+						{
+							"Value": "{correo_creacion}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue3",
+							"KeyName": "Correo de Creación Solicitud",
+							"Visible": true
+						},
+						{
+							"Value": "por {aprobador/nombre}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue1",
+							"KeyName": "Revisado el $(DT,{fecha_revision},'es-CO','',{format:'medium'})",
+							"Visible": true
+						},
+						{
+							"Value": "por {autorizador/nombre}",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue2",
+							"KeyName": "Autorizado el $(DT,{fecha_autorizado},'es-CO','',{format:'medium'})",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 1
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"Value": "{observaciones_tec}",
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "FormCellNote0",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Observaciones Técnico",
+							"PlaceHolder": "No hay comentarios registrados",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"Value": "{comentarios_aux}",
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "FormCellNote1",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Observaciones Auxiliar",
+							"PlaceHolder": "No hay comentarios registrados",
+							"Enabled": true,
+							"IsEditable": false
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Materiales de la Solicitud"
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "ComponentesSolicitud",
+						"QueryOptions": "/appconsumos_mb/Rules/Campo/Query_Detalle_Componentes_Campo.js",
+						"ReadLink": "{@odata.readLink}"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay elementos para mostrar",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+						"Subhead": "Cant. Apro: {cantidad_aprobada} de {cantidad_tomada} {material/und/und_vz}",
+						"Footnote": "Tomado de: {almacen_almacen} - {almacen/almacen_desc}",
+						"Description": "{material/material_desc}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Pos: {posicion}",
+						"SubstatusText": "Op: {op_number} ",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "Blue",
+								"Text": "Doc. Material: {doc_material}"
+							},
+							{
+								"Color": "Grey",
+								"Text": "/appconsumos_mb/Rules/get_ConfirmacionTec.js"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://product"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Detalle_Historico_Campo",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Sincronizar",
+				"Icon": "sap-icon://synchronize",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/appconsumos_mb/Rules/Campo/SyncRevisarCampo.js"
+			}
+		],
+		"_Name": "ActionBar10",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Detalle Histórico Campo"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": "/appconsumos_mb/Rules/Campo/set_VisibleBtnAbrirDocumento.js",
+				"Title": "Abrir documento",
+				"Styles": {
+					"Image": "Button",
+					"Button": "Button"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Campo/AbrirDocumento_Campo.js",
+				"Image": "sap-icon://pdf-attachment",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

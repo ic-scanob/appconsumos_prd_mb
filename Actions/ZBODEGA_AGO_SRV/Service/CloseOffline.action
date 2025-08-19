@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.OfflineOData.Close",
+	"ActionResult": {
+		"_Name": "close"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOfflineFailureMessage.action",
+	"OnSuccess": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOfflineSuccessMessage.action",
+	"Service": "/appconsumos_mb/Services/ZBODEGA_AGO_SRV.service",
+	"Force": true
+}

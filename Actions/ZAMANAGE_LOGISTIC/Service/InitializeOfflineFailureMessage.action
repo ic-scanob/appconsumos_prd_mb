@@ -1,0 +1,6 @@
+{
+	"_Type": "Action.Type.BannerMessage",
+	"Message": "No se pudo inicializar el servicio ZAMANAGE_LOGISTIC de la aplicación - {#ActionResults:init/error}",
+	"Duration": 7,
+	"Animated": true
+}

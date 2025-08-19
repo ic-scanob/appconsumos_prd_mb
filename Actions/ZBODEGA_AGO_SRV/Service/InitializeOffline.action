@@ -1,0 +1,15 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "InitializeOffline"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/InitializeOfflineFailureMessage.action",
+	"Service": "/appconsumos_mb/Services/ZBODEGA_AGO_SRV.service",
+	"DefiningRequests": [
+		{
+			"Name": "ZBIW_MARDTSet",
+			"Query": "ZBIW_MARDTSet",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}

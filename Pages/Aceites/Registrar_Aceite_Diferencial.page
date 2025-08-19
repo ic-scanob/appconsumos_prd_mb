@@ -1,0 +1,550 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"KeyAndValues": [
+						{
+							"Value": " {#Page:Filtro_Aceites/#ClientData/data_planilla_diferencial/contador_ini} ",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_inicial",
+							"KeyName": "Contador Inicial",
+							"Visible": true
+						},
+						{
+							"Value": " {#Page:Filtro_Aceites/#ClientData/data_planilla_diferencial/contador_fin} ",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_final",
+							"KeyName": "Contador Final",
+							"Visible": true
+						},
+						{
+							"Value": " {#Page:Filtro_Aceites/#ClientData/data_planilla_diferencial/estado} ",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_estado",
+							"KeyName": "Estado",
+							"Visible": true
+						},
+						{
+							"Value": " {#Page:Filtro_Aceites/#ClientData/data_planilla_diferencial/total} ",
+							"_Type": "KeyValue.Type.Item",
+							"_Name": "KeyValue_consumo",
+							"KeyName": "Total Consumo",
+							"Visible": true
+						}
+					],
+					"MaxItemCount": 1,
+					"_Type": "Section.Type.KeyValue",
+					"_Name": "SectionKeyValue0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Layout": {
+						"NumberOfColumns": 2
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Layout": {
+						"LayoutType": "Vertical",
+						"HorizontalAlignment": "Leading"
+					},
+					"_Type": "Section.Type.ButtonTable",
+					"_Name": "SectionButtonTable0",
+					"Visible": "/appconsumos_mb/Rules/Aceites/setVisible_Botones_Planillas_Diferencial.js",
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Buttons": [
+						{
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButton_visible",
+							"Title": "Agregar Consumo",
+							"Alignment": "Right",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://sys-add",
+							"ImagePosition": "Leading",
+							"FullWidth": true,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Aceites/set_Contador_Inicial_Diferencial.js"
+						},
+						{
+							"Styles": {
+								"Image": "Button2",
+								"Button": "Button2"
+							},
+							"_Type": "ButtonTable.Type.Button",
+							"_Name": "ButtonTableTypeButton_enviar",
+							"Title": "Enviar Planilla",
+							"Alignment": "Right",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://open-command-field",
+							"ImagePosition": "Leading",
+							"FullWidth": true,
+							"Visible": true,
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Aceites/Enviar_Planilla_Aceite_Diferencial.js"
+						}
+					]
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "equipo_diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Equipo",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"LoadingIndicatorText": "Cargando equipos...",
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un equipo",
+							"PlaceHolder": "Ingrese Equipo",
+							"OnValueChange": "/appconsumos_mb/Rules/Aceites/setEnabled_Tipo_Aceite_Diferencial.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Enabled": true,
+								"Placeholder": "Equipo...",
+								"BarcodeScanner": true
+							},
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "Equipos",
+									"QueryOptions": "$filter=sociedad eq '{{#Page:Main/#ClientData/info_user/sociedad}}'&$orderby=equipo"
+								},
+								"ObjectCell": {
+									"Description": "{equipo_desc}",
+									"PreserveIconStackSpacing": false,
+									"StatusText": "{centro}",
+									"Subhead": "{tipo}",
+									"SubstatusText": "{sociedad}",
+									"Title": "{equipo}",
+									"Visible": true
+								},
+								"ReturnValue": "{equipo}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "tipo_diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Tipo",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleccione el tipo",
+							"PlaceHolder": "Ingrese Tipo",
+							"OnValueChange": "/appconsumos_mb/Rules/Aceites/onChange_Tipo_Aceite_Diferencial.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": false,
+							"Search": {
+								"Placeholder": "Tipo..."
+							},
+							"PickerItems": [
+								{
+									"DisplayValue": "Full",
+									"ReturnValue": "Full"
+								},
+								{
+									"DisplayValue": "Cambio",
+									"ReturnValue": "Cambio"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "orden_diferencial",
+							"IsVisible": false,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Órden",
+							"DataPaging": {
+								"ShowLoadingIndicator": true,
+								"LoadingIndicatorText": "cargando...",
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona una orden",
+							"PlaceHolder": "Ingrese orden",
+							"HelperText": "Elige una orden abierta vinculada al equipo seleccionado.",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": true,
+							"IsEditable": true,
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "Ordenes",
+									"QueryOptions": "$filter=equipo eq 'IP923384'"
+								},
+								"ObjectCell": {
+									"Description": "{orden_desc}",
+									"DisplayDescriptionInMobile": true,
+									"Footnote": "{equipo} - {equipo_desc}",
+									"PreserveIconStackSpacing": false,
+									"StatusText": "res: {reserva}",
+									"Subhead": "/appconsumos_mb/Rules/Campo/get_Date_creacion.js",
+									"Title": "/appconsumos_mb/Rules/Aceites/getOrden_RevisarPlanilla.js",
+									"Visible": true
+								},
+								"ReturnValue": "{orden}"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "kmh_diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Kilometraje Horómetro",
+							"PlaceHolder": "Ingrese valor",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "operario_diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Ficha Operario",
+							"PlaceHolder": "Ingrese ficha",
+							"KeyboardType": "Number",
+							"AlternateInput": "Barcode",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "cont_inicial_diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Contador Inicial",
+							"PlaceHolder": "Ingrese contador Inicial",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": false
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "con_final_diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Contador Final",
+							"PlaceHolder": "Ingrese contador final",
+							"KeyboardType": "Number",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "observaciones_diferencial",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": false,
+							"Caption": "Observación",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona una observación",
+							"PlaceHolder": "Seleccionar observación",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Enabled": true
+							},
+							"PickerItems": [
+								{
+									"DisplayValue": "M1 - MANGUERA DESCOGOLLADOR",
+									"ReturnValue": "M1"
+								},
+								{
+									"DisplayValue": "M2 - MANGUERA DIVISOR / SIN FIN",
+									"ReturnValue": "M2"
+								},
+								{
+									"DisplayValue": "M3 - MANGUERA DISCO CORTE",
+									"ReturnValue": "M3"
+								},
+								{
+									"DisplayValue": "M4 - MANGUERA MARCHA / PARQUEO",
+									"ReturnValue": "M4"
+								},
+								{
+									"DisplayValue": "M5 - MANGUERA ELEVADOR",
+									"ReturnValue": "M5"
+								},
+								{
+									"DisplayValue": "M6 - MANGUERA PICADOR",
+									"ReturnValue": "M6"
+								},
+								{
+									"DisplayValue": "M7 - MANGUERA SUSPENSION / CANUTO",
+									"ReturnValue": "M7"
+								},
+								{
+									"DisplayValue": "M8 - MANGUERA ROLO",
+									"ReturnValue": "M8"
+								},
+								{
+									"DisplayValue": "M9 - MANGUERA EXTRACTOR PRIMARIO - SEGUNDARIO",
+									"ReturnValue": "M9"
+								},
+								{
+									"DisplayValue": "M10 - MANGUERA GATO GIRO / TORNAMESA",
+									"ReturnValue": "M10"
+								},
+								{
+									"DisplayValue": "M11 - MANGUERA PASAMURO",
+									"ReturnValue": "M11"
+								},
+								{
+									"DisplayValue": "M12 - MANGUERA BANCO LEVANTE",
+									"ReturnValue": "M12"
+								},
+								{
+									"DisplayValue": "M13 - MANGUERA SUCCION",
+									"ReturnValue": "M13"
+								},
+								{
+									"DisplayValue": "M14 - MANGUERA BANCO CONTROL HCO",
+									"ReturnValue": "M14"
+								},
+								{
+									"DisplayValue": "M15 - CONSUMO AUTOVOLTEO",
+									"ReturnValue": "M15"
+								},
+								{
+									"DisplayValue": "M16 - CONSUMO TRACTOR",
+									"ReturnValue": "M16"
+								},
+								{
+									"DisplayValue": "M17 - MANGUERA ENFRIADOR ACEITE",
+									"ReturnValue": "M17"
+								},
+								{
+									"DisplayValue": "M18 - MNGUERA ALIMENTACION",
+									"ReturnValue": "M18"
+								},
+								{
+									"DisplayValue": "M19 - COMPLETAR FULL",
+									"ReturnValue": "M19"
+								},
+								{
+									"DisplayValue": "M20 - TENSIONAR ORUGAS",
+									"ReturnValue": "M20"
+								},
+								{
+									"DisplayValue": "M21 - CAMBIO MOTOR HIDRAULICO",
+									"ReturnValue": "M21"
+								},
+								{
+									"DisplayValue": "M22 - MANGUERA CORTADOR BASE",
+									"ReturnValue": "M22"
+								},
+								{
+									"DisplayValue": "M23 - FUGA TANQUE HIDRAULICO",
+									"ReturnValue": "M23"
+								},
+								{
+									"DisplayValue": "M24 - ENFRIADOR ACEITE",
+									"ReturnValue": "M24"
+								},
+								{
+									"DisplayValue": "M25 - CAJA BASE",
+									"ReturnValue": "M25"
+								},
+								{
+									"DisplayValue": "M26 - MANGUERA BASCULANTE",
+									"ReturnValue": "M26"
+								}
+							]
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Registrar Consumo",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-activity-2",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Aceites/Registrar_Items_Aceite_Diferencial.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Agregar Consumo de Aceite Diferencial"
+					},
+					"Visible": false,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader1",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Consumos de Aceite Diferencial"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": {
+						"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+						"EntitySet": "ItemPlanillasAceites",
+						"QueryOptions": "/appconsumos_mb/Rules/Aceites/Query_Registro_Planilla_Id_Diferencial.js"
+					},
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay elementos para mostrar...",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{equipo_equipo}",
+						"Subhead": "{op_ficha} - {op_nombre}",
+						"Footnote": "{equipo/equipo_desc} ",
+						"Description": "{obs_text} ",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cont Inicial: {contador_ini}",
+						"SubstatusText": "Cont Final: {contador_fin}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [
+							{
+								"Color": "Grey",
+								"Text": "Consumo: {consumo} "
+							},
+							{
+								"Color": "/appconsumos_mb/Rules/Aceites/Color_Aceites_Tipo.js",
+								"Text": "{tipo}"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://measurement-document"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"LoadingIndicatorText": "Cargando datos...",
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Registrar_Aceite_Diferencial",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar19",
+		"_Type": "Control.Type.ActionBar"
+	}
+}

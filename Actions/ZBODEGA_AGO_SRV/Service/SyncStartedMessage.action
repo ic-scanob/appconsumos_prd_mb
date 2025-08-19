@@ -1,0 +1,8 @@
+{
+	"_Type": "Action.Type.ProgressBanner",
+	"OnFailure": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action",
+	"OnSuccess": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/UploadOffline.action",
+	"Message": "Carga de datos del ERP en proceso...",
+	"CompletionMessage": "Sincronización Completa",
+	"CompletionTimeout": 7
+}

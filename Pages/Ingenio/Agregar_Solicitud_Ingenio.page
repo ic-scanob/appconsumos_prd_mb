@@ -1,0 +1,298 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "No. Res: {#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/reserva}",
+						"Footnote": "/appconsumos_mb/Rules/formatOrdenId.js",
+						"Description": "{#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/orden_desc}",
+						"SubstatusText": "Centro: {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/centro}",
+						"DetailImageIsCircular": false,
+						"Tags": [
+							"#Page:Main/#ClientData/info_user/correo"
+						],
+						"BodyText": "{#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/equipo} -  {#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/equipo_desc} ",
+						"HeadlineText": "Almacen: {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/almacen} - {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/almacen_desc}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "ficha",
+							"IsVisible": true,
+							"Separator": false,
+							"Caption": "Ficha Técnico *",
+							"PlaceHolder": "Ingresa el número de ficha",
+							"KeyboardType": "Number",
+							"AlternateInput": "Barcode",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "observaciones",
+							"IsVisible": true,
+							"Separator": false,
+							"Caption": "Observaciones",
+							"PlaceHolder": "Ingresa observaciones en la solicitud",
+							"MinNumberOfLines": 3,
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell1"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Label",
+							"_Name": "FormCellLabel0",
+							"IsVisible": true,
+							"Separator": true,
+							"Text": "Agregar Material",
+							"TextWrap": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "material",
+							"IsVisible": true,
+							"Separator": false,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Material *",
+							"Label": "Selecciona un material",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Seleciona un material",
+							"HelperText": "Verifica que el material seleccionado provenga del almacén donde se realizó el consumo.",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Mode": "Persistent",
+								"Enabled": true,
+								"Placeholder": "Buscar Material...",
+								"BarcodeScanner": true
+							},
+							"PickerItems": "/appconsumos_mb/Rules/Ingenio/get_Materiales_Almacenes_Ingenio.js"
+						},
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "cantidad",
+							"IsVisible": true,
+							"Separator": false,
+							"Caption": "Cantidad *",
+							"PlaceHolder": "Ingresa la cantidad del material",
+							"KeyboardType": "Number",
+							"AlternateInput": "None",
+							"HelperText": "Debe ser un número mayor a 0",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Separator": false,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Agregar Material",
+							"Alignment": "Right",
+							"ButtonType": "Text",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-product",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Ingenio/Agregar_Materiales_Solicitud.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Materiales de la Solicitud"
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": "/appconsumos_mb/Rules/Ingenio/Target_Lista_Materiales.js",
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay materiales aún",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{Matnr}",
+						"Subhead": "Tomado de: {Lgort}",
+						"Description": "{Txtmd}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "Cant: {cant} de {Labst} {Meins}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "DetailButton",
+						"AccessoryButtonIcon": "sap-icon://delete",
+						"AccessoryButtonText": "Borrar",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://product"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"OnAccessoryButtonPress": "/appconsumos_mb/Rules/Ingenio/Borrar_Material_Lista.js",
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"Search": {
+						"Mode": "Expandable",
+						"Enabled": true,
+						"Placeholder": "Buscar Material..."
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Agregar_Solicitud_Ingenio",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "close",
+				"Icon": "sap-icon://decline",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+					"Properties": {
+						"Message": "¿Estás seguro que quieres salir?",
+						"Title": "Confirmación",
+						"OKCaption": "Aceptar",
+						"OnOK": {
+							"Name": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action",
+							"Properties": {
+								"NavigateBackToPage": "Ingenio"
+							}
+						},
+						"CancelCaption": "Cancelar"
+					}
+				}
+			}
+		],
+		"_Name": "ActionBar2",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Nueva Solicitud Ingenio"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": true,
+				"Title": "Crear Solicitud Ingenio",
+				"Styles": {
+					"Image": "Button2",
+					"Button": "Button2"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Ingenio/Validate_Req_Create_Solicitud_Ingenio.js",
+				"Image": "sap-icon://save",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

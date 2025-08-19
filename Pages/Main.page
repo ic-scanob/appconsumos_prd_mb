@@ -1,0 +1,156 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": false,
+						"HeaderSeparator": false,
+						"FooterSeparator": false,
+						"ControlSeparator": false
+					},
+					"_Type": "Section.Type.Image",
+					"_Name": "SectionImage0",
+					"Visible": true,
+					"Image": "/appconsumos_mb/Images/logo_both.png",
+					"Width": 477,
+					"Height": 52,
+					"Alignment": "Center",
+					"ContentMode": "Center",
+					"PaddingTop": 10
+				},
+				{
+					"ObjectHeader": {
+						"Subhead": "{#Application/#AppData/UserId}",
+						"Description": "Aplicación para llevar trazabilidad de consumos en Campo e Ingenio",
+						"DetailImageIsCircular": false,
+						"HeadlineText": "Consumos APP",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ContactCell",
+					"_Name": "SectionContactCell0",
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"ContactCells": [
+						{
+							"ContactCell": {
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
+								"_Name": "ContactCellItem0",
+								"DetailImage": "sap-icon://key-user-settings",
+								"Headline": "Administración",
+								"Subheadline": "Administrar Usuarios y Almacenes",
+								"Description": "",
+								"Visible": true,
+								"OnPress": "/appconsumos_mb/Rules/Administracion/NavTo_Administracion.js"
+							}
+						},
+						{
+							"ContactCell": {
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
+								"_Name": "ContactCellItem1",
+								"DetailImage": "sap-icon://e-care",
+								"Headline": "Campo",
+								"Subheadline": "Gestionar Órdenes de Campo",
+								"Description": "",
+								"Visible": true,
+								"OnPress": "/appconsumos_mb/Rules/Campo/NavTo_Campo.js"
+							}
+						},
+						{
+							"ContactCell": {
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
+								"_Name": "ContactCellItem2",
+								"DetailImage": "sap-icon://factory",
+								"Headline": "Ingenio",
+								"Subheadline": "Gestionar Órdenes de Ingenio",
+								"Description": "",
+								"Visible": true,
+								"OnPress": "/appconsumos_mb/Rules/Ingenio/NavTo_Ingenio.js"
+							}
+						},
+						{
+							"ContactCell": {
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
+								"_Name": "ContactCellItem3",
+								"DetailImage": "sap-icon://customer-order-entry",
+								"Headline": "Inventario",
+								"Subheadline": "Gestionar Inventario de Almacenes",
+								"Description": "",
+								"Visible": true,
+								"OnPress": "/appconsumos_mb/Rules/Inventario/NavTo_Inventario.js"
+							}
+						},
+						{
+							"ContactCell": {
+								"ContextMenu": {
+									"PerformFirstActionWithFullSwipe": true
+								},
+								"_Name": "ContactCellItem4",
+								"DetailImage": "sap-icon://mileage",
+								"Headline": "Aceites y Lubricantes",
+								"Subheadline": "Gestionar Consumos de Aceites y Lubricantes",
+								"Description": "",
+								"Visible": true,
+								"OnPress": "/appconsumos_mb/Rules/Aceites/NavTo_Aceites.js"
+							}
+						}
+					]
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Main",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "User Menu",
+				"Icon": "sap-icon://customer",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": "/appconsumos_mb/Actions/Application/UserMenuPopover.action"
+			}
+		],
+		"_Name": "ActionBar1",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Inicio",
+		"PrefersLargeCaption": true
+	}
+}

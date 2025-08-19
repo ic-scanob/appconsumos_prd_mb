@@ -1,0 +1,317 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="4.0" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+    <edmx:Reference Uri="https://sap.github.io/odata-vocabularies/vocabularies/Common.xml">
+        <edmx:Include Alias="Common" Namespace="com.sap.vocabularies.Common.v1"/>
+    </edmx:Reference>
+    <edmx:Reference Uri="https://oasis-tcs.github.io/odata-vocabularies/vocabularies/Org.OData.Core.V1.xml">
+        <edmx:Include Alias="Core" Namespace="Org.OData.Core.V1"/>
+    </edmx:Reference>
+    <edmx:DataServices>
+        <Schema Namespace="appconsumos" xmlns="http://docs.oasis-open.org/odata/ns/edm">
+            <EntityContainer Name="EntityContainer">
+                <EntitySet Name="Empleados" EntityType="appconsumos.Empleados"/>
+                <EntitySet Name="EmpleadosApp" EntityType="appconsumos.EmpleadosApp"/>
+                <EntitySet Name="Almacenes" EntityType="appconsumos.Almacenes"/>
+                <EntitySet Name="AlmacenesApp" EntityType="appconsumos.AlmacenesApp"/>
+                <EntitySet Name="MaterialesAlmacen" EntityType="appconsumos.MaterialesAlmacen"/>
+                <EntitySet Name="Inventario" EntityType="appconsumos.Inventario">
+                    <NavigationPropertyBinding Path="almacen" Target="AlmacenesApp"/>
+                </EntitySet>
+                <EntitySet Name="Equipos" EntityType="appconsumos.Equipos"/>
+                <EntitySet Name="Ordenes" EntityType="appconsumos.Ordenes"/>
+                <EntitySet Name="DetalleReserva" EntityType="appconsumos.DetalleReserva"/>
+                <EntitySet Name="Solicitudes" EntityType="appconsumos.Solicitudes">
+                    <NavigationPropertyBinding Path="operario" Target="EmpleadosApp"/>
+                    <NavigationPropertyBinding Path="almacen" Target="AlmacenesApp"/>
+                    <NavigationPropertyBinding Path="equipo" Target="Equipos"/>
+                    <NavigationPropertyBinding Path="orden" Target="Ordenes"/>
+                    <NavigationPropertyBinding Path="aprobador" Target="EmpleadosApp"/>
+                    <NavigationPropertyBinding Path="autorizador" Target="EmpleadosApp"/>
+                </EntitySet>
+                <EntitySet Name="ComponentesSolicitud" EntityType="appconsumos.ComponentesSolicitud">
+                    <NavigationPropertyBinding Path="solicitud" Target="Solicitudes"/>
+                    <NavigationPropertyBinding Path="material" Target="MaterialesAlmacen"/>
+                    <NavigationPropertyBinding Path="almacen" Target="AlmacenesApp"/>
+                </EntitySet>
+                <EntitySet Name="VerSolicitudesAbiertas" EntityType="appconsumos.VerSolicitudesAbiertas"/>
+                <FunctionImport Name="generatePDF" Function="appconsumos.generatePDF"/>
+                <ActionImport Name="firmarPDF" Action="appconsumos.firmarPDF"/>
+            </EntityContainer>
+            <EntityType Name="Empleados">
+                <Key>
+                    <PropertyRef Name="ficha"/>
+                </Key>
+                <Property Name="ficha" Type="Edm.String" MaxLength="8" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="correo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="cargo" Type="Edm.String" MaxLength="25"/>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4"/>
+            </EntityType>
+            <EntityType Name="EmpleadosApp">
+                <Key>
+                    <PropertyRef Name="ficha"/>
+                </Key>
+                <Property Name="ficha" Type="Edm.String" MaxLength="8" Nullable="false"/>
+                <Property Name="nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="correo" Type="Edm.String" MaxLength="50"/>
+                <Property Name="rol" Type="Edm.String"/>
+                <Property Name="isAdmin" Type="Edm.Boolean" DefaultValue="false"/>
+                <Property Name="cargo" Type="Edm.String" MaxLength="25"/>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="estado" Type="Edm.String" MaxLength="10" DefaultValue="Activo"/>
+            </EntityType>
+            <EntityType Name="Almacenes">
+                <Key>
+                    <PropertyRef Name="sociedad"/>
+                    <PropertyRef Name="almacen"/>
+                    <PropertyRef Name="centro"/>
+                </Key>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="almacen" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="centro" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="almacen_desc" Type="Edm.String" MaxLength="16"/>
+            </EntityType>
+            <EntityType Name="AlmacenesApp">
+                <Key>
+                    <PropertyRef Name="sociedad"/>
+                    <PropertyRef Name="almacen"/>
+                    <PropertyRef Name="centro"/>
+                </Key>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="almacen" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="centro" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="almacen_desc" Type="Edm.String" MaxLength="16"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="MaterialesAlmacen">
+                <Key>
+                    <PropertyRef Name="material"/>
+                    <PropertyRef Name="almacen"/>
+                    <PropertyRef Name="centro"/>
+                    <PropertyRef Name="sociedad"/>
+                </Key>
+                <Property Name="material" Type="Edm.String" MaxLength="18" Nullable="false"/>
+                <Property Name="almacen" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="centro" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="material_desc" Type="Edm.String" MaxLength="40"/>
+            </EntityType>
+            <EntityType Name="Inventario">
+                <Key>
+                    <PropertyRef Name="material"/>
+                    <PropertyRef Name="almacen_sociedad"/>
+                    <PropertyRef Name="almacen_almacen"/>
+                    <PropertyRef Name="almacen_centro"/>
+                </Key>
+                <Property Name="material" Type="Edm.String" MaxLength="18" Nullable="false"/>
+                <NavigationProperty Name="almacen" Type="appconsumos.AlmacenesApp">
+                    <ReferentialConstraint Property="almacen_sociedad" ReferencedProperty="sociedad"/>
+                    <ReferentialConstraint Property="almacen_almacen" ReferencedProperty="almacen"/>
+                    <ReferentialConstraint Property="almacen_centro" ReferencedProperty="centro"/>
+                </NavigationProperty>
+                <Property Name="almacen_sociedad" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="almacen_almacen" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="almacen_centro" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="material_desc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="stock_disponible" Type="Edm.Decimal" Precision="13" Scale="3"/>
+                <Property Name="stock_reservado" Type="Edm.Decimal" Precision="13" Scale="3"/>
+            </EntityType>
+            <EntityType Name="Equipos">
+                <Key>
+                    <PropertyRef Name="equipo"/>
+                </Key>
+                <Property Name="equipo" Type="Edm.String" MaxLength="18" Nullable="false"/>
+                <Property Name="equipo_desc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="centro" Type="Edm.String" MaxLength="4"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="10"/>
+                <Property Name="centro_plan" Type="Edm.String" MaxLength="4"/>
+                <Property Name="grupo_plan" Type="Edm.String" MaxLength="3"/>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4"/>
+            </EntityType>
+            <EntityType Name="Ordenes">
+                <Key>
+                    <PropertyRef Name="orden"/>
+                </Key>
+                <Property Name="orden" Type="Edm.String" MaxLength="12" Nullable="false"/>
+                <Property Name="orden_desc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="equipo" Type="Edm.String" MaxLength="18"/>
+                <Property Name="equipo_desc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="reserva" Type="Edm.String" MaxLength="10"/>
+                <Property Name="estado" Type="Edm.String" MaxLength="1"/>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="fecha_creacion" Type="Edm.String" MaxLength="8"/>
+                <Property Name="fecha_referencia" Type="Edm.String" MaxLength="8"/>
+                <Property Name="grupo_plan" Type="Edm.String" MaxLength="3"/>
+                <Property Name="centro_plan" Type="Edm.String" MaxLength="4"/>
+                <Property Name="hoja_ruta" Type="Edm.String" MaxLength="10"/>
+            </EntityType>
+            <EntityType Name="DetalleReserva">
+                <Key>
+                    <PropertyRef Name="reserva"/>
+                    <PropertyRef Name="posicion"/>
+                </Key>
+                <Property Name="reserva" Type="Edm.String" MaxLength="10" Nullable="false"/>
+                <Property Name="posicion" Type="Edm.String" MaxLength="4" Nullable="false"/>
+                <Property Name="orden" Type="Edm.String" MaxLength="12"/>
+                <Property Name="material" Type="Edm.String" MaxLength="18"/>
+                <Property Name="material_desc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="cant_solicitada" Type="Edm.Decimal" Precision="13" Scale="3"/>
+                <Property Name="cant_tomada" Type="Edm.Decimal" Precision="13" Scale="3"/>
+                <Property Name="tipo_mov" Type="Edm.String" MaxLength="1"/>
+                <Property Name="tomado" Type="Edm.String" MaxLength="1"/>
+                <Property Name="centro" Type="Edm.String" MaxLength="4"/>
+                <Property Name="sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="operacion" Type="Edm.String" MaxLength="4"/>
+            </EntityType>
+            <EntityType Name="Solicitudes">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="operario" Type="appconsumos.EmpleadosApp">
+                    <ReferentialConstraint Property="operario_ficha" ReferencedProperty="ficha"/>
+                </NavigationProperty>
+                <Property Name="operario_ficha" Type="Edm.String" MaxLength="8"/>
+                <NavigationProperty Name="almacen" Type="appconsumos.AlmacenesApp">
+                    <ReferentialConstraint Property="almacen_sociedad" ReferencedProperty="sociedad"/>
+                    <ReferentialConstraint Property="almacen_almacen" ReferencedProperty="almacen"/>
+                    <ReferentialConstraint Property="almacen_centro" ReferencedProperty="centro"/>
+                </NavigationProperty>
+                <Property Name="almacen_sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="almacen_almacen" Type="Edm.String" MaxLength="4"/>
+                <Property Name="almacen_centro" Type="Edm.String" MaxLength="4"/>
+                <NavigationProperty Name="equipo" Type="appconsumos.Equipos">
+                    <ReferentialConstraint Property="equipo_equipo" ReferencedProperty="equipo"/>
+                </NavigationProperty>
+                <Property Name="equipo_equipo" Type="Edm.String" MaxLength="18"/>
+                <NavigationProperty Name="orden" Type="appconsumos.Ordenes">
+                    <ReferentialConstraint Property="orden_orden" ReferencedProperty="orden"/>
+                </NavigationProperty>
+                <Property Name="orden_orden" Type="Edm.String" MaxLength="12"/>
+                <Property Name="reserva" Type="Edm.String" MaxLength="10"/>
+                <NavigationProperty Name="aprobador" Type="appconsumos.EmpleadosApp">
+                    <ReferentialConstraint Property="aprobador_ficha" ReferencedProperty="ficha"/>
+                </NavigationProperty>
+                <Property Name="aprobador_ficha" Type="Edm.String" MaxLength="8"/>
+                <NavigationProperty Name="autorizador" Type="appconsumos.EmpleadosApp">
+                    <ReferentialConstraint Property="autorizador_ficha" ReferencedProperty="ficha"/>
+                </NavigationProperty>
+                <Property Name="autorizador_ficha" Type="Edm.String" MaxLength="8"/>
+                <Property Name="observaciones_tec" Type="Edm.String" MaxLength="240"/>
+                <Property Name="estado" Type="Edm.String" MaxLength="10"/>
+                <Property Name="correo_creacion" Type="Edm.String" MaxLength="50"/>
+                <Property Name="fecha_creacion" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="fecha_revision" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="fecha_autorizado" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="comentarios_aux" Type="Edm.String" MaxLength="240"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="16"/>
+            </EntityType>
+            <EntityType Name="ComponentesSolicitud">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <NavigationProperty Name="solicitud" Type="appconsumos.Solicitudes">
+                    <ReferentialConstraint Property="solicitud_id" ReferencedProperty="id"/>
+                </NavigationProperty>
+                <Property Name="solicitud_id" Type="Edm.Guid"/>
+                <NavigationProperty Name="material" Type="appconsumos.MaterialesAlmacen">
+                    <ReferentialConstraint Property="material_material" ReferencedProperty="material"/>
+                    <ReferentialConstraint Property="material_almacen" ReferencedProperty="almacen"/>
+                    <ReferentialConstraint Property="material_centro" ReferencedProperty="centro"/>
+                    <ReferentialConstraint Property="material_sociedad" ReferencedProperty="sociedad"/>
+                </NavigationProperty>
+                <Property Name="material_material" Type="Edm.String" MaxLength="18"/>
+                <Property Name="material_almacen" Type="Edm.String" MaxLength="4"/>
+                <Property Name="material_centro" Type="Edm.String" MaxLength="4"/>
+                <Property Name="material_sociedad" Type="Edm.String" MaxLength="4"/>
+                <NavigationProperty Name="almacen" Type="appconsumos.AlmacenesApp">
+                    <ReferentialConstraint Property="almacen_sociedad" ReferencedProperty="sociedad"/>
+                    <ReferentialConstraint Property="almacen_almacen" ReferencedProperty="almacen"/>
+                    <ReferentialConstraint Property="almacen_centro" ReferencedProperty="centro"/>
+                </NavigationProperty>
+                <Property Name="almacen_sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="almacen_almacen" Type="Edm.String" MaxLength="4"/>
+                <Property Name="almacen_centro" Type="Edm.String" MaxLength="4"/>
+                <Property Name="mat_nuevo" Type="Edm.String" MaxLength="18"/>
+                <Property Name="mat_nuevo_desc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="cantidad_tomada" Type="Edm.Decimal" Scale="variable"/>
+                <Property Name="cantidad_aprobada" Type="Edm.Decimal" Scale="variable"/>
+                <Property Name="aprobado" Type="Edm.Boolean"/>
+                <Property Name="confirmacion_tec" Type="Edm.Boolean"/>
+                <Property Name="memorando" Type="Edm.Boolean"/>
+            </EntityType>
+            <EntityType Name="VerSolicitudesAbiertas">
+                <Key>
+                    <PropertyRef Name="id"/>
+                </Key>
+                <Property Name="id" Type="Edm.Guid" Nullable="false"/>
+                <Property Name="op_ficha" Type="Edm.String" MaxLength="8"/>
+                <Property Name="op_nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="op_rol" Type="Edm.String"/>
+                <Property Name="op_isAdmin" Type="Edm.Boolean" DefaultValue="false"/>
+                <Property Name="op_cargo" Type="Edm.String" MaxLength="25"/>
+                <Property Name="op_sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="alm_sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="alm_almacen" Type="Edm.String" MaxLength="4"/>
+                <Property Name="alm_centro" Type="Edm.String" MaxLength="4"/>
+                <Property Name="alm_desc" Type="Edm.String" MaxLength="16"/>
+                <Property Name="equipo_solicitud" Type="Edm.String" MaxLength="18"/>
+                <Property Name="eq_desc_solicitud" Type="Edm.String" MaxLength="40"/>
+                <Property Name="orden" Type="Edm.String" MaxLength="12"/>
+                <Property Name="or_desc" Type="Edm.String" MaxLength="40"/>
+                <Property Name="or_sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="or_creacion" Type="Edm.String" MaxLength="8"/>
+                <Property Name="or_ref" Type="Edm.String" MaxLength="8"/>
+                <Property Name="or_grupo_plan" Type="Edm.String" MaxLength="3"/>
+                <Property Name="or_centro_plan" Type="Edm.String" MaxLength="4"/>
+                <Property Name="or_hoja_ruta" Type="Edm.String" MaxLength="10"/>
+                <Property Name="reserva" Type="Edm.String" MaxLength="10"/>
+                <Property Name="correo_creacion" Type="Edm.String" MaxLength="50"/>
+                <Property Name="ap_ficha" Type="Edm.String" MaxLength="8"/>
+                <Property Name="ap_nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="ap_rol" Type="Edm.String"/>
+                <Property Name="ap_isAdmin" Type="Edm.Boolean" DefaultValue="false"/>
+                <Property Name="ap_cargo" Type="Edm.String" MaxLength="25"/>
+                <Property Name="ap_sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="au_ficha" Type="Edm.String" MaxLength="8"/>
+                <Property Name="au_nombre" Type="Edm.String" MaxLength="100"/>
+                <Property Name="au_rol" Type="Edm.String"/>
+                <Property Name="au_isAdmin" Type="Edm.Boolean" DefaultValue="false"/>
+                <Property Name="au_cargo" Type="Edm.String" MaxLength="25"/>
+                <Property Name="au_sociedad" Type="Edm.String" MaxLength="4"/>
+                <Property Name="observaciones_tec" Type="Edm.String" MaxLength="240"/>
+                <Property Name="estado" Type="Edm.String" MaxLength="10"/>
+                <Property Name="fecha_creacion" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="fecha_revision" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="fecha_autorizado" Type="Edm.DateTimeOffset" Precision="7"/>
+                <Property Name="comentarios_aux" Type="Edm.String" MaxLength="240"/>
+                <Property Name="tipo" Type="Edm.String" MaxLength="16"/>
+            </EntityType>
+            <Function Name="generatePDF" IsBound="false" IsComposable="false">
+                <Parameter Name="image" Type="Edm.String"/>
+                <ReturnType Type="Edm.String"/>
+            </Function>
+            <Action Name="firmarPDF" IsBound="false">
+                <Parameter Name="pdf" Type="Edm.String"/>
+                <Parameter Name="image" Type="Edm.String"/>
+                <ReturnType Type="Edm.String"/>
+            </Action>
+            <Annotations Target="appconsumos.Solicitudes/id">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="appconsumos.Solicitudes/fecha_creacion">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+            <Annotations Target="appconsumos.ComponentesSolicitud/id">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="appconsumos.VerSolicitudesAbiertas/id">
+                <Annotation Term="Core.ComputedDefaultValue" Bool="true"/>
+            </Annotations>
+            <Annotations Target="appconsumos.VerSolicitudesAbiertas/fecha_creacion">
+                <Annotation Term="Core.Computed" Bool="true"/>
+            </Annotations>
+        </Schema>
+    </edmx:DataServices>
+</edmx:Edmx>

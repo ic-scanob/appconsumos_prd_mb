@@ -1,0 +1,26 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_Planilla_Aceite_Aprobar"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error aprobando la planilla - {#ActionResults:Update_Planilla_Aceite_Aprobar/error}",
+			"Title": "Error",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Aceites/Confirmar_Consumos_Aceite_Motor.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "PlanillasAceites",
+		"QueryOptions": "$filter=id eq {{#Page:Filtro_Aceites/#ClientData/QueryRevisarPlanilla}}"
+	},
+	"Properties": {
+		"estado": "Aprobada",
+		"comentarios_aux": "#Page:Filtro_Aceites/#ClientData/obsRevisarPlanilla",
+		"fecha_revision": "/appconsumos_mb/Rules/get_Now_Datetime.js",
+		"aprobador_ficha": "#Page:Main/#ClientData/info_user/ficha"
+	}
+}

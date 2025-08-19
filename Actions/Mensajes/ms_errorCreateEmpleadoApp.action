@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "ms_errorCreateEmpleadoApp"
+	},
+	"Message": "Falló en Crear el empleado - {#ActionResults:Create_EmpleadosApp/error}  ",
+	"Title": "Error",
+	"OKCaption": "Ok"
+}

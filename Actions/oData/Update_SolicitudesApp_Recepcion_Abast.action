@@ -1,0 +1,22 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_SolicitudesApp_Recepcion_Abast"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error al actualizar la solicitud - {#ActionResults:Update_SolicitudesApp_Recepcion_Abast/error}",
+			"Title": "Error"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Inventario/ConfirmarMaterialesItems_Abast.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"estado": "Tramitado"
+	}
+}

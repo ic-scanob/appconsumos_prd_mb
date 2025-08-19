@@ -1,0 +1,28 @@
+{
+	"_Type": "Action.Type.ODataService.DeleteEntity",
+	"ActionResult": {
+		"_Name": "Delete_AlmacenesApp"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error al eliminar el almacén: {#ActionResults:Delete_AlmacenesApp/error}",
+			"Title": "Error al Eliminar",
+			"OKCaption": "Ok"
+		}
+	},
+	"OnSuccess": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"OnSuccess": "/appconsumos_mb/Actions/CloseModalPage_Complete.action",
+			"Message": "Eliminación Exitosa",
+			"Title": "Almacén eliminado exitosamente",
+			"OKCaption": "Ok"
+		}
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "AlmacenesApp",
+		"ReadLink": "{@odata.readLink}"
+	}
+}

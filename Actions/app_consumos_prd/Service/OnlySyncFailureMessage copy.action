@@ -1,0 +1,7 @@
+{
+	"_Type": "Action.Type.BannerMessage",
+	"OnSuccess": "/appconsumos_mb/Rules/get_Info_Usuario.js",
+	"Message": "La sincronización de los datos falló - {#ActionResults:onlysync/error}",
+	"Duration": 7,
+	"Animated": true
+}

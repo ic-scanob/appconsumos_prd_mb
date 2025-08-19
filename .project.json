@@ -1,0 +1,29 @@
+{
+	"Credential": "cf",
+	"CF": {
+		"Target": "https://api.cf.us10-001.hana.ondemand.com",
+		"Organization": "727b9559-b976-4cc8-b1cd-a9b1e9e24745",
+		"Space": "f6cc8297-96c0-4f03-8641-ae1075ebe118"
+	},
+	"MobileService": {
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/727b9559-b976-4cc8-b1cd-a9b1e9e24745/space/f6cc8297-96c0-4f03-8641-ae1075ebe118",
+		"AppId": "app.consumos.prd",
+		"Destination": [
+			"app.consumos.prd",
+			"ZBODEGA_AGO_SRV",
+			"ZAMANAGE_LOGISTIC"
+		],
+		"Type": "standard"
+	},
+	"Build": {
+		"SourceMap": true,
+		"TSTarget": "es6",
+		"WMF": true,
+		"Platform": "iOS & Android"
+	},
+	"Onboarding": {
+		"Schema": "sapmobilesvcs",
+		"TimeZone": "UTC",
+		"URL": "sapmobilesvcs://?AppId=app.consumos.prd&ClientId=e13dd951-1def-4ad7-93a0-398a69da9537&ServerUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com&SapCloudPlatformEndpoint=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com&TokenUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+	}
+}

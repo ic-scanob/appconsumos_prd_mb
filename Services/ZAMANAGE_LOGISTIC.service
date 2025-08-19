@@ -1,0 +1,13 @@
+{
+	"DestinationName": "ZAMANAGE_LOGISTIC",
+	"OfflineEnabled": true,
+	"LanguageURLParam": "",
+	"OnlineOptions": {},
+	"OfflineOptions": {
+		"StoreParameters": {}
+	},
+	"PathSuffix": "",
+	"SourceType": "Mobile",
+	"ServiceUrl": "",
+	"RestService": true
+}

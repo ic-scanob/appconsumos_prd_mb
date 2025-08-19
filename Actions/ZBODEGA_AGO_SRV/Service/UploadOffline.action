@@ -1,0 +1,9 @@
+{
+	"_Type": "Action.Type.OfflineOData.Upload",
+	"ActionResult": {
+		"_Name": "sync"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action",
+	"OnSuccess": "/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadStartedMessage.action",
+	"Service": "/appconsumos_mb/Services/ZBODEGA_AGO_SRV.service"
+}

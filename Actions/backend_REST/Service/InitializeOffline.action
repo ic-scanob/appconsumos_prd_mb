@@ -1,0 +1,64 @@
+{
+	"_Type": "Action.Type.ODataService.Initialize",
+	"ActionResult": {
+		"_Name": "init"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/backend_REST/Service/InitializeOfflineFailureMessage.action",
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Downloading...",
+	"Service": "/appconsumos_mb/Services/backend_REST.service",
+	"DefiningRequests": [
+		{
+			"Name": "Almacenes",
+			"Query": "Almacenes"
+		},
+		{
+			"Name": "AlmacenesApp",
+			"Query": "AlmacenesApp"
+		},
+		{
+			"Name": "Empleados",
+			"Query": "Empleados"
+		},
+		{
+			"Name": "EmpleadosApp",
+			"Query": "EmpleadosApp"
+		},
+		{
+			"Name": "Equipos",
+			"Query": "Equipos"
+		},
+		{
+			"Name": "Inventario",
+			"Query": "Inventario"
+		},
+		{
+			"Name": "MaterialesAlmacen",
+			"Query": "MaterialesAlmacen"
+		},
+		{
+			"Name": "Ordenes",
+			"Query": "Ordenes"
+		},
+		{
+			"Name": "Solicitudes",
+			"Query": "Solicitudes",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "DetalleReserva",
+			"Query": "DetalleReserva",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "ComponentesSolicitud",
+			"Query": "ComponentesSolicitud",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "VerSolicitudesAbiertas",
+			"Query": "VerSolicitudesAbiertas",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}

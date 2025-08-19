@@ -1,0 +1,25 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_SolicitudesApp_Autorizar_Abast"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error al autorizar la solicitud de abastecimiento - {#ActionResults:Update_SolicitudesApp_Autorizar_Abast/error}",
+			"Title": "Error",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Inventario/FirmarSolicitud_Abast.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"autorizador_ficha": "#Page:Main/#ClientData/info_user/ficha",
+		"estado": "Autorizado",
+		"fecha_autorizado": "/appconsumos_mb/Rules/get_Now_Datetime.js"
+	}
+}

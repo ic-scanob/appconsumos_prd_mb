@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_AlmacenesApp"
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "AlmacenesApp"
+	},
+	"Properties": {
+		"sociedad": "",
+		"almacen": "",
+		"centro": "",
+		"almacen_desc": "",
+		"tipo": ""
+	}
+}

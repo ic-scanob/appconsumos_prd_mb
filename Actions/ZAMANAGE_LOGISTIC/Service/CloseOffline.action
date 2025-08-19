@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.OfflineOData.Close",
+	"ActionResult": {
+		"_Name": "close"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/ZAMANAGE_LOGISTIC/Service/CloseOfflineFailureMessage.action",
+	"OnSuccess": "/appconsumos_mb/Actions/ZAMANAGE_LOGISTIC/Service/CloseOfflineSuccessMessage.action",
+	"Service": "/appconsumos_mb/Services/ZAMANAGE_LOGISTIC.service",
+	"Force": true
+}

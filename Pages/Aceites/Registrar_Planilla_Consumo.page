@@ -1,0 +1,71 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"ObjectHeader": {
+						"Subhead": "Ficha: {#Page:Filtro_Aceites/#ClientData/data_planilla_motor/operario_ficha} ",
+						"StatusText": "No. Planilla: {#Page:Filtro_Aceites/#ClientData/data_planilla_motor/numero}",
+						"SubstatusText": "{#Page:Filtro_Aceites/#ClientData/data_planilla_motor/almacen_almacen} - {#Page:Filtro_Aceites/#ClientData/data_planilla_motor/almacen/almacen_desc}",
+						"DetailImageIsCircular": false,
+						"BodyText": "{#Page:Filtro_Aceites/#ClientData/data_planilla_motor/operario/nombre}",
+						"HeadlineText": "Fecha: {#Page:Filtro_Aceites/#ClientData/data_planilla_motor/fecha}",
+						"StatusPosition": "Stacked",
+						"StatusImagePosition": "Leading",
+						"SubstatusImagePosition": "Leading"
+					},
+					"_Type": "Section.Type.ObjectHeader",
+					"_Name": "SectionObjectHeader0",
+					"Visible": true
+				}
+			]
+		},
+		{
+			"_Type": "Control.Type.Tabs",
+			"_Name": "Tabs0",
+			"Items": [
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Motor",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Registrar_Aceite_Motor.page",
+					"_Name": "Motor_Page"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Hidráulico",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Registrar_Aceite_Hidraulico.page",
+					"_Name": "Hidra_Page"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Diferencial",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Registrar_Aceite_Diferencial.page",
+					"_Name": "Diferencial_Page"
+				},
+				{
+					"_Type": "Control.Type.TabItem",
+					"Caption": "Reductores",
+					"PageToOpen": "/appconsumos_mb/Pages/Aceites/Registrar_Aceite_Reductores.page",
+					"_Name": "Reductores_Page"
+				}
+			],
+			"Position": "Top",
+			"TabStripType": "Normal",
+			"SwipeEnabled": true
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Registrar_Planilla_Consumo",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar4",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Planilla Consumos de Aceite"
+	}
+}

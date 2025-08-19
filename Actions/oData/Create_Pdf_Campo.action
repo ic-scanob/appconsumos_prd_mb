@@ -1,0 +1,28 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_Pdf_Campo"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error guardando el PDF en la bd - {#ActionResults:Create_Pdf_Campo/error}",
+			"Title": "Error",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": "$(PLT,'/appconsumos_mb/Rules/Rule_openDocumentoIOS.js','/appconsumos_mb/Rules/Rule_openDocumentoAnd.js',)",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Pdf"
+	},
+	"Properties": {
+		"id": "/appconsumos_mb/Rules/guid.js",
+		"tipo": "Campo",
+		"orden": "{orden}",
+		"solicitud_id": "{id}",
+		"fecha": "/appconsumos_mb/Rules/get_Now_Datetime.js",
+		"PDFData": "#Page:Detalle_Solicitudes_Campo/#ClientData/b64Data",
+		"FileName": "orden_campo.pdf"
+	}
+}

@@ -1,0 +1,10 @@
+{
+	"_Type": "Action.Type.Message",
+	"ActionResult": {
+		"_Name": "OnWillUpdate"
+	},
+	"Message": "Ya está disponible una nueva versión de la aplicación. ¿Quieres actualizarla?",
+	"Title": "¡Nueva versión disponible!",
+	"OKCaption": "Actualizar",
+	"CancelCaption": "Cancelar"
+}

@@ -1,0 +1,300 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "observaciones_abast",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Observaciones *",
+							"PlaceHolder": "Ingresa observaciones de la revisión",
+							"MinNumberOfLines": 3,
+							"Enabled": true,
+							"IsEditable": true
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell1"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.Label",
+							"_Name": "FormCellLabel0",
+							"IsVisible": true,
+							"Separator": true,
+							"Text": "Revisión de Materiales",
+							"TextWrap": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "materiales_revision_abast",
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Materiales Solicitud *",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un material",
+							"HelperText": "Selecciona un material de la solicitud",
+							"OnValueChange": "/appconsumos_mb/Rules/Inventario/Select_Material_Revisar_Abast.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Mode": "Expandable",
+								"Enabled": true
+							},
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "ComponentesSolicitud",
+									"QueryOptions": "/appconsumos_mb/Rules/Inventario/Query_Revisar_Abast.js",
+									"ReadLink": "{@odata.readLink}"
+								},
+								"ObjectCell": {
+									"Description": "/appconsumos_mb/Rules/Inventario/get_desc_Material_Revisar.js",
+									"PreserveIconStackSpacing": false,
+									"Subhead": "/appconsumos_mb/Rules/Inventario/get_unidad_Revisar.js",
+									"Tags": [
+										{
+											"Color": "/appconsumos_mb/Rules/Inventario/Color_Tipo_Material_Revisar.js",
+											"Text": "/appconsumos_mb/Rules/Campo/get_tag_Material_Revisar.js"
+										}
+									],
+									"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+									"Visible": true
+								},
+								"ReturnValue": "/appconsumos_mb/Rules/formatMaterialId.js"
+							}
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "btn_almacenes",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Ir a almacenes",
+							"Alignment": "Right",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://inventory",
+							"ImagePosition": "Leading",
+							"Enabled": false,
+							"OnPress": "/appconsumos_mb/Rules/Inventario/NavTo_RevisionAlmacenes.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Materiales de la Revisión"
+					},
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": "/appconsumos_mb/Rules/Inventario/Target_Materiales_Revision_Abast.js",
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay elementos para mostrar",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
+						"Subhead": "Tomado de: {almacen}",
+						"Description": "{material_desc}",
+						"DisplayDescriptionInMobile": true,
+						"SubstatusText": "Cant apro: {cant_apro} de {cant_sol} {und}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"AccessoryButtonIcon": "sap-icon://delete",
+						"AccessoryButtonText": "Borrar",
+						"Tags": [
+							{
+								"Color": "/appconsumos_mb/Rules/Color_Aprobado_Solicitud.js",
+								"Text": "{aprobado}"
+							},
+							{
+								"Color": "/appconsumos_mb/Rules/Inventario/Color_Tipo_ListaMaterial.js",
+								"Text": "Material {tipo}"
+							}
+						],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://product"
+								}
+							],
+							"ImageIsCircular": true,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": true
+						},
+						"OnAccessoryButtonPress": "/appconsumos_mb/Rules/Inventario/Borrar_Materiales_Revision_Abast.js",
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Revision_Solicitud_Reabastecimiento",
+	"OnReturning": "/appconsumos_mb/Rules/Inventario/Redraw_List_Revisar.js",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"Icon": "sap-icon://decline",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+					"Properties": {
+						"Message": "¿Estás seguro que quieres salir?",
+						"Title": "Confirmación",
+						"OKCaption": "Aceptar",
+						"OnOK": {
+							"Name": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action",
+							"Properties": {
+								"NavigateBackToPage": "Detalle_Solicitud_Reabastecimieto"
+							}
+						},
+						"CancelCaption": "Cancelar"
+					}
+				}
+			}
+		],
+		"_Name": "ActionBar0",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Revisión Solicitud Abastecimiento"
+	},
+	"FioriToolbar": {
+		"_Type": "Control.Type.FioriToolbar",
+		"_Name": "FioriToolbar0",
+		"Items": [
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem1",
+				"Visible": true,
+				"Title": "Confirmar",
+				"Styles": {
+					"Image": "Button2",
+					"Button": "Button2"
+				},
+				"OnPress": "/appconsumos_mb/Rules/Inventario/Confirmar_Revision_Abast.js",
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			},
+			{
+				"_Type": "FioriToolbarItem.Type.Button",
+				"_Name": "ToolbarItem0",
+				"Visible": true,
+				"Title": "Rechazar",
+				"Styles": {
+					"Image": "Button_Eliminar",
+					"Button": "Button_Eliminar"
+				},
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+					"Properties": {
+						"Message": "¿Estas seguro que deseas rechazar la solicitud?",
+						"Title": "Confirmación",
+						"OKCaption": "Aceptar",
+						"OnOK": "/appconsumos_mb/Actions/oData/Update_SolicitudesApp_Rechazar_Abast.action",
+						"CancelCaption": "Cancelar"
+					}
+				},
+				"Enabled": true,
+				"ButtonType": "Primary",
+				"Semantic": "Tint",
+				"ImagePosition": "Leading"
+			}
+		]
+	}
+}

@@ -1,0 +1,112 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"_Type": "Section.Type.ProfileHeader",
+					"_Name": "SectionProfileHeader0",
+					"Visible": true,
+					"ProfileHeader": {
+						"DetailImage": "sap-icon://my-view",
+						"DetailImageIsCircular": false,
+						"Headline": "Usuario SAP :",
+						"Subheadline": "{#Page:Main/#ClientData/info_user/sapUsr}",
+						"Description": ""
+					}
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.SimpleProperty",
+							"_Name": "pass",
+							"IsVisible": true,
+							"Separator": true,
+							"Caption": "Contraseña SAP *",
+							"PlaceHolder": "Ingrese sus credenciales SAP",
+							"KeyboardType": "Password",
+							"AlternateInput": "None",
+							"HelperText": "*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Autorizar",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://validate",
+							"ImagePosition": "Leading",
+							"Enabled": "/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js",
+							"OnPress": "/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Aprobar_Aceite_Motor",
+	"ActionBar": {
+		"Items": [
+			{
+				"_Type": "Control.Type.ActionBarItem",
+				"_Name": "ActionBarItem0",
+				"Caption": "Item",
+				"Icon": "sap-icon://decline",
+				"Position": "Right",
+				"IsIconCircular": false,
+				"Visible": true,
+				"OnPress": {
+					"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+					"Properties": {
+						"Message": "¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados",
+						"Title": "Confirmación",
+						"OKCaption": "Aceptar",
+						"OnOK": "/appconsumos_mb/Actions/CloseModalPage_Cancel.action",
+						"CancelCaption": "Cancelar"
+					}
+				}
+			}
+		],
+		"_Name": "ActionBar4",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Aprobar Planilla Motor"
+	}
+}

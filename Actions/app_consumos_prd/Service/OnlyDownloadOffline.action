@@ -1,0 +1,63 @@
+{
+	"_Type": "Action.Type.OfflineOData.Download",
+	"ActionResult": {
+		"_Name": "onlysync"
+	},
+	"OnFailure": "/appconsumos_mb/Actions/app_consumos_prd/Service/OnlySyncFailureMessage.action",
+	"OnSuccess": "/appconsumos_mb/Rules/app_consumos_prd/OnlyErrorArchive_CheckForSyncError.js",
+	"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+	"DefiningRequests": [
+		{
+			"Name": "Almacenes",
+			"Query": "Almacenes"
+		},
+		{
+			"Name": "AlmacenesApp",
+			"Query": "AlmacenesApp"
+		},
+		{
+			"Name": "Empleados",
+			"Query": "Empleados"
+		},
+		{
+			"Name": "EmpleadosApp",
+			"Query": "EmpleadosApp"
+		},
+		{
+			"Name": "Equipos",
+			"Query": "Equipos"
+		},
+		{
+			"Name": "Inventario",
+			"Query": "Inventario"
+		},
+		{
+			"Name": "MaterialesAlmacen",
+			"Query": "MaterialesAlmacen"
+		},
+		{
+			"Name": "Ordenes",
+			"Query": "Ordenes"
+		},
+		{
+			"Name": "Solicitudes",
+			"Query": "Solicitudes",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "ComponentesSolicitud",
+			"Query": "ComponentesSolicitud",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "DetalleReserva",
+			"Query": "DetalleReserva",
+			"AutomaticallyRetrievesStreams": false
+		},
+		{
+			"Name": "VerSolicitudesAbiertas",
+			"Query": "VerSolicitudesAbiertas",
+			"AutomaticallyRetrievesStreams": false
+		}
+	]
+}

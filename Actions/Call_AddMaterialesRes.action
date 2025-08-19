@@ -1,0 +1,16 @@
+{
+	"_Type": "Action.Type.RestService.SendRequest",
+	"ActionResult": {
+		"_Name": "Call_AddMaterialesRes"
+	},
+	"ShowActivityIndicator": true,
+	"ActivityIndicatorText": "Cargando datos ...",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/backend_REST.service",
+		"Path": "/AddMaterialRes",
+		"RequestProperties": {
+			"Method": "GET",
+			"FetchCSRF": true
+		}
+	}
+}

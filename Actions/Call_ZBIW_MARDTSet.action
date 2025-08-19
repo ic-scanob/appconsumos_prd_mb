@@ -1,0 +1,14 @@
+{
+	"_Type": "Action.Type.RestService.SendRequest",
+	"ActionResult": {
+		"_Name": "Call_ZBIW_MARDTSet"
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/ZBODEGA_AGO_SRV.service",
+		"Path": "/ZBIW_MARDTSet",
+		"RequestProperties": {
+			"Method": "GET",
+			"FetchCSRF": true
+		}
+	}
+}

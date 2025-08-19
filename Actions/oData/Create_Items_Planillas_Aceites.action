@@ -1,0 +1,13 @@
+{
+	"_Type": "Action.Type.ODataService.CreateEntity",
+	"ActionResult": {
+		"_Name": "Create_Items_Planillas_Aceites"
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "ItemPlanillasAceites"
+	},
+	"Properties": {
+		"id": ""
+	}
+}

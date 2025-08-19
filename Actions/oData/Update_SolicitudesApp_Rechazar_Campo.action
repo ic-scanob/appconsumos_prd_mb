@@ -1,0 +1,26 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_SolicitudesApp_Rechazar_Campo"
+	},
+	"OnFailure": {
+		"Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
+		"Properties": {
+			"Message": "Error actualizando la solicitud - {#ActionResults:Update_SolicitudesApp_Rechazar_Campo/error}",
+			"Title": "Error",
+			"OKCaption": "Aceptar"
+		}
+	},
+	"OnSuccess": "/appconsumos_mb/Rules/Campo/Rechazar_Solicitud_Revision_Componentes_Campo.js",
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "Solicitudes",
+		"QueryOptions": "$filter=id eq {{#Page:Detalle_Solicitudes_Campo/#ClientData/id_de_solicitud}}"
+	},
+	"Properties": {
+		"aprobador_ficha": "#Page:Main/#ClientData/info_user/ficha",
+		"estado": "Rechazado",
+		"fecha_revision": "/appconsumos_mb/Rules/get_Now_Datetime.js",
+		"comentarios_aux": "#Page:Revision_Solicitud_Campo/#Control:comentarios_aux/#Value"
+	}
+}

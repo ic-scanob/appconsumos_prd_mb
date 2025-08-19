@@ -1,0 +1,17 @@
+{
+	"_Type": "Action.Type.ODataService.UpdateEntity",
+	"ActionResult": {
+		"_Name": "Update_ComponentesSolicitudApp"
+	},
+	"Target": {
+		"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+		"EntitySet": "ComponentesSolicitud",
+		"ReadLink": "{@odata.readLink}"
+	},
+	"Properties": {
+		"id": "",
+		"cantidad_aprobada": 0,
+		"aprobado": false,
+		"confirmacion_tec": false
+	}
+}
