@@ -46,8 +46,8 @@
 							"_Name": "FormCellSimpleProperty_ficha",
 							"IsVisible": true,
 							"Separator": false,
-							"Caption": "Ficha Operario",
-							"PlaceHolder": "Ingrese Ficha Operario",
+							"Caption": "Ficha Técnico",
+							"PlaceHolder": "Ingrese Ficha Técnico",
 							"KeyboardType": "Number",
 							"AlternateInput": "Barcode",
 							"Enabled": true,
@@ -207,6 +207,7 @@
 						"UseTopPadding": true,
 						"Caption": "Aceite Diferencial 85W-140 - 1139592"
 					},
+					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
@@ -256,6 +257,7 @@
 						"UseTopPadding": true,
 						"Caption": "Aceites Diferenciales y Reductores 80W-90 - 1139593"
 					},
+					"Visible": true,
 					"EmptySection": {
 						"FooterVisible": false
 					},
@@ -269,7 +271,7 @@
 	"_Name": "Crear_Planilla_Consumo",
 	"ActionBar": {
 		"Items": [],
-		"_Name": "ActionBar10",
+		"_Name": "ActionBar11",
 		"_Type": "Control.Type.ActionBar",
 		"Caption": "Planilla Control de Consumo"
 	},

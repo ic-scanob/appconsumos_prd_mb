@@ -46,8 +46,8 @@
 							"_Name": "FormCellSimpleProperty_ficha",
 							"IsVisible": true,
 							"Separator": false,
-							"Caption": "Ficha Operario",
-							"PlaceHolder": "Ingrese Ficha Operario",
+							"Caption": "Ficha Técnico",
+							"PlaceHolder": "Ingrese Ficha Técnico",
 							"KeyboardType": "Number",
 							"AlternateInput": "Barcode",
 							"Enabled": true,
@@ -321,7 +321,7 @@
 	"_Name": "Crear_Planilla_Consumo_Incauca",
 	"ActionBar": {
 		"Items": [],
-		"_Name": "ActionBar11",
+		"_Name": "ActionBar12",
 		"_Type": "Control.Type.ActionBar",
 		"Caption": "Planilla Control de Consumo"
 	},
