@@ -21,7 +21,7 @@ export default function Agregar_Materiales_Solicitud(context) {
     }
     
     let data = material[0].BindingObject
-    let stock = data.stock_disponible
+    let stock = data.stock_disponible + data.stock_reservado
 
     //TODO DESCOMENTAR CUANDO HAYA INVENTARIO
     if(stock == 0){

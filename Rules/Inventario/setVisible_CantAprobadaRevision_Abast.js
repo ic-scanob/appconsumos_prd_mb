@@ -25,9 +25,10 @@ export default function setVisible_CantAprobadaRevision_Abast(context) {
     //alert(JSON.stringify(almacen[0]))
     var index = almacen[0].SelectedIndex
     var data = clientData.listaInventario[index].BindingObject
+    var total = parseFloat(data.Labst) + parseFloat(data.Klabs)
     //alert(JSON.stringify(data))
 
-    if (data.Labst < 1) {
+    if (total < 1) {
         return context.executeAction({
             "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
             "Properties": {

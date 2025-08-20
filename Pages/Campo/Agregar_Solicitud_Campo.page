@@ -149,7 +149,7 @@
 								"ObjectCell": {
 									"Description": "{material_desc}",
 									"DisplayDescriptionInMobile": true,
-									"Footnote": "Disponible: {stock_disponible} {und/und_vz} / Reservado: {stock_disponible} {und/und_vz}",
+									"Footnote": "Disponible: {stock_disponible} {und/und_vz} / Reservado: {stock_reservado} {und/und_vz}",
 									"PreserveIconStackSpacing": false,
 									"Subhead": "{almacen/almacen} - {almacen/almacen_desc}",
 									"Title": "/appconsumos_mb/Rules/formatMaterialId.js",
@@ -241,7 +241,7 @@
 						"Subhead": "Tomado de: {almacen/almacen_desc} ({almacen/almacen})",
 						"Description": "{material_desc}",
 						"DisplayDescriptionInMobile": true,
-						"StatusText": "Cant: {cant} de {stock_disponible} {und/und_vz}",
+						"StatusText": "Cant: {cant} {und/und_vz}",
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "DetailButton",
 						"AccessoryButtonIcon": "sap-icon://delete",

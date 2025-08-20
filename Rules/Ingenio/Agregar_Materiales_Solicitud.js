@@ -22,7 +22,7 @@ export default function Agregar_Materiales_Solicitud(context) {
 
     var index = material[0].SelectedIndex
     let data = clientData.lista_inventario[index].BindingObject
-    let stock = data.Labst
+    let stock = parseFloat(data.Labst) + parseFloat(data.Klabs)
 
     
     if(stock == 0){

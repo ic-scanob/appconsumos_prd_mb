@@ -16,6 +16,7 @@ export default function ProcesarSolicitud_Campo_SAP(context) {
     let reserva = info_solicitud.reserva;
     let centro = info_solicitud.alm_centro;
     let alm_desc = info_solicitud.alm_desc;
+    let op_ficha = info_solicitud.op_ficha;
     let pass = context.evaluateTargetPath("#Page:Autorizar_Solicitud_Campo/#Control:pass/#Value");
     const pageProxy = context.getPageProxy();
     var btn_autorizar = pageProxy.getControl("SectionedTable0").getSection("SectionFormCell0").getControl("FormCellButton0")
@@ -51,7 +52,7 @@ export default function ProcesarSolicitud_Campo_SAP(context) {
                 Material: e.material_material.replace(/^0+/, ''),
                 Plant: centro,
                 Activity: e.op_number,
-                GrRcpt: alm_desc,
+                GrRcpt: op_ficha,
                 RequirementQuantity: `${e.cantidad_aprobada}`,
                 RequirementQuantityUnit: e.material.und.und_vz,
             };

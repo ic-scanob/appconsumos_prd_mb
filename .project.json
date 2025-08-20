@@ -3,13 +3,13 @@
 	"CF": {
 		"Target": "https://api.cf.us10-001.hana.ondemand.com",
 		"Organization": "727b9559-b976-4cc8-b1cd-a9b1e9e24745",
-		"Space": "f6cc8297-96c0-4f03-8641-ae1075ebe118"
+		"Space": "ed6aae4a-0532-4da6-80d5-644d2bb4cfb9"
 	},
 	"MobileService": {
-		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/727b9559-b976-4cc8-b1cd-a9b1e9e24745/space/f6cc8297-96c0-4f03-8641-ae1075ebe118",
-		"AppId": "app.consumos.prd",
+		"AdminAPI": "https://mobile-service-cockpit-api.cfapps.us10.hana.ondemand.com/cockpit/v1/org/727b9559-b976-4cc8-b1cd-a9b1e9e24745/space/ed6aae4a-0532-4da6-80d5-644d2bb4cfb9",
+		"AppId": "app.consumos.qa",
 		"Destination": [
-			"app.consumos.prd",
+			"app.consumos.qa",
 			"ZBODEGA_AGO_SRV",
 			"ZAMANAGE_LOGISTIC"
 		],
@@ -24,6 +24,6 @@
 	"Onboarding": {
 		"Schema": "sapmobilesvcs",
 		"TimeZone": "UTC",
-		"URL": "sapmobilesvcs://?AppId=app.consumos.prd&ClientId=e13dd951-1def-4ad7-93a0-398a69da9537&ServerUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com&SapCloudPlatformEndpoint=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com&TokenUrl=https://providencia-cf-fst5boqw-prd-app-consumos-prd.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
+		"URL": "sapmobilesvcs://?AppId=app.consumos.qa&ClientId=43ad8d37-a4f0-41c9-a0fe-71bc69f1d2a8&ServerUrl=https://providencia-cf-fst5boqw-dev-app-consumos-qa.cfapps.us10-001.hana.ondemand.com&SapCloudPlatformEndpoint=https://providencia-cf-fst5boqw-dev-app-consumos-qa.cfapps.us10-001.hana.ondemand.com&AuthorizationEndpointUrl=https://providencia-cf-fst5boqw-dev-app-consumos-qa.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/authorize&RedirectUrl=https://providencia-cf-fst5boqw-dev-app-consumos-qa.cfapps.us10-001.hana.ondemand.com&TokenUrl=https://providencia-cf-fst5boqw-dev-app-consumos-qa.cfapps.us10-001.hana.ondemand.com/oauth2/api/v1/token&multiUser=false"
 	}
 }

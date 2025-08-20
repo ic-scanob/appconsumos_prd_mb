@@ -9,7 +9,7 @@ export default function NavTo_RevisionAlmacenes(context) {
     clientData.infoMaterial = materialLP[0].BindingObject
     let clientDataAlm = context.evaluateTargetPathForAPI('#Page:Filtro_Almacen_Solicitud_Abast').getClientData();
     //var inventario_form = pageProxy.getControl("SectionedTable0").getSection("SectionFormCell0")
-
+    let clientDataMain = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
     let mat_nuevo = clientData.infoMaterial.mat_nuevo
     let material = clientData.infoMaterial.material_material
     let value = ''
@@ -24,7 +24,7 @@ export default function NavTo_RevisionAlmacenes(context) {
 
     //let clientDataFiltro = context.evaluateTargetPathForAPI('#Page:Filtro_Ingenio').getClientData();
 
-    return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO'`).then(async (results) => {
+    return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO' and sociedad eq '${clientDataMain.info_user.sociedad}'`).then(async (results) => {
 
         if (results && results.length > 0) {
             let filtro = `$filter=Matnr eq '${value}' and Werks eq '${clientDataAlm.almacen_abast.centro}' and Spras eq 'ES' and not substringof('BORRADO', Txtmd) and not substringof('BORRAR', Txtmd) and not substringof('BORRAD_', Txtmd) and (`

@@ -25,7 +25,7 @@ export default function Aprobar_Material_Revision_Abast(context) {
     var index = almacen[0].SelectedIndex
     //var data = clientData.listaInventario[index].BindingObject
     let dataAlm = clientDataMaterial.listaInventario[index].BindingObject
-    let stock = parseFloat(dataAlm.Labst)
+    let stock = parseFloat(dataAlm.Labst) + parseFloat(dataAlm.Klabs)
     cant = parseFloat(cant)
     
 

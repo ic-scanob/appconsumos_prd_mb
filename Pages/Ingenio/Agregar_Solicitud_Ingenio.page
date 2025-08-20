@@ -198,7 +198,7 @@
 						"Subhead": "Tomado de: {Lgort}",
 						"Description": "{Txtmd}",
 						"DisplayDescriptionInMobile": true,
-						"StatusText": "Cant: {cant} de {Labst} {Meins}",
+						"StatusText": "Cant: {cant} {Meins}",
 						"PreserveIconStackSpacing": false,
 						"AccessoryType": "DetailButton",
 						"AccessoryButtonIcon": "sap-icon://delete",

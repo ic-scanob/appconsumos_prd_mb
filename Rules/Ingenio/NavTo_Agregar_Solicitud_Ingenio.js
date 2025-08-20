@@ -4,6 +4,7 @@
  */
 export default function NavTo_Agregar_Solicitud_Ingenio(context) {
     let clientData = context.evaluateTargetPathForAPI('#Page:Detalle_Orden_Ingenio').getClientData();
+    let clientDataMain = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
     clientData.lista_materiales = []
     clientData.lista_inventario = []
     clientData.context_binding = context.binding
@@ -11,7 +12,7 @@ export default function NavTo_Agregar_Solicitud_Ingenio(context) {
     let clientDataFiltro = context.evaluateTargetPathForAPI('#Page:Filtro_Ingenio').getClientData();
     //alert(JSON.stringify(context.binding))
 
-    return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO'`).then(async (results) => {
+    return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO' and  sociedad eq '${clientDataMain.info_user.sociedad}'`).then(async (results) => {
 
         if (results && results.length > 0) {
             let filtro = `$filter=Werks eq '${clientDataFiltro.centro_ingenio}' and Spras eq 'ES' and not substringof('BORRADO', Txtmd) and not substringof('BORRAR', Txtmd) and not substringof('BORRAD_', Txtmd) and (`

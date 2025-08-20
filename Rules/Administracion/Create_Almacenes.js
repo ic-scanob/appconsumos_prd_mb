@@ -35,7 +35,7 @@ export default function Create_Almacenes(context) {
     let promises = lista_almacenes.map((almacen, i) => {
         let nuevo_almacen = almacen.BindingObject;
 
-        return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=almacen eq '${nuevo_almacen.almacen}'`)
+        return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=almacen eq '${nuevo_almacen.almacen}' and centro eq '${nuevo_almacen.centro}' and sociedad eq '${nuevo_almacen.sociedad}'`)
             .then(result => {
                 if (result.length === 0) {
                     return context.executeAction({

@@ -14,6 +14,7 @@ export default function ProcesarSolicitud_Ingenio_SAP(context) {
     let reserva = info_solicitud.reserva;
     let centro = info_solicitud.alm_centro;
     let alm_desc = info_solicitud.alm_desc;
+    let op_ficha = info_solicitud.op_ficha;
     let pass = context.evaluateTargetPath("#Page:Autorizar_Solicitud_Ingenio/#Control:pass/#Value");
     const pageProxy = context.getPageProxy();
     let clientData = context.evaluateTargetPathForAPI('#Page:Autorizar_Solicitud_Ingenio').getClientData();
@@ -50,7 +51,7 @@ export default function ProcesarSolicitud_Ingenio_SAP(context) {
                 Material: e.mat_nuevo.replace(/^0+/, ''),
                 Plant: centro,
                 Activity: e.op_number,
-                GrRcpt: info_solicitud.alm_almacen,
+                GrRcpt: op_ficha,
                 RequirementQuantity: `${e.cantidad_aprobada}`,
                 RequirementQuantityUnit: e.mat_nuevo_und,
             };
