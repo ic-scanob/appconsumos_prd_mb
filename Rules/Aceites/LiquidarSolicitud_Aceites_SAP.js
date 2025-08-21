@@ -7,6 +7,7 @@ export default function LiquidarSolicitud_Aceites_SAP(context) {
     //falta validar que el campo de contraseña si este diligenciado
     let clientData_user = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
     let clientData = context.evaluateTargetPathForAPI('#Page:Filtro_Aceites').getClientData();
+    let pass = ""
 
     let page = context.getPageProxy();
     let titulo = page.getName();
@@ -16,22 +17,27 @@ export default function LiquidarSolicitud_Aceites_SAP(context) {
     if (titulo == "Aprobar_Aceite_Motor" ){
         info_solicitud = clientData.data_planilla_motor;
         pagina_Detalle = "Detalle_Aceite_Motor"
+        pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Motor/#Control:pass/#Value");
     }
     if (titulo == "Aprobar_Aceite_Diferencial" ){
         info_solicitud = clientData.data_planilla_diferencial;
         pagina_Detalle = "Detalle_Aceite_Diferencial"
+        pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Diferencial/#Control:pass/#Value");
     }
     if (titulo == "Aprobar_Aceite_Hidraulico" ){
         info_solicitud = clientData.data_planilla_hidraulico;
         pagina_Detalle = "Detalle_Aceite_Hidraulico"
+        pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Hidraulico/#Control:pass/#Value");
     }
     if (titulo == "Aprobar_Aceite_Reductor" ){
         info_solicitud = clientData.data_planilla_reductor;
         pagina_Detalle = "Detalle_Aceite_Reductor"
+        pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Reductor/#Control:pass/#Value");
     }
     if (titulo == "Aprobar_Aceite_Servotransmisor" ){
         info_solicitud = clientData.data_planilla_servotrans;
         pagina_Detalle = "Detalle_Aceite_Servotransmisor"
+        pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Servotransmisor/#Control:pass/#Value");
     }
     
     let id_solicitud = info_solicitud.id;
@@ -125,7 +131,7 @@ export default function LiquidarSolicitud_Aceites_SAP(context) {
                                 "Method": "POST",
                                 "Body": {
                                     "username": info_user.sapUsr,
-                                    "password": "Abaper072025",
+                                    "password": pass,
                                     "data": data
                                 }
                             }

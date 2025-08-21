@@ -74,7 +74,7 @@ export default function ProcesarSolicitud_Campo_SAP(context) {
                                 "Method": "POST",
                                 "Body": {
                                     "username": info_user.sapUsr,
-                                    "password": "Abaper072025",
+                                    "password": pass,
                                     "data": data
                                 }
                             }
@@ -187,108 +187,7 @@ export default function ProcesarSolicitud_Campo_SAP(context) {
         alert(`Error general: ${error.message || JSON.stringify(error)}`);
     });
 }
-/*return Promise.allSettled(promesasAddMat).then(() => {
-    let mensaje = "";
 
-    if (errores.length === 0) {
-        btn_liquidar.setEnabled(true)
-        mensaje = 'Solicitud gestionada correctamente. Los materiales fueron añadidos a la reserva.';
-    } else if (exitosos.length === 0) {
-        mensaje = `Solicitud no gestionada. Fallaron todos los materiales:\n\n${errores.join('\n')}`;
-    } else {
-        mensaje = `Solicitud parcialmente gestionada.\n\nErrores:\n${errores.join('\n')}`;
-    }
-
-    alert(JSON.stringify(liquidar))
-    //alert(JSON.stringify(update))
-
-    // Segunda fase: liquidar
-    /*
-    let exitososLiq = [];
-    let erroresLiq = [];
-    const promesasLiquidar = liquidar.map((item) => {
-        alert(JSON.stringify(item))
-        return context.executeAction({
-            "Name": "/appconsumos_mb/Actions/Call_LiquidarMaterialRes.action",
-            "Properties": {
-                "OnFailure": "",
-                "OnSuccess": "",
-                "Target": {
-                    "Service": "/appconsumos_mb/Services/backend_REST.service",
-                    "Path": "/LiquidarMaterialRes",
-                    "RequestProperties": {
-                        "Method": "POST",
-                        "Body": {
-                            "username": info_user.sapUsr,
-                            "password": "Abaper072025",
-                            "data": item
-                        }
-                    }
-                }
-            }
-        }).then((res) => {
-
-            alert(JSON.stringify(res))
-            let resjson = res.data
-            let success = resjson.success
-            let doc_material = resjson.doc_material
-            if (success) {
-                exitososLiq.push(`${item.Material}`);
-                update.forEach(u => {
-                    if (u.posicion === item.RES_ITEM) {
-                        u.doc_material = doc_material;
-                    }
-                });
-            } else {
-                erroresLiq.push(`${item.Material}: ${resjson.message}`);
-            }
-        }).catch((err) => {
-            erroresLiq.push(`Error al liquidar material ${item.Material}: ${err.message || err}`);
-        });
-    });
-
-    return Promise.allSettled(promesasLiquidar).then(() => {
-        let mensajeFinal = '';
-        if (erroresLiq.length > 0) {
-            mensajeFinal = `Liquidación completada con errores:\n${erroresLiq.join('\n')}`;
-        } else {
-            mensajeFinal = 'Todos los materiales fueron liquidados correctamente en SAP.';
-        }
-
-        alert(JSON.stringify(update))
-        return context.executeAction({
-            "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-            "Properties": {
-                "Title": "Resultado de la operación",
-                "Message": mensaje
-            }
-        }).then(() => {
-            return context.executeAction({
-                "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-                "Properties": {
-
-                    "Title": "Resultado de la liquidación",
-                    "Message": mensajeFinal
-                }
-            }).then(() => {
-
-            });
-        });
-    });
-
-    */
-
-//Falta actualizar el campo de posicion en los componentes en la bd y luego hacer la otra regla para liquidar
-/*return context.executeAction({
-    "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-    "Properties": {
-        "Title": "Resultado de la operación",
-        "Message": mensaje
-    }
-})
-});
-
-*/
 
 
 

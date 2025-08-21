@@ -1,6 +1,0 @@
-{
-	"_Type": "Action.Type.BannerMessage",
-	"Message": "La sincronización de los datos (ERP) falló - {#ActionResults:sync/error}",
-	"Duration": 7,
-	"Animated": true
-}

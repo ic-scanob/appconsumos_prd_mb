@@ -71,7 +71,7 @@ export default function ProcesarSolicitud_Ingenio_SAP(context) {
                                 "Method": "POST",
                                 "Body": {
                                     "username": info_user.sapUsr,
-                                    "password": "Abaper072025",
+                                    "password": pass,
                                     "data": data
                                 }
                             }
