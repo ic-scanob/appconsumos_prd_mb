@@ -72,7 +72,6 @@ let appconsumos_mb_actions_logging_loguploadfailure_action = __webpack_require__
 let appconsumos_mb_actions_logging_loguploadsuccessful_action = __webpack_require__(/*! ./appconsumos_mb/Actions/Logging/LogUploadSuccessful.action */ "./build.definitions/appconsumos_mb/Actions/Logging/LogUploadSuccessful.action")
 let appconsumos_mb_actions_logging_uploadlog_action = __webpack_require__(/*! ./appconsumos_mb/Actions/Logging/UploadLog.action */ "./build.definitions/appconsumos_mb/Actions/Logging/UploadLog.action")
 let appconsumos_mb_actions_logging_uploadlogprogress_action = __webpack_require__(/*! ./appconsumos_mb/Actions/Logging/UploadLogProgress.action */ "./build.definitions/appconsumos_mb/Actions/Logging/UploadLogProgress.action")
-let appconsumos_mb_actions_mensajes_ms_errorcreateempleadoapp_action = __webpack_require__(/*! ./appconsumos_mb/Actions/Mensajes/ms_errorCreateEmpleadoApp.action */ "./build.definitions/appconsumos_mb/Actions/Mensajes/ms_errorCreateEmpleadoApp.action")
 let appconsumos_mb_actions_odata_create_almacenesapp_action = __webpack_require__(/*! ./appconsumos_mb/Actions/oData/Create_AlmacenesApp.action */ "./build.definitions/appconsumos_mb/Actions/oData/Create_AlmacenesApp.action")
 let appconsumos_mb_actions_odata_create_componentessolicitudapp_action = __webpack_require__(/*! ./appconsumos_mb/Actions/oData/Create_ComponentesSolicitudApp.action */ "./build.definitions/appconsumos_mb/Actions/oData/Create_ComponentesSolicitudApp.action")
 let appconsumos_mb_actions_odata_create_empleadosapp_action = __webpack_require__(/*! ./appconsumos_mb/Actions/oData/Create_EmpleadosApp.action */ "./build.definitions/appconsumos_mb/Actions/oData/Create_EmpleadosApp.action")
@@ -124,13 +123,8 @@ let appconsumos_mb_actions_zamanage_logistic_service_initializeofflinefailuremes
 let appconsumos_mb_actions_zbodega_ago_srv_service_closeoffline_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOffline.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOffline.action")
 let appconsumos_mb_actions_zbodega_ago_srv_service_closeofflinefailuremessage_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOfflineFailureMessage.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOfflineFailureMessage.action")
 let appconsumos_mb_actions_zbodega_ago_srv_service_closeofflinesuccessmessage_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOfflineSuccessMessage.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/CloseOfflineSuccessMessage.action")
-let appconsumos_mb_actions_zbodega_ago_srv_service_downloadoffline_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadOffline.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadOffline.action")
-let appconsumos_mb_actions_zbodega_ago_srv_service_downloadstartedmessage_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadStartedMessage.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadStartedMessage.action")
 let appconsumos_mb_actions_zbodega_ago_srv_service_initializeoffline_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/InitializeOffline.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/InitializeOffline.action")
 let appconsumos_mb_actions_zbodega_ago_srv_service_initializeofflinefailuremessage_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/InitializeOfflineFailureMessage.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/InitializeOfflineFailureMessage.action")
-let appconsumos_mb_actions_zbodega_ago_srv_service_syncfailuremessage_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action")
-let appconsumos_mb_actions_zbodega_ago_srv_service_syncstartedmessage_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncStartedMessage.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncStartedMessage.action")
-let appconsumos_mb_actions_zbodega_ago_srv_service_uploadoffline_action = __webpack_require__(/*! ./appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/UploadOffline.action */ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/UploadOffline.action")
 let appconsumos_mb_globals_application_appdefinition_version_global = __webpack_require__(/*! ./appconsumos_mb/Globals/Application/AppDefinition_Version.global */ "./build.definitions/appconsumos_mb/Globals/Application/AppDefinition_Version.global")
 let appconsumos_mb_globals_application_applicationname_global = __webpack_require__(/*! ./appconsumos_mb/Globals/Application/ApplicationName.global */ "./build.definitions/appconsumos_mb/Globals/Application/ApplicationName.global")
 let appconsumos_mb_globals_application_supportemail_global = __webpack_require__(/*! ./appconsumos_mb/Globals/Application/SupportEmail.global */ "./build.definitions/appconsumos_mb/Globals/Application/SupportEmail.global")
@@ -261,7 +255,6 @@ let appconsumos_mb_rules_aceites_getenabledautorizar_aceites_js = __webpack_requ
 let appconsumos_mb_rules_aceites_getorden_revisarplanilla_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Aceites/getOrden_RevisarPlanilla.js */ "./build.definitions/appconsumos_mb/Rules/Aceites/getOrden_RevisarPlanilla.js")
 let appconsumos_mb_rules_aceites_isvisible_btn_validar_registros_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Aceites/isVisible_Btn_Validar_Registros.js */ "./build.definitions/appconsumos_mb/Rules/Aceites/isVisible_Btn_Validar_Registros.js")
 let appconsumos_mb_rules_aceites_liquidarsolicitud_aceites_sap_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Aceites/LiquidarSolicitud_Aceites_SAP.js */ "./build.definitions/appconsumos_mb/Rules/Aceites/LiquidarSolicitud_Aceites_SAP.js")
-let appconsumos_mb_rules_aceites_liquidarsolicitud_motor_sap_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Aceites/LiquidarSolicitud_Motor_SAP.js */ "./build.definitions/appconsumos_mb/Rules/Aceites/LiquidarSolicitud_Motor_SAP.js")
 let appconsumos_mb_rules_aceites_navto_aceites_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Aceites/NavTo_Aceites.js */ "./build.definitions/appconsumos_mb/Rules/Aceites/NavTo_Aceites.js")
 let appconsumos_mb_rules_aceites_navto_crear_planilla_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Aceites/NavTo_Crear_Planilla.js */ "./build.definitions/appconsumos_mb/Rules/Aceites/NavTo_Crear_Planilla.js")
 let appconsumos_mb_rules_aceites_navto_crear_registro_consumo_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Aceites/NavTo_Crear_Registro_Consumo.js */ "./build.definitions/appconsumos_mb/Rules/Aceites/NavTo_Crear_Registro_Consumo.js")
@@ -375,7 +368,6 @@ let appconsumos_mb_rules_campo_color_estado_sol_campo_js = __webpack_require__(/
 let appconsumos_mb_rules_campo_confirmarsolicitudcampo_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Campo/ConfirmarSolicitudCampo.js */ "./build.definitions/appconsumos_mb/Rules/Campo/ConfirmarSolicitudCampo.js")
 let appconsumos_mb_rules_campo_crear_solicitud_reabast_automatica_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Campo/Crear_Solicitud_Reabast_Automatica.js */ "./build.definitions/appconsumos_mb/Rules/Campo/Crear_Solicitud_Reabast_Automatica.js")
 let appconsumos_mb_rules_campo_create_componentes_solicitud_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Campo/Create_Componentes_Solicitud.js */ "./build.definitions/appconsumos_mb/Rules/Campo/Create_Componentes_Solicitud.js")
-let appconsumos_mb_rules_campo_firmarsolicitud_campo_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Campo/FirmarSolicitud_Campo.js */ "./build.definitions/appconsumos_mb/Rules/Campo/FirmarSolicitud_Campo.js")
 let appconsumos_mb_rules_campo_get_date_creacion_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Campo/get_Date_creacion.js */ "./build.definitions/appconsumos_mb/Rules/Campo/get_Date_creacion.js")
 let appconsumos_mb_rules_campo_get_date_ref_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Campo/get_Date_ref.js */ "./build.definitions/appconsumos_mb/Rules/Campo/get_Date_ref.js")
 let appconsumos_mb_rules_campo_get_list_campo_equipo_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Campo/get_List_Campo_Equipo.js */ "./build.definitions/appconsumos_mb/Rules/Campo/get_List_Campo_Equipo.js")
@@ -497,7 +489,6 @@ let appconsumos_mb_rules_inventario_navto_list_abastecimiento_js = __webpack_req
 let appconsumos_mb_rules_inventario_navto_revisionalmacenes_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Inventario/NavTo_RevisionAlmacenes.js */ "./build.definitions/appconsumos_mb/Rules/Inventario/NavTo_RevisionAlmacenes.js")
 let appconsumos_mb_rules_inventario_navto_revisionsolicitudabast_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Inventario/NavTo_RevisionSolicitudAbast.js */ "./build.definitions/appconsumos_mb/Rules/Inventario/NavTo_RevisionSolicitudAbast.js")
 let appconsumos_mb_rules_inventario_onchange_materiales_revision_abast_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Inventario/onChange_Materiales_Revision_Abast.js */ "./build.definitions/appconsumos_mb/Rules/Inventario/onChange_Materiales_Revision_Abast.js")
-let appconsumos_mb_rules_inventario_pdfprueba_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Inventario/PDFPRUEBA.js */ "./build.definitions/appconsumos_mb/Rules/Inventario/PDFPRUEBA.js")
 let appconsumos_mb_rules_inventario_query_confirmar_componentes_abast_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Inventario/Query_Confirmar_Componentes_Abast.js */ "./build.definitions/appconsumos_mb/Rules/Inventario/Query_Confirmar_Componentes_Abast.js")
 let appconsumos_mb_rules_inventario_query_detalle_componentes_abast_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Inventario/Query_Detalle_Componentes_Abast.js */ "./build.definitions/appconsumos_mb/Rules/Inventario/Query_Detalle_Componentes_Abast.js")
 let appconsumos_mb_rules_inventario_query_detalle_componentes_abast_nuevo_js = __webpack_require__(/*! ./appconsumos_mb/Rules/Inventario/Query_Detalle_Componentes_Abast_Nuevo.js */ "./build.definitions/appconsumos_mb/Rules/Inventario/Query_Detalle_Componentes_Abast_Nuevo.js")
@@ -600,7 +591,6 @@ module.exports = {
 	appconsumos_mb_actions_logging_loguploadsuccessful_action : appconsumos_mb_actions_logging_loguploadsuccessful_action,
 	appconsumos_mb_actions_logging_uploadlog_action : appconsumos_mb_actions_logging_uploadlog_action,
 	appconsumos_mb_actions_logging_uploadlogprogress_action : appconsumos_mb_actions_logging_uploadlogprogress_action,
-	appconsumos_mb_actions_mensajes_ms_errorcreateempleadoapp_action : appconsumos_mb_actions_mensajes_ms_errorcreateempleadoapp_action,
 	appconsumos_mb_actions_odata_create_almacenesapp_action : appconsumos_mb_actions_odata_create_almacenesapp_action,
 	appconsumos_mb_actions_odata_create_componentessolicitudapp_action : appconsumos_mb_actions_odata_create_componentessolicitudapp_action,
 	appconsumos_mb_actions_odata_create_empleadosapp_action : appconsumos_mb_actions_odata_create_empleadosapp_action,
@@ -652,13 +642,8 @@ module.exports = {
 	appconsumos_mb_actions_zbodega_ago_srv_service_closeoffline_action : appconsumos_mb_actions_zbodega_ago_srv_service_closeoffline_action,
 	appconsumos_mb_actions_zbodega_ago_srv_service_closeofflinefailuremessage_action : appconsumos_mb_actions_zbodega_ago_srv_service_closeofflinefailuremessage_action,
 	appconsumos_mb_actions_zbodega_ago_srv_service_closeofflinesuccessmessage_action : appconsumos_mb_actions_zbodega_ago_srv_service_closeofflinesuccessmessage_action,
-	appconsumos_mb_actions_zbodega_ago_srv_service_downloadoffline_action : appconsumos_mb_actions_zbodega_ago_srv_service_downloadoffline_action,
-	appconsumos_mb_actions_zbodega_ago_srv_service_downloadstartedmessage_action : appconsumos_mb_actions_zbodega_ago_srv_service_downloadstartedmessage_action,
 	appconsumos_mb_actions_zbodega_ago_srv_service_initializeoffline_action : appconsumos_mb_actions_zbodega_ago_srv_service_initializeoffline_action,
 	appconsumos_mb_actions_zbodega_ago_srv_service_initializeofflinefailuremessage_action : appconsumos_mb_actions_zbodega_ago_srv_service_initializeofflinefailuremessage_action,
-	appconsumos_mb_actions_zbodega_ago_srv_service_syncfailuremessage_action : appconsumos_mb_actions_zbodega_ago_srv_service_syncfailuremessage_action,
-	appconsumos_mb_actions_zbodega_ago_srv_service_syncstartedmessage_action : appconsumos_mb_actions_zbodega_ago_srv_service_syncstartedmessage_action,
-	appconsumos_mb_actions_zbodega_ago_srv_service_uploadoffline_action : appconsumos_mb_actions_zbodega_ago_srv_service_uploadoffline_action,
 	appconsumos_mb_globals_application_appdefinition_version_global : appconsumos_mb_globals_application_appdefinition_version_global,
 	appconsumos_mb_globals_application_applicationname_global : appconsumos_mb_globals_application_applicationname_global,
 	appconsumos_mb_globals_application_supportemail_global : appconsumos_mb_globals_application_supportemail_global,
@@ -789,7 +774,6 @@ module.exports = {
 	appconsumos_mb_rules_aceites_getorden_revisarplanilla_js : appconsumos_mb_rules_aceites_getorden_revisarplanilla_js,
 	appconsumos_mb_rules_aceites_isvisible_btn_validar_registros_js : appconsumos_mb_rules_aceites_isvisible_btn_validar_registros_js,
 	appconsumos_mb_rules_aceites_liquidarsolicitud_aceites_sap_js : appconsumos_mb_rules_aceites_liquidarsolicitud_aceites_sap_js,
-	appconsumos_mb_rules_aceites_liquidarsolicitud_motor_sap_js : appconsumos_mb_rules_aceites_liquidarsolicitud_motor_sap_js,
 	appconsumos_mb_rules_aceites_navto_aceites_js : appconsumos_mb_rules_aceites_navto_aceites_js,
 	appconsumos_mb_rules_aceites_navto_crear_planilla_js : appconsumos_mb_rules_aceites_navto_crear_planilla_js,
 	appconsumos_mb_rules_aceites_navto_crear_registro_consumo_js : appconsumos_mb_rules_aceites_navto_crear_registro_consumo_js,
@@ -903,7 +887,6 @@ module.exports = {
 	appconsumos_mb_rules_campo_confirmarsolicitudcampo_js : appconsumos_mb_rules_campo_confirmarsolicitudcampo_js,
 	appconsumos_mb_rules_campo_crear_solicitud_reabast_automatica_js : appconsumos_mb_rules_campo_crear_solicitud_reabast_automatica_js,
 	appconsumos_mb_rules_campo_create_componentes_solicitud_js : appconsumos_mb_rules_campo_create_componentes_solicitud_js,
-	appconsumos_mb_rules_campo_firmarsolicitud_campo_js : appconsumos_mb_rules_campo_firmarsolicitud_campo_js,
 	appconsumos_mb_rules_campo_get_date_creacion_js : appconsumos_mb_rules_campo_get_date_creacion_js,
 	appconsumos_mb_rules_campo_get_date_ref_js : appconsumos_mb_rules_campo_get_date_ref_js,
 	appconsumos_mb_rules_campo_get_list_campo_equipo_js : appconsumos_mb_rules_campo_get_list_campo_equipo_js,
@@ -1025,7 +1008,6 @@ module.exports = {
 	appconsumos_mb_rules_inventario_navto_revisionalmacenes_js : appconsumos_mb_rules_inventario_navto_revisionalmacenes_js,
 	appconsumos_mb_rules_inventario_navto_revisionsolicitudabast_js : appconsumos_mb_rules_inventario_navto_revisionsolicitudabast_js,
 	appconsumos_mb_rules_inventario_onchange_materiales_revision_abast_js : appconsumos_mb_rules_inventario_onchange_materiales_revision_abast_js,
-	appconsumos_mb_rules_inventario_pdfprueba_js : appconsumos_mb_rules_inventario_pdfprueba_js,
 	appconsumos_mb_rules_inventario_query_confirmar_componentes_abast_js : appconsumos_mb_rules_inventario_query_confirmar_componentes_abast_js,
 	appconsumos_mb_rules_inventario_query_detalle_componentes_abast_js : appconsumos_mb_rules_inventario_query_detalle_componentes_abast_js,
 	appconsumos_mb_rules_inventario_query_detalle_componentes_abast_nuevo_js : appconsumos_mb_rules_inventario_query_detalle_componentes_abast_nuevo_js,
@@ -3433,6 +3415,7 @@ function LiquidarSolicitud_Aceites_SAP(context) {
   //falta validar que el campo de contraseña si este diligenciado
   let clientData_user = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
   let clientData = context.evaluateTargetPathForAPI('#Page:Filtro_Aceites').getClientData();
+  let pass = "";
   let page = context.getPageProxy();
   let titulo = page.getName();
   let info_solicitud;
@@ -3440,22 +3423,27 @@ function LiquidarSolicitud_Aceites_SAP(context) {
   if (titulo == "Aprobar_Aceite_Motor") {
     info_solicitud = clientData.data_planilla_motor;
     pagina_Detalle = "Detalle_Aceite_Motor";
+    pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Motor/#Control:pass/#Value");
   }
   if (titulo == "Aprobar_Aceite_Diferencial") {
     info_solicitud = clientData.data_planilla_diferencial;
     pagina_Detalle = "Detalle_Aceite_Diferencial";
+    pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Diferencial/#Control:pass/#Value");
   }
   if (titulo == "Aprobar_Aceite_Hidraulico") {
     info_solicitud = clientData.data_planilla_hidraulico;
     pagina_Detalle = "Detalle_Aceite_Hidraulico";
+    pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Hidraulico/#Control:pass/#Value");
   }
   if (titulo == "Aprobar_Aceite_Reductor") {
     info_solicitud = clientData.data_planilla_reductor;
     pagina_Detalle = "Detalle_Aceite_Reductor";
+    pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Reductor/#Control:pass/#Value");
   }
   if (titulo == "Aprobar_Aceite_Servotransmisor") {
     info_solicitud = clientData.data_planilla_servotrans;
     pagina_Detalle = "Detalle_Aceite_Servotransmisor";
+    pass = context.evaluateTargetPath("#Page:Aprobar_Aceite_Servotransmisor/#Control:pass/#Value");
   }
   let id_solicitud = info_solicitud.id;
   let info_user = clientData_user.info_user;
@@ -3540,7 +3528,7 @@ function LiquidarSolicitud_Aceites_SAP(context) {
                 "Method": "POST",
                 "Body": {
                   "username": info_user.sapUsr,
-                  "password": "Abaper072025",
+                  "password": pass,
                   "data": data
                 }
               }
@@ -3640,223 +3628,6 @@ function LiquidarSolicitud_Aceites_SAP(context) {
             "Name": "/appconsumos_mb/Actions/CloseModalPage_Complete.action",
             "Properties": {
               "NavigateBackToPage": pagina_Detalle
-            }
-          });
-        }
-        // Si hay errores, navegar de regreso
-        return Promise.resolve();
-      });
-    });
-  }).catch(error => {
-    alert(`Error general liquidar: ${error.message || JSON.stringify(error)}`);
-  });
-}
-
-/***/ }),
-
-/***/ "./build.definitions/appconsumos_mb/Rules/Aceites/LiquidarSolicitud_Motor_SAP.js":
-/*!***************************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Rules/Aceites/LiquidarSolicitud_Motor_SAP.js ***!
-  \***************************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ LiquidarSolicitud_Diferencial_SAP)
-/* harmony export */ });
-/**
- * Describe this function...
- * @param {IClientAPI} clientAPI
- */
-function LiquidarSolicitud_Diferencial_SAP(context) {
-  //falta validar que el campo de contraseña si este diligenciado
-  let clientData_user = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
-  let clientData = context.evaluateTargetPathForAPI('#Page:Filtro_Aceites').getClientData();
-  let info_user = clientData_user.info_user;
-  let info_solicitud = clientData.data_planilla_motor;
-  let id_solicitud = info_solicitud.id;
-  let material = info_solicitud.material;
-  let sociedad = info_solicitud.almacen_sociedad;
-  let centro;
-  let almacen;
-  //clientData.id_solicitud = id_solicitud;
-  const pageProxy = context.getPageProxy();
-  let exitosos = [];
-  let errores = [];
-  let liquidar = [];
-  let update = [];
-  var data = {};
-  if (sociedad === "AI01") {
-    almacen = "407";
-    centro = "2000";
-  }
-  if (sociedad === "AI08") {
-    almacen = "406";
-    centro = "2200";
-  }
-  function sleep(ms) {
-    return new Promise(resolve => setTimeout(resolve, ms));
-  }
-  let filtro = `$filter=planilla_id eq ${id_solicitud} and doc_material eq null`;
-  return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'ItemPlanillasAceites', [], filtro).then(async results => {
-    if (!results || results.length === 0) {
-      return context.executeAction({
-        "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-        "Properties": {
-          "Title": "Componentes liquidados",
-          "Message": "Todos los componentes de esta solicitud ya se encuentran liquidados en la reserva."
-        }
-      });
-    }
-
-    // Crear las promesas para cada componente
-    for (const e of results) {
-      if (e.tipo === "Cambio") {
-        data = {
-          Material: material,
-          MOVE_TYPE: e.clase_mov,
-          Plant: centro,
-          StgeLoc: almacen,
-          EntryQnt: `${e.consumo}`,
-          ORDERID: "",
-          SGTXT: e.obs_text,
-          BKTXT: e.op_ficha,
-          RES_ITEM: e.posicion,
-          RESERV_NO: e.reserva,
-          EntryUom: ""
-        };
-      }
-      if (e.tipo === "Full") {
-        data = {
-          Material: material,
-          MOVE_TYPE: e.clase_mov,
-          Plant: centro,
-          StgeLoc: almacen,
-          EntryQnt: `${e.consumo}`,
-          ORDERID: e.equipo_equipo,
-          SGTXT: e.obs_text,
-          BKTXT: e.op_ficha,
-          RES_ITEM: "",
-          RESERV_NO: "",
-          EntryUom: ""
-        };
-      }
-      try {
-        const res = await context.executeAction({
-          "Name": "/appconsumos_mb/Actions/Call_LiquidarMaterialRes.action",
-          "Properties": {
-            "ShowActivityIndicator": true,
-            "ActivityIndicatorText": "Cargando datos ...",
-            "OnFailure": "",
-            "OnSuccess": "",
-            "Target": {
-              "Service": "/appconsumos_mb/Services/backend_REST.service",
-              "Path": "/LiquidarMaterialRes",
-              "RequestProperties": {
-                "Method": "POST",
-                "Body": {
-                  "username": info_user.sapUsr,
-                  "password": "Abaper072025",
-                  "data": data
-                }
-              }
-            }
-          }
-        });
-        //actualizar el inventario de la bd tambien
-
-        const resjson = res.data;
-        //alert(resjson.doc_material)
-        if (resjson.success) {
-          exitosos.push(`${material}`);
-          update.push({
-            idComponente: e.id,
-            readLink: e["@odata.readLink"],
-            material: material,
-            doc_material: resjson.doc_material,
-            almacen: almacen,
-            centro: centro,
-            sociedad: sociedad
-          });
-        } else {
-          errores.push(`${material}: ${resjson.message}`);
-        }
-      } catch (error) {
-        //alert(error);
-        //agregar validacion autenticacion
-        errores.push(`${material}: ${error?.message || error}`);
-      }
-
-      //await sleep(1000); // Esperar 2 segundos antes de la próxima iteración
-    }
-
-    //alert(JSON.stringify(update))
-    //alert(JSON.stringify(liquidar))
-    let promises = update.map(material => {
-      return context.executeAction({
-        "Name": "/appconsumos_mb/Actions/oData/Update_Item_Planillas_Aceite.action",
-        "Properties": {
-          "Target": {
-            "ReadLink": material.readLink
-          },
-          "Properties": {
-            "id": material.idComponente,
-            "doc_material": material.doc_material
-          }
-        }
-      });
-      /* .then(() => {
-          
-           let filtroInv = `$filter=material eq '${material.material}' and almacen_almacen eq '${material.almacen}' and almacen_centro eq '${material.centro}' and almacen_sociedad eq '${material.sociedad}'`;
-          return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'Inventario', [], filtroInv).then(async (results) => {
-              if (results && results.length > 0) {
-                  let inventario = results.getItem(0)
-                  let nueva_cant = inventario.stock_disponible - material.cant
-                  return context.executeAction({
-                      "Name": "/appconsumos_mb/Actions/oData/Update_Inventario.action",
-                      "Properties": {
-                          "Target": {
-                              "ReadLink": inventario["@odata.readLink"]
-                          },
-                          "Properties": {
-                              "stock_disponible": nueva_cant
-                          }
-                      }
-                  })
-               }
-          })
-      }).catch((error) => {
-          alert(`Error actualizando material ${material.material}: ${error}`);
-      });
-      */
-    });
-    let mensaje = "";
-    if (errores.length === 0) {
-      //Si esto se cumple cambiar el estado de la solicitud a autorizado y generar el pdf, de lo contrario no se cambia ni se guarda el pdf
-      //en el return o resume de la pagina que el boton de autorizar valide si si hay cosas para autoriza si no que quite el boton
-      //context.executeAction("/appconsumos_mb/Actions/oData/Update_SolicitudesApp_Autorizar_Campo.action")
-      mensaje = 'Todos los materiales fueron liquidados correctamente en SAP.';
-    } else if (exitosos.length === 0) {
-      //context.executeAction("/appconsumos_mb/Actions/oData/Update_SolicitudesApp_Autorizar_Campo.action")
-      mensaje = `Solicitud no liquidada. Fallaron todos los materiales:\n\n${errores.join('\n')}. Intentalo nuevamente`;
-    } else {
-      mensaje = `Liquidación completada con errores:\n${errores.join('\n')}. Intentalo nuevamente`;
-    }
-    return Promise.allSettled(promises).then(() => {
-      return context.executeAction({
-        "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-        "Properties": {
-          "Title": "Resultado de la liquidación",
-          "Message": mensaje
-        }
-      }).then(() => {
-        // close modal cuando todo salga bien
-        if (errores.length === 0) {
-          return context.executeAction({
-            "Name": "/appconsumos_mb/Actions/CloseModalPage_Complete.action",
-            "Properties": {
-              "NavigateBackToPage": "Detalle_Aceite_Diferencial"
             }
           });
         }
@@ -10066,7 +9837,7 @@ function Agregar_Materiales_Solicitud(context) {
     });
   }
   let data = material[0].BindingObject;
-  let stock = data.stock_disponible;
+  let stock = data.stock_disponible + data.stock_reservado;
 
   //TODO DESCOMENTAR CUANDO HAYA INVENTARIO
   if (stock == 0) {
@@ -10744,199 +10515,6 @@ function Create_Componentes_Solicitud(context) {
 
 /***/ }),
 
-/***/ "./build.definitions/appconsumos_mb/Rules/Campo/FirmarSolicitud_Campo.js":
-/*!*******************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Rules/Campo/FirmarSolicitud_Campo.js ***!
-  \*******************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ FirmarSolicitud_Campo)
-/* harmony export */ });
-/* harmony import */ var _Rule_openDocumentoAnd_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../Rule_openDocumentoAnd.js */ "./build.definitions/appconsumos_mb/Rules/Rule_openDocumentoAnd.js");
-/* harmony import */ var _Rule_openDocumentoIOS_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Rule_openDocumentoIOS.js */ "./build.definitions/appconsumos_mb/Rules/Rule_openDocumentoIOS.js");
-
-
-/**
- * Describe this function...
- * @param {IClientAPI} context
- */
-
-async function FirmarSolicitud_Campo(context) {
-  //manejar bien los errores del backend y la autenticación
-  //no se envia correo electronico
-  //1. Enviar los componentes a la orden - hay que validar si ya hay creados materiales con las cantidades solicitadas usar esos campos y no hay que crearlos 
-  //   - se debe guardar en los componentes de la solicitud las posiciones en la reserva de los materiales creados o escogidos
-  //2. liquidar los componentes de la orden - se debe guardar el numero de documento de material en cada componente y se debe mostrar en el detalle de los items de la solicitud
-  //3. actualizar los componentes como entregados en la bd y el estado de la solicitud 
-  //4. se debe obtener el pdf de la orden y mostrarlo con la firma del autorizador ingresada y guardar el pdf a la base de datos para luego poder consultarlo desde el historico
-
-  function sendEmail(pdf) {
-    return context.executeAction({
-      "Name": "/appconsumos_mb/Actions/Call_Sendmail.action",
-      "Properties": {
-        "OnFailure": "",
-        "OnSuccess": "",
-        "Target": {
-          "Service": "/appconsumos_mb/Services/backend_REST.service",
-          "Path": "/sendmail",
-          "RequestProperties": {
-            "Method": "POST",
-            "Body": {
-              "sender": "natalia.lopez@structum-co.com",
-              "to": "nlopez8066@outlook.com",
-              "subject": "Prueba",
-              "body": `Cuerpo prueba`,
-              "nombre": "pdfprueba.pdf",
-              "adj": `${pdf}`
-            }
-          }
-        }
-      }
-    }).then(result => {
-      if (result && result.data) {
-        alert(JSON.stringify(result));
-      }
-    }).catch(error => {
-      alert(error);
-    });
-  }
-  const base64Pdf = `JVBERi0xLjMKJf////8KNyAwIG9iago8PAovVHlwZSAvUGFnZQovUGFyZW50IDEgMCBSCi9NZWRpYUJveCBbMCAwIDYxMiA3OTJdCi9Db250ZW50cyA1IDAgUgovUmVzb3VyY2VzIDYgMCBSCj4+CmVuZG9iago2IDAgb2JqCjw8Ci9Qcm9jU2V0IFsvUERGIC9UZXh0IC9JbWFnZUIgL0ltYWdlQyAvSW1hZ2VJXQovRm9udCA8PAovRjEgOCAwIFIKPj4KL0NvbG9yU3BhY2UgPDwKPj4KPj4KZW5kb2JqCjUgMCBvYmoKPDwKL0xlbmd0aCAyOTUKL0ZpbHRlciAvRmxhdGVEZWNvZGUKPj4Kc3RyZWFtCniclZO7TsQwEEV7f8X8wC7zvJNIUQokKOgQ6RAFWpJuC/j/AiXQQBytLEuWZVlzfI/HQkxMJyGm7JUu1/JZZLd3P/1uCil3Z0XP7JScZ07QdC13j0LS0bSU1yEUkYwldaSTMw3pCGUYFszK6RDoSMo04AJRzl4ZFyxILCPxG01P5WEqzyWYhJkkeD39NZeXW7eLIKRXb8WpWOAZsPR/IOVmkvIhyg2COR091qz+B2XtoexGqoChr6jTZnVRz/Ox5XlfZ0jaXl0baVNXR5kY73W1lbfjJOoWOhuvY6fLm3XZwZuMFGtzx/oDZF1VpbXxNml1oHV7ZW3F7TiNurnO1lWVoVmZ1DtMf3oLc+1jtlE2UXWMicVeVVt5O06hbqmzxU7VN8QUFdoKZW5kc3RyZWFtCmVuZG9iagoxMCAwIG9iagooUERGS2l0KQplbmRvYmoKMTEgMCBvYmoKKFBERktpdCkKZW5kb2JqCjEyIDAgb2JqCihEOjIwMjUwNjI3MTUyMDQwWikKZW5kb2JqCjkgMCBvYmoKPDwKL1Byb2R1Y2VyIDEwIDAgUgovQ3JlYXRvciAxMSAwIFIKL0NyZWF0aW9uRGF0ZSAxMiAwIFIKPj4KZW5kb2JqCjggMCBvYmoKPDwKL1R5cGUgL0ZvbnQKL0Jhc2VGb250IC9IZWx2ZXRpY2EKL1N1YnR5cGUgL1R5cGUxCi9FbmNvZGluZyAvV2luQW5zaUVuY29kaW5nCj4+CmVuZG9iago0IDAgb2JqCjw8Cj4+CmVuZG9iagozIDAgb2JqCjw8Ci9UeXBlIC9DYXRhbG9nCi9QYWdlcyAxIDAgUgovTmFtZXMgMiAwIFIKPj4KZW5kb2JqCjEgMCBvYmoKPDwKL1R5cGUgL1BhZ2VzCi9Db3VudCAxCi9LaWRzIFs3IDAgUl0KPj4KZW5kb2JqCjIgMCBvYmoKPDwKL0Rlc3RzIDw8CiAgL05hbWVzIFsKXQo+Pgo+PgplbmRvYmoKeHJlZgowIDEzCjAwMDAwMDAwMDAgNjU1MzUgZiAKMDAwMDAwMDkzNCAwMDAwMCBuIAowMDAwMDAwOTkxIDAwMDAwIG4gCjAwMDAwMDA4NzIgMDAwMDAgbiAKMDAwMDAwMDg1MSAwMDAwMCBuIAowMDAwMDAwMjI2IDAwMDAwIG4gCjAwMDAwMDAxMTkgMDAwMDAgbiAKMDAwMDAwMDAxNSAwMDAwMCBuIAowMDAwMDAwNzU0IDAwMDAwIG4gCjAwMDAwMDA2NzkgMDAwMDAgbiAKMDAwMDAwMDU5MyAwMDAwMCBuIAowMDAwMDAwNjE4IDAwMDAwIG4gCjAwMDAwMDA2NDMgMDAwMDAgbiAKdHJhaWxlcgo8PAovU2l6ZSAxMwovUm9vdCAzIDAgUgovSW5mbyA5IDAgUgovSUQgWzwwODRjMzgzN2I5NjMxNmVhYmQ5N2E0NDk1YmIwZmVkND4gPDA4NGMzODM3Yjk2MzE2ZWFiZDk3YTQ0OTViYjBmZWQ0Pl0KPj4Kc3RhcnR4cmVmCjEwMzgKJSVFT0YK`;
-
-  //const pageProxy = context.getPageProxy();
-  const platform = context.nativescript.platformModule;
-  const signatureObject = context.evaluateTargetPath("#Page:Autorizar_Solicitud_Campo/#Control:FormCellInlineSignatureCapture0/#Value");
-  let signatureContent;
-  if (platform.isAndroid) {
-    signatureContent = android.util.Base64.encodeToString(signatureObject.content, android.util.Base64.DEFAULT);
-  } else if (platform.isIOS) {
-    signatureContent = signatureObject.content.base64Encoding();
-  }
-  alert("entro firmar");
-  return context.executeAction({
-    "Name": "/appconsumos_mb/Actions/Call_FirmarPDF.action",
-    "Properties": {
-      "OnFailure": "",
-      "OnSuccess": "",
-      "Target": {
-        "Service": "/appconsumos_mb/Services/backend_REST.service",
-        "Path": "/firmarPDF",
-        "RequestProperties": {
-          "Method": "POST",
-          "Body": {
-            "pdf": `${base64Pdf}`,
-            "image": `${signatureContent}`
-          }
-        }
-      }
-    }
-  }).then(result => {
-    if (result && result.data) {
-      //alert(result.data.value)//el pdf en base64
-      context.b64Data = result.data.value;
-      sendEmail(result.data.value);
-      if (platform.isAndroid) {
-        return (0,_Rule_openDocumentoAnd_js__WEBPACK_IMPORTED_MODULE_0__["default"])(context);
-      } else if (platform.isIOS) {
-        return (0,_Rule_openDocumentoIOS_js__WEBPACK_IMPORTED_MODULE_1__["default"])(context);
-      }
-
-      /*context.executeAction({
-          "Name": "/appconsumos_mb/Actions/openDocument.action",
-          "Properties":{
-              "Path": result.data.value,
-              "MimeType": "application/pdf",
-              "OnSuccess":""
-          }
-      });*/
-      //let mensaje = result.data.Message;
-    }
-  }).catch(error => {
-    alert(error);
-  });
-
-  /*let servicePath = "/appconsumos_mb/Services/app_consumos_prd.service";
-  let functionDef = {
-      "Name": "firmarPDF",
-      "Parameters": {
-          "pdf": `${base64Pdf}`,
-          "image":`${signatureContent}`
-      }
-  };
-  let headers = null;
-  return context.callFunction(servicePath, functionDef, headers).then((result) => {
-      // Si el servicio devuelve un string plano
-      alert(result)
-      alert(JSON.stringify(result))
-      if (result && typeof result === "string") {
-          alert(`Resultado: ${result}`);
-      } else if (result && result.value) {
-          alert(`Resultado: ${result.value}`);
-      } else {
-          alert("La acción no devolvió resultado esperado.");
-      }
-  }).catch((error) => {
-      alert(`Error al ejecutar firmaPDF: ${error}`);
-  });*/
-
-  /*alert("entro")
-  let result;
-  try {
-      result = await context.invokeFunction("firmarPDF", { pdf: `${base64Pdf}`, image: `${signatureContent}` });
-      if (result.data) {
-          // Handle the result (e.g., display it in a message)
-          alert("res exitosa")
-      }
-  } catch (error) {
-      alert("Error al firmar el PDF:");
-      alert(error)
-  }*/
-
-  /*let servicePath = "/appconsumos_mb/Services/app_consumos_prd.service";
-  let functionDef = {
-      "Name": "firmarPDF",
-      "Parameters": {
-          "pdf": `${base64Pdf}`,
-          "image":`${signatureContent}`
-      }
-  };
-  let headers = null;
-  return context.callFunction(servicePath, functionDef, headers).then((result) => {
-      //Because this Function Import return an Edm.Int64 type data, the result in result will simply be an integer value.
-      alert("res exitosa")
-      return context.executeAction({
-          "Name": "/appconsumos_mb/Rules/Campo/Response_firmarPDF.js",
-      });
-  }).catch((error) => {
-      alert(error)
-  });*/
-
-  /*return context.executeAction({
-      "Name": "/appconsumos_mb/Actions/oData/Call_firmarPDF.action",
-      "Properties": {
-          "OnFailure": {
-              "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-              "Properties": {
-                  "Message": "Error - {#ActionResults:Call_firmarPDF/error}"
-              }
-          },
-          "OnSuccess": "/appconsumos_mb/Rules/Campo/Response_firmarPDF.js",
-          "Target": {
-              "Service": "/appconsumos_mb/Services/backend_REST.service",
-              "Path": `/firmarPDF(pdf='${base64Pdf}',image='${signatureContent}')`,
-              "RequestProperties": {
-                  "Method": "GET",
-                  "FetchCSRF": true
-              }
-          }
-      }
-  })*/
-}
-
-/***/ }),
-
 /***/ "./build.definitions/appconsumos_mb/Rules/Campo/LiquidarSolicitud_Campo_SAP.js":
 /*!*************************************************************************************!*\
   !*** ./build.definitions/appconsumos_mb/Rules/Campo/LiquidarSolicitud_Campo_SAP.js ***!
@@ -11015,7 +10593,7 @@ function LiquidarSolicitud_Campo_SAP(context) {
                 "Method": "POST",
                 "Body": {
                   "username": info_user.sapUsr,
-                  "password": "Abaper072025",
+                  "password": pass,
                   "data": data
                 }
               }
@@ -11553,7 +11131,7 @@ function ProcesarSolicitud_Campo_SAP(context) {
                 "Method": "POST",
                 "Body": {
                   "username": info_user.sapUsr,
-                  "password": "Abaper072025",
+                  "password": pass,
                   "data": data
                 }
               }
@@ -11662,108 +11240,6 @@ function ProcesarSolicitud_Campo_SAP(context) {
     alert(`Error general: ${error.message || JSON.stringify(error)}`);
   });
 }
-/*return Promise.allSettled(promesasAddMat).then(() => {
-    let mensaje = "";
-
-    if (errores.length === 0) {
-        btn_liquidar.setEnabled(true)
-        mensaje = 'Solicitud gestionada correctamente. Los materiales fueron añadidos a la reserva.';
-    } else if (exitosos.length === 0) {
-        mensaje = `Solicitud no gestionada. Fallaron todos los materiales:\n\n${errores.join('\n')}`;
-    } else {
-        mensaje = `Solicitud parcialmente gestionada.\n\nErrores:\n${errores.join('\n')}`;
-    }
-
-    alert(JSON.stringify(liquidar))
-    //alert(JSON.stringify(update))
-
-    // Segunda fase: liquidar
-    /*
-    let exitososLiq = [];
-    let erroresLiq = [];
-    const promesasLiquidar = liquidar.map((item) => {
-        alert(JSON.stringify(item))
-        return context.executeAction({
-            "Name": "/appconsumos_mb/Actions/Call_LiquidarMaterialRes.action",
-            "Properties": {
-                "OnFailure": "",
-                "OnSuccess": "",
-                "Target": {
-                    "Service": "/appconsumos_mb/Services/backend_REST.service",
-                    "Path": "/LiquidarMaterialRes",
-                    "RequestProperties": {
-                        "Method": "POST",
-                        "Body": {
-                            "username": info_user.sapUsr,
-                            "password": "Abaper072025",
-                            "data": item
-                        }
-                    }
-                }
-            }
-        }).then((res) => {
-
-            alert(JSON.stringify(res))
-            let resjson = res.data
-            let success = resjson.success
-            let doc_material = resjson.doc_material
-            if (success) {
-                exitososLiq.push(`${item.Material}`);
-                update.forEach(u => {
-                    if (u.posicion === item.RES_ITEM) {
-                        u.doc_material = doc_material;
-                    }
-                });
-            } else {
-                erroresLiq.push(`${item.Material}: ${resjson.message}`);
-            }
-        }).catch((err) => {
-            erroresLiq.push(`Error al liquidar material ${item.Material}: ${err.message || err}`);
-        });
-    });
-
-    return Promise.allSettled(promesasLiquidar).then(() => {
-        let mensajeFinal = '';
-        if (erroresLiq.length > 0) {
-            mensajeFinal = `Liquidación completada con errores:\n${erroresLiq.join('\n')}`;
-        } else {
-            mensajeFinal = 'Todos los materiales fueron liquidados correctamente en SAP.';
-        }
-
-        alert(JSON.stringify(update))
-        return context.executeAction({
-            "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-            "Properties": {
-                "Title": "Resultado de la operación",
-                "Message": mensaje
-            }
-        }).then(() => {
-            return context.executeAction({
-                "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-                "Properties": {
-
-                    "Title": "Resultado de la liquidación",
-                    "Message": mensajeFinal
-                }
-            }).then(() => {
-
-            });
-        });
-    });
-
-    */
-
-//Falta actualizar el campo de posicion en los componentes en la bd y luego hacer la otra regla para liquidar
-/*return context.executeAction({
-    "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
-    "Properties": {
-        "Title": "Resultado de la operación",
-        "Message": mensaje
-    }
-})
-});
-
-*/
 
 /***/ }),
 
@@ -12982,7 +12458,7 @@ function Agregar_Materiales_Solicitud(context) {
   }
   var index = material[0].SelectedIndex;
   let data = clientData.lista_inventario[index].BindingObject;
-  let stock = data.Labst;
+  let stock = parseFloat(data.Labst) + parseFloat(data.Klabs);
   if (stock == 0) {
     return context.executeAction({
       "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
@@ -13614,13 +13090,14 @@ __webpack_require__.r(__webpack_exports__);
  */
 function NavTo_Agregar_Solicitud_Ingenio(context) {
   let clientData = context.evaluateTargetPathForAPI('#Page:Detalle_Orden_Ingenio').getClientData();
+  let clientDataMain = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
   clientData.lista_materiales = [];
   clientData.lista_inventario = [];
   clientData.context_binding = context.binding;
   let clientDataFiltro = context.evaluateTargetPathForAPI('#Page:Filtro_Ingenio').getClientData();
   //alert(JSON.stringify(context.binding))
 
-  return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO'`).then(async results => {
+  return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO' and  sociedad eq '${clientDataMain.info_user.sociedad}'`).then(async results => {
     if (results && results.length > 0) {
       let filtro = `$filter=Werks eq '${clientDataFiltro.centro_ingenio}' and Spras eq 'ES' and not substringof('BORRADO', Txtmd) and not substringof('BORRAR', Txtmd) and not substringof('BORRAD_', Txtmd) and (`;
       results.forEach(e => {
@@ -14074,6 +13551,7 @@ function ProcesarSolicitud_Ingenio_SAP(context) {
   let reserva = info_solicitud.reserva;
   let centro = info_solicitud.alm_centro;
   let alm_desc = info_solicitud.alm_desc;
+  let op_ficha = info_solicitud.op_ficha;
   let pass = context.evaluateTargetPath("#Page:Autorizar_Solicitud_Ingenio/#Control:pass/#Value");
   const pageProxy = context.getPageProxy();
   let clientData = context.evaluateTargetPathForAPI('#Page:Autorizar_Solicitud_Ingenio').getClientData();
@@ -14108,7 +13586,7 @@ function ProcesarSolicitud_Ingenio_SAP(context) {
         Material: e.mat_nuevo.replace(/^0+/, ''),
         Plant: centro,
         Activity: e.op_number,
-        GrRcpt: info_solicitud.alm_almacen,
+        GrRcpt: op_ficha,
         RequirementQuantity: `${e.cantidad_aprobada}`,
         RequirementQuantityUnit: e.mat_nuevo_und
       };
@@ -14127,7 +13605,7 @@ function ProcesarSolicitud_Ingenio_SAP(context) {
                 "Method": "POST",
                 "Body": {
                   "username": info_user.sapUsr,
-                  "password": "Abaper072025",
+                  "password": pass,
                   "data": data
                 }
               }
@@ -15422,7 +14900,7 @@ function Aprobar_Material_Revision_Abast(context) {
   var index = almacen[0].SelectedIndex;
   //var data = clientData.listaInventario[index].BindingObject
   let dataAlm = clientDataMaterial.listaInventario[index].BindingObject;
-  let stock = parseFloat(dataAlm.Labst);
+  let stock = parseFloat(dataAlm.Labst) + parseFloat(dataAlm.Klabs);
   cant = parseFloat(cant);
   if (!cant || cant < 0) {
     return context.executeAction({
@@ -16735,7 +16213,7 @@ function NavTo_RevisionAlmacenes(context) {
   clientData.infoMaterial = materialLP[0].BindingObject;
   let clientDataAlm = context.evaluateTargetPathForAPI('#Page:Filtro_Almacen_Solicitud_Abast').getClientData();
   //var inventario_form = pageProxy.getControl("SectionedTable0").getSection("SectionFormCell0")
-
+  let clientDataMain = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
   let mat_nuevo = clientData.infoMaterial.mat_nuevo;
   let material = clientData.infoMaterial.material_material;
   let value = '';
@@ -16748,7 +16226,7 @@ function NavTo_RevisionAlmacenes(context) {
 
   //let clientDataFiltro = context.evaluateTargetPathForAPI('#Page:Filtro_Ingenio').getClientData();
 
-  return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO'`).then(async results => {
+  return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'AlmacenesApp', [], `$filter=tipo eq 'INGENIO' and sociedad eq '${clientDataMain.info_user.sociedad}'`).then(async results => {
     if (results && results.length > 0) {
       let filtro = `$filter=Matnr eq '${value}' and Werks eq '${clientDataAlm.almacen_abast.centro}' and Spras eq 'ES' and not substringof('BORRADO', Txtmd) and not substringof('BORRAR', Txtmd) and not substringof('BORRAD_', Txtmd) and (`;
       results.forEach(e => {
@@ -16841,187 +16319,6 @@ function NavTo_RevisionSolicitudAbast(context) {
       "ModalPageFullscreen": true
     }
   });
-}
-
-/***/ }),
-
-/***/ "./build.definitions/appconsumos_mb/Rules/Inventario/PDFPRUEBA.js":
-/*!************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Rules/Inventario/PDFPRUEBA.js ***!
-  \************************************************************************/
-/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export */ __webpack_require__.d(__webpack_exports__, {
-/* harmony export */   "default": () => (/* binding */ PDFPRUEBA)
-/* harmony export */ });
-/* harmony import */ var _get_FechaHoraCol_js__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ../get_FechaHoraCol.js */ "./build.definitions/appconsumos_mb/Rules/get_FechaHoraCol.js");
-/* harmony import */ var _Rule_openDocumentoAnd_js__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ../Rule_openDocumentoAnd.js */ "./build.definitions/appconsumos_mb/Rules/Rule_openDocumentoAnd.js");
-/* harmony import */ var _Rule_openDocumentoIOS_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../Rule_openDocumentoIOS.js */ "./build.definitions/appconsumos_mb/Rules/Rule_openDocumentoIOS.js");
-/**
- * Describe this function...
- * @param {IClientAPI} context
- */
-
-
-
-async function PDFPRUEBA(context) {
-  const platform = context.nativescript.platformModule;
-  let info_user = context.evaluateTargetPathForAPI('#Page:Main').getClientData().info_user;
-  const palabras = info_user.nombre.split(" ");
-  const nombre = palabras.slice(0, -1).join(" ");
-  let sender_email = context.getGlobalDefinition('/appconsumos_mb/Globals/sender_user_email.global');
-  const signatureObject = context.evaluateTargetPath("#Page:Autorizar_Solicitud_Reabastecimiento/#Control:FormCellInlineSignatureCapture0/#Value");
-  let signatureContent;
-  let tipo;
-  if (platform.isAndroid) {
-    signatureContent = android.util.Base64.encodeToString(signatureObject.content, android.util.Base64.DEFAULT);
-    tipo = "And";
-  } else if (platform.isIOS) {
-    signatureContent = signatureObject.content.base64Encoding();
-    tipo = "IOS";
-  }
-  const info_solicitud = context.binding;
-  const orden = info_solicitud.orden;
-  const reserva = info_solicitud.reserva;
-  try {
-    /*const res = await context.executeAction({
-        "Name": "/appconsumos_mb/Actions/Call_ZAMMST_ORDRINSUSet.action",
-        "Properties": {
-            "ShowActivityIndicator": true,
-            "ActivityIndicatorText": "Cargando datos ...",
-            "OnFailure": "",
-            "OnSuccess": "",
-            "Target": {
-                "Service": "/appconsumos_mb/Services/ZAMANAGE_LOGISTIC.service",
-                "Path": `/ZAMMST_RESERVASet?$filter=(Rsnum eq '${reserva}')&$format=json`,
-                "RequestProperties": {
-                    "Method": "GET"
-                }
-            }
-        }
-    })
-     const resjson = res.data;
-     if (resjson?.d?.results?.[0]?.Pdf) {
-        const pdfData = resjson.d.results[0].Pdf;
-         const result = await context.executeAction({
-            "Name": "/appconsumos_mb/Actions/Call_FirmarPDF.action",
-            "Properties": {
-                "ShowActivityIndicator": true,
-                "ActivityIndicatorText": "Cargando ...",
-                "OnFailure": "",
-                "OnSuccess": "",
-                "Target": {
-                    "Service": "/appconsumos_mb/Services/backend_REST.service",
-                    "Path": "/firmarPDFRes",
-                    "RequestProperties": {
-                        "Method": "POST",
-                        "Body": {
-                            "pdf": `${pdfData}`,
-                            "image": `${signatureContent}`,
-                            "tipo": tipo
-                        }
-                    }
-                }
-            }
-        });*/
-
-    /*await context.executeAction({
-        "Name": "/appconsumos_mb/Actions/Call_Sendmail.action",
-        "Properties": {
-            "ShowActivityIndicator": true,
-            "ActivityIndicatorText": "Enviando correo ...",
-            "OnFailure": "",
-            "OnSuccess": "",
-            "Target": {
-                "Service": "/appconsumos_mb/Services/backend_REST.service",
-                "Path": "/sendmail",
-                "RequestProperties": {
-                    "Method": "POST",
-                    "Body": {
-                        "to": "scanob@incauca.com",
-                        "subject": "PDF Ingenio - Autorización",
-                        "body": "Adjunto PDF firmado desde aplicación Ingenio.",
-                        "nombre": "ingenio_firmado.pdf",
-                        "adj": `${pdfData}`
-                    }
-                }
-            }
-        }
-    });*/
-    let clientDataAutorizar = context.evaluateTargetPathForAPI('#Page:Detalle_Solicitud_Reabastecimieto').getClientData();
-    const reqdata = {
-      fecha: (0,_get_FechaHoraCol_js__WEBPACK_IMPORTED_MODULE_0__["default"])(),
-      pEntrega: "",
-      pEntregaficha: "",
-      pAutoriza: info_user.nombre,
-      pAutorizaficha: info_user.ficha
-    };
-    const datajson = [{
-      alce: "Alce 6",
-      sap: "1215306",
-      desc: "ADAPTADOR RECTO M-M 2083-8-85 1/2x1/2VTP",
-      cant: "2",
-      um: "PZA"
-    }, {
-      alce: "Alce 6",
-      sap: "1166831",
-      desc: 'MANGUERA 3/4" X 1.80 MT TCA LOCA 5000 PS',
-      cant: "4",
-      um: "PZA"
-    }, {
-      alce: "Alce 6",
-      sap: "1455091",
-      desc: 'ESPIRALETO 3/4',
-      cant: "1",
-      um: "PZA"
-    }, {
-      alce: "Alce 6",
-      sap: "1455091",
-      desc: 'ESPIRALETO 3/4',
-      cant: "1",
-      um: "PZA"
-    }];
-    let logo_pro = context.getGlobalDefinition('/appconsumos_mb/Globals/logo_pro.global');
-    let logo = logo_pro.getValue();
-    return context.executeAction({
-      "Name": "/appconsumos_mb/Actions/Call_generatePDF.action",
-      "Properties": {
-        "ShowActivityIndicator": true,
-        "ActivityIndicatorText": "Cargando datos ...",
-        "OnFailure": "",
-        "OnSuccess": "",
-        "Target": {
-          "Service": "/appconsumos_mb/Services/backend_REST.service",
-          "Path": "/generatePDF",
-          "RequestProperties": {
-            "Method": "POST",
-            "Body": {
-              "data": reqdata,
-              "image": `${signatureContent}`,
-              "items": datajson,
-              "logo": `${logo}`,
-              "tipo": tipo
-            }
-          }
-        }
-      }
-    }).then(async result => {
-      if (result && result.data) {
-        //context.b64Data = result.data.value
-        clientDataAutorizar.b64Data = result.data.value;
-        context.b64Data = result.data.value;
-        if (platform.isAndroid) {
-          await (0,_Rule_openDocumentoAnd_js__WEBPACK_IMPORTED_MODULE_1__["default"])(context);
-        } else if (platform.isIOS) {
-          await (0,_Rule_openDocumentoIOS_js__WEBPACK_IMPORTED_MODULE_2__["default"])(context);
-        }
-      }
-    });
-  } catch (error) {
-    alert(`Error al procesar el PDF: ${error.message || error}`);
-  }
 }
 
 /***/ }),
@@ -17964,9 +17261,10 @@ function setVisible_CantAprobadaRevision_Abast(context) {
   //alert(JSON.stringify(almacen[0]))
   var index = almacen[0].SelectedIndex;
   var data = clientData.listaInventario[index].BindingObject;
+  var total = parseFloat(data.Labst) + parseFloat(data.Klabs);
   //alert(JSON.stringify(data))
 
-  if (data.Labst < 1) {
+  if (total < 1) {
     return context.executeAction({
       "Name": "/appconsumos_mb/Actions/GenericMessageBox.action",
       "Properties": {
@@ -19453,7 +18751,7 @@ module.exports = function (item) {
   \****************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Diferencial","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Diferencial"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"Abcd12345678xyz","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":false},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Diferencial","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Diferencial"}}
 
 /***/ }),
 
@@ -19463,7 +18761,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \***************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Hidraulico","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Hidraulico"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"Abcd12345678xyz","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":false},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Hidraulico","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Hidraulico"}}
 
 /***/ }),
 
@@ -19473,7 +18771,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \**********************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Motor","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Motor"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"Abcd12345678xyz","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":false},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Motor","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Motor"}}
 
 /***/ }),
 
@@ -19483,7 +18781,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \*************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Reductor","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Reductor"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"Abcd12345678xyz","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":false},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Reductor","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Reductor"}}
 
 /***/ }),
 
@@ -19493,7 +18791,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \********************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Servotransmisor","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Servotransmisor"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"Abcd12345678xyz","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":false},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Aceites/getEnabledAutorizar_Aceites.js","OnPress":"/appconsumos_mb/Rules/Aceites/ValidarAutorizar_Aceites.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Aprobar_Aceite_Servotransmisor","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la aprobación? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Aprobar Planilla Servotransmisor"}}
 
 /***/ }),
 
@@ -19733,7 +19031,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \**************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FormCellListPicker_Almacenes","IsVisible":true,"Separator":true,"AllowMultipleSelection":true,"AllowEmptySelection":true,"Caption":"Seleccionar Almacenes","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleccionar uno o varios almacenes","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"Search":{"Enabled":true},"PickerItems":{"Target":{"Service":"/appconsumos_mb/Services/app_consumos_prd.service","EntitySet":"Almacenes","QueryOptions":"$orderby=almacen,sociedad,centro"},"ObjectCell":{"Description":"{centro}","PreserveIconStackSpacing":false,"Subhead":"{almacen_desc}","SubstatusText":"{sociedad}","Title":"{almacen}","Visible":true},"ReturnValue":"{almacen} {centro} {sociedad}"}},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FormCellListPicker_Tipo","IsVisible":true,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Tipo","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleccionar un tipo","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"PickerItems":["INGENIO","CAMPO"]},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Button":"Button"},"Title":"Agregar Almacenes","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://add","ImagePosition":"Leading","Enabled":true,"OnPress":"/appconsumos_mb/Rules/Administracion/Create_Almacenes.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Agregar_Almacenes","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action"}],"_Name":"ActionBar0","_Type":"Control.Type.ActionBar","Caption":"Agregar Almacenes"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FormCellListPicker_Almacenes","IsVisible":true,"Separator":true,"AllowMultipleSelection":true,"AllowEmptySelection":true,"Caption":"Seleccionar Almacenes","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleccionar uno o varios almacenes","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":false,"IsSearchCancelledAfterSelection":false,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"Search":{"Enabled":true},"PickerItems":{"Target":{"Service":"/appconsumos_mb/Services/app_consumos_prd.service","EntitySet":"Almacenes","QueryOptions":"$orderby=almacen,sociedad,centro"},"ObjectCell":{"Description":"{centro}","PreserveIconStackSpacing":false,"Subhead":"{almacen_desc}","SubstatusText":"{sociedad}","Title":"{almacen}","Visible":true},"ReturnValue":"{almacen} {centro} {sociedad}"}},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"FormCellListPicker_Tipo","IsVisible":true,"Separator":true,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Tipo","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleccionar un tipo","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"PickerItems":["INGENIO","CAMPO"]},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Agregar Almacenes","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://add","ImagePosition":"Leading","Enabled":true,"OnPress":"/appconsumos_mb/Rules/Administracion/Create_Almacenes.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Agregar_Almacenes","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action"}],"_Name":"ActionBar0","_Type":"Control.Type.ActionBar","Caption":"Agregar Almacenes"}}
 
 /***/ }),
 
@@ -19833,7 +19131,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":true,"_Type
   \***********************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"No. Res: {reserva}","Footnote":"/appconsumos_mb/Rules/formatOrdenId.js","Description":"{orden_desc}","SubstatusText":"Centro: {#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/centro}","DetailImageIsCircular":false,"Tags":["#Page:Main/#ClientData/info_user/correo"],"BodyText":"{equipo} - {equipo_desc} ","HeadlineText":"Almacen: {#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/almacen} - {#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/almacen_desc}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ficha","IsVisible":true,"Separator":false,"Caption":"Ficha Técnico *","PlaceHolder":"Ingresa el número de ficha","KeyboardType":"Number","AlternateInput":"Barcode","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Note","_Name":"observaciones","IsVisible":true,"Separator":false,"Caption":"Observaciones","PlaceHolder":"Ingresa observaciones en la solicitud","MinNumberOfLines":3,"Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"horometro","IsVisible":true,"Separator":true,"Caption":"Horometro","PlaceHolder":"Ingrese el horometro del equipo","KeyboardType":"Number","AlternateInput":"Barcode","Enabled":true,"IsEditable":true},{"Value":true,"_Type":"Control.Type.FormCell.Switch","_Name":"switch_reabastecer","IsVisible":true,"Separator":true,"Caption":"¿Reabastecer Automáticamente?","HelperText":"Marca esta opción para que, al autorizar la solicitud, se genere automáticamente una solicitud de abastecimiento con los materiales consumidos.","IsEditable":true}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell1"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.Label","_Name":"FormCellLabel0","IsVisible":true,"Separator":true,"Text":"Agregar Material","TextWrap":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"material","IsVisible":true,"Separator":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Material *","Label":"Selecciona un material","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleciona un material","HelperText":"Verifica que el material seleccionado provenga del almacén donde se realizó el consumo.","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"Search":{"Mode":"Persistent","AdditionalProperties":["material","material_desc"],"Enabled":true,"Placeholder":"Buscar Material...","BarcodeScanner":true},"PickerItems":{"Target":{"Service":"/appconsumos_mb/Services/app_consumos_prd.service","EntitySet":"Inventario","QueryOptions":"$expand=almacen,und&$filter=almacen/tipo eq 'CAMPO' and almacen_sociedad eq '{{#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/sociedad}}'&$orderby=almacen_almacen","ReadLink":"{@odata.readLink}"},"ObjectCell":{"Description":"{material_desc}","DisplayDescriptionInMobile":true,"Footnote":"Disponible: {stock_disponible} {und/und_vz} / Reservado: {stock_disponible} {und/und_vz}","PreserveIconStackSpacing":false,"Subhead":"{almacen/almacen} - {almacen/almacen_desc}","Title":"/appconsumos_mb/Rules/formatMaterialId.js","Visible":true},"ReturnValue":"{almacen/almacen_desc} - {material}"}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"cantidad","IsVisible":true,"Separator":false,"Caption":"Cantidad *","PlaceHolder":"Ingresa la cantidad del material","KeyboardType":"Number","AlternateInput":"None","HelperText":"Debe ser un número mayor a 0","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":false,"Styles":{"Image":"Button","Button":"Button"},"Title":"Agregar Material","Alignment":"Right","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://add-product","ImagePosition":"Leading","Enabled":true,"OnPress":"/appconsumos_mb/Rules/Campo/Agregar_Materiales_Solicitud.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Header":{"_Type":"SectionCommon.Type.Header","_Name":"SectionCommonTypeHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Materiales de la Solicitud"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Grouping":{"GroupingProperties":[],"Header":{"Items":[]}},"_Type":"Section.Type.ObjectTable","Target":"/appconsumos_mb/Rules/Campo/Target_Lista_Materiales.js","_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No hay materiales aún","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[],"_Type":"ObjectCell.Type.ContextMenu"},"Title":"/appconsumos_mb/Rules/formatMaterialId.js","Subhead":"Tomado de: {almacen/almacen_desc} ({almacen/almacen})","Description":"{material_desc}","DisplayDescriptionInMobile":true,"StatusText":"Cant: {cant} de {stock_disponible} {und/und_vz}","PreserveIconStackSpacing":false,"AccessoryType":"DetailButton","AccessoryButtonIcon":"sap-icon://delete","AccessoryButtonText":"Borrar","Tags":[],"AvatarStack":{"Avatars":[{"Image":"sap-icon://product"}],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnAccessoryButtonPress":"/appconsumos_mb/Rules/Campo/Borrar_Material_Lista.js","_Type":"ObjectTable.Type.ObjectCell","Selected":false},"Search":{"Mode":"Expandable","Enabled":true,"Placeholder":"Buscar Material..."},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Agregar_Solicitud_Campo","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"close","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Estás seguro que quieres salir?","Title":"Confirmación","OKCaption":"Aceptar","OnOK":{"Name":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","Properties":{"NavigateBackToPage":"Detalle_Orden_Campo"}},"CancelCaption":"Cancelar"}}}],"_Name":"ActionBar2","_Type":"Control.Type.ActionBar","Caption":"Solicitud de Formalización"},"FioriToolbar":{"_Type":"Control.Type.FioriToolbar","_Name":"FioriToolbar0","Items":[{"_Type":"FioriToolbarItem.Type.Button","_Name":"ToolbarItem0","Visible":true,"Title":"Crear Formalización Campo","Styles":{"Image":"Button2","Button":"Button2"},"OnPress":"/appconsumos_mb/Rules/Campo/Validate_Req_Create_Solicitud_Campo.js","Image":"sap-icon://save","Enabled":true,"ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading"}]}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"No. Res: {reserva}","Footnote":"/appconsumos_mb/Rules/formatOrdenId.js","Description":"{orden_desc}","SubstatusText":"Centro: {#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/centro}","DetailImageIsCircular":false,"Tags":["#Page:Main/#ClientData/info_user/correo"],"BodyText":"{equipo} - {equipo_desc} ","HeadlineText":"Almacen: {#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/almacen} - {#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/almacen_desc}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ficha","IsVisible":true,"Separator":false,"Caption":"Ficha Técnico *","PlaceHolder":"Ingresa el número de ficha","KeyboardType":"Number","AlternateInput":"Barcode","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Note","_Name":"observaciones","IsVisible":true,"Separator":false,"Caption":"Observaciones","PlaceHolder":"Ingresa observaciones en la solicitud","MinNumberOfLines":3,"Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"horometro","IsVisible":true,"Separator":true,"Caption":"Horometro","PlaceHolder":"Ingrese el horometro del equipo","KeyboardType":"Number","AlternateInput":"Barcode","Enabled":true,"IsEditable":true},{"Value":true,"_Type":"Control.Type.FormCell.Switch","_Name":"switch_reabastecer","IsVisible":true,"Separator":true,"Caption":"¿Reabastecer Automáticamente?","HelperText":"Marca esta opción para que, al autorizar la solicitud, se genere automáticamente una solicitud de abastecimiento con los materiales consumidos.","IsEditable":true}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell1"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.Label","_Name":"FormCellLabel0","IsVisible":true,"Separator":true,"Text":"Agregar Material","TextWrap":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"material","IsVisible":true,"Separator":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Material *","Label":"Selecciona un material","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleciona un material","HelperText":"Verifica que el material seleccionado provenga del almacén donde se realizó el consumo.","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"Search":{"Mode":"Persistent","AdditionalProperties":["material","material_desc"],"Enabled":true,"Placeholder":"Buscar Material...","BarcodeScanner":true},"PickerItems":{"Target":{"Service":"/appconsumos_mb/Services/app_consumos_prd.service","EntitySet":"Inventario","QueryOptions":"$expand=almacen,und&$filter=almacen/tipo eq 'CAMPO' and almacen_sociedad eq '{{#Page:Filtro_Campo/#Control:almacen_campo/#Value/#First/BindingObject/sociedad}}'&$orderby=almacen_almacen","ReadLink":"{@odata.readLink}"},"ObjectCell":{"Description":"{material_desc}","DisplayDescriptionInMobile":true,"Footnote":"Disponible: {stock_disponible} {und/und_vz} / Reservado: {stock_reservado} {und/und_vz}","PreserveIconStackSpacing":false,"Subhead":"{almacen/almacen} - {almacen/almacen_desc}","Title":"/appconsumos_mb/Rules/formatMaterialId.js","Visible":true},"ReturnValue":"{almacen/almacen_desc} - {material}"}},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"cantidad","IsVisible":true,"Separator":false,"Caption":"Cantidad *","PlaceHolder":"Ingresa la cantidad del material","KeyboardType":"Number","AlternateInput":"None","HelperText":"Debe ser un número mayor a 0","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":false,"Styles":{"Image":"Button","Button":"Button"},"Title":"Agregar Material","Alignment":"Right","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://add-product","ImagePosition":"Leading","Enabled":true,"OnPress":"/appconsumos_mb/Rules/Campo/Agregar_Materiales_Solicitud.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Header":{"_Type":"SectionCommon.Type.Header","_Name":"SectionCommonTypeHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Materiales de la Solicitud"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Grouping":{"GroupingProperties":[],"Header":{"Items":[]}},"_Type":"Section.Type.ObjectTable","Target":"/appconsumos_mb/Rules/Campo/Target_Lista_Materiales.js","_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No hay materiales aún","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[],"_Type":"ObjectCell.Type.ContextMenu"},"Title":"/appconsumos_mb/Rules/formatMaterialId.js","Subhead":"Tomado de: {almacen/almacen_desc} ({almacen/almacen})","Description":"{material_desc}","DisplayDescriptionInMobile":true,"StatusText":"Cant: {cant} {und/und_vz}","PreserveIconStackSpacing":false,"AccessoryType":"DetailButton","AccessoryButtonIcon":"sap-icon://delete","AccessoryButtonText":"Borrar","Tags":[],"AvatarStack":{"Avatars":[{"Image":"sap-icon://product"}],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnAccessoryButtonPress":"/appconsumos_mb/Rules/Campo/Borrar_Material_Lista.js","_Type":"ObjectTable.Type.ObjectCell","Selected":false},"Search":{"Mode":"Expandable","Enabled":true,"Placeholder":"Buscar Material..."},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Agregar_Solicitud_Campo","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"close","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Estás seguro que quieres salir?","Title":"Confirmación","OKCaption":"Aceptar","OnOK":{"Name":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","Properties":{"NavigateBackToPage":"Detalle_Orden_Campo"}},"CancelCaption":"Cancelar"}}}],"_Name":"ActionBar2","_Type":"Control.Type.ActionBar","Caption":"Solicitud de Formalización"},"FioriToolbar":{"_Type":"Control.Type.FioriToolbar","_Name":"FioriToolbar0","Items":[{"_Type":"FioriToolbarItem.Type.Button","_Name":"ToolbarItem0","Visible":true,"Title":"Crear Formalización Campo","Styles":{"Image":"Button2","Button":"Button2"},"OnPress":"/appconsumos_mb/Rules/Campo/Validate_Req_Create_Solicitud_Campo.js","Image":"sap-icon://save","Enabled":true,"ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading"}]}}
 
 /***/ }),
 
@@ -19843,7 +19141,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \*************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.InlineSignatureCapture","_Name":"FormCellInlineSignatureCapture0","IsVisible":true,"Separator":true,"Caption":"Firmar Orden Mantenimiento *","ShowTimestampInImage":true,"ShowXMark":true,"ShowUnderline":false,"WatermarkText":"","WatermarkTextMaxLines":3,"HelperText":"Toque para firmar"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Campo/getEnabledAutorizar_Campo.js","OnPress":"/appconsumos_mb/Rules/Campo/ValidarAutorizar_Campo.js"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton1","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Liquidar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://payment-approval","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Campo/getEnabledLiquidar_Campo.js","OnPress":"/appconsumos_mb/Rules/Campo/ValidarLiquidar_Campo.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Autorizar_Solicitud_Campo","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la autorización? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Autorizar Solicitud Campo"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"Abcd12345678xyz","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":false},{"_Type":"Control.Type.FormCell.InlineSignatureCapture","_Name":"FormCellInlineSignatureCapture0","IsVisible":true,"Separator":true,"Caption":"Firmar Orden Mantenimiento *","ShowTimestampInImage":true,"ShowXMark":true,"ShowUnderline":false,"WatermarkText":"","WatermarkTextMaxLines":3,"HelperText":"Toque para firmar"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Campo/getEnabledAutorizar_Campo.js","OnPress":"/appconsumos_mb/Rules/Campo/ValidarAutorizar_Campo.js"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton1","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Liquidar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://payment-approval","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Campo/getEnabledLiquidar_Campo.js","OnPress":"/appconsumos_mb/Rules/Campo/ValidarLiquidar_Campo.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Autorizar_Solicitud_Campo","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la autorización? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Autorizar Solicitud Campo"}}
 
 /***/ }),
 
@@ -19953,7 +19251,7 @@ module.exports = {"Controls":[{"_Type":"Control.Type.SectionedTable","_Name":"Se
   \***************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"No. Res: {#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/reserva}","Footnote":"/appconsumos_mb/Rules/formatOrdenId.js","Description":"{#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/orden_desc}","SubstatusText":"Centro: {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/centro}","DetailImageIsCircular":false,"Tags":["#Page:Main/#ClientData/info_user/correo"],"BodyText":"{#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/equipo} -  {#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/equipo_desc} ","HeadlineText":"Almacen: {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/almacen} - {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/almacen_desc}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ficha","IsVisible":true,"Separator":false,"Caption":"Ficha Técnico *","PlaceHolder":"Ingresa el número de ficha","KeyboardType":"Number","AlternateInput":"Barcode","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Note","_Name":"observaciones","IsVisible":true,"Separator":false,"Caption":"Observaciones","PlaceHolder":"Ingresa observaciones en la solicitud","MinNumberOfLines":3,"Enabled":true,"IsEditable":true}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell1"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.Label","_Name":"FormCellLabel0","IsVisible":true,"Separator":true,"Text":"Agregar Material","TextWrap":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"material","IsVisible":true,"Separator":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Material *","Label":"Selecciona un material","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleciona un material","HelperText":"Verifica que el material seleccionado provenga del almacén donde se realizó el consumo.","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"Search":{"Mode":"Persistent","Enabled":true,"Placeholder":"Buscar Material...","BarcodeScanner":true},"PickerItems":"/appconsumos_mb/Rules/Ingenio/get_Materiales_Almacenes_Ingenio.js"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"cantidad","IsVisible":true,"Separator":false,"Caption":"Cantidad *","PlaceHolder":"Ingresa la cantidad del material","KeyboardType":"Number","AlternateInput":"None","HelperText":"Debe ser un número mayor a 0","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":false,"Styles":{"Image":"Button","Button":"Button"},"Title":"Agregar Material","Alignment":"Right","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://add-product","ImagePosition":"Leading","Enabled":true,"OnPress":"/appconsumos_mb/Rules/Ingenio/Agregar_Materiales_Solicitud.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Header":{"_Type":"SectionCommon.Type.Header","_Name":"SectionCommonTypeHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Materiales de la Solicitud"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Grouping":{"GroupingProperties":[],"Header":{"Items":[]}},"_Type":"Section.Type.ObjectTable","Target":"/appconsumos_mb/Rules/Ingenio/Target_Lista_Materiales.js","_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No hay materiales aún","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[],"_Type":"ObjectCell.Type.ContextMenu"},"Title":"{Matnr}","Subhead":"Tomado de: {Lgort}","Description":"{Txtmd}","DisplayDescriptionInMobile":true,"StatusText":"Cant: {cant} de {Labst} {Meins}","PreserveIconStackSpacing":false,"AccessoryType":"DetailButton","AccessoryButtonIcon":"sap-icon://delete","AccessoryButtonText":"Borrar","Tags":[],"AvatarStack":{"Avatars":[{"Image":"sap-icon://product"}],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnAccessoryButtonPress":"/appconsumos_mb/Rules/Ingenio/Borrar_Material_Lista.js","_Type":"ObjectTable.Type.ObjectCell","Selected":false},"Search":{"Mode":"Expandable","Enabled":true,"Placeholder":"Buscar Material..."},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Agregar_Solicitud_Ingenio","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"close","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Estás seguro que quieres salir?","Title":"Confirmación","OKCaption":"Aceptar","OnOK":{"Name":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","Properties":{"NavigateBackToPage":"Ingenio"}},"CancelCaption":"Cancelar"}}}],"_Name":"ActionBar2","_Type":"Control.Type.ActionBar","Caption":"Nueva Solicitud Ingenio"},"FioriToolbar":{"_Type":"Control.Type.FioriToolbar","_Name":"FioriToolbar0","Items":[{"_Type":"FioriToolbarItem.Type.Button","_Name":"ToolbarItem0","Visible":true,"Title":"Crear Solicitud Ingenio","Styles":{"Image":"Button2","Button":"Button2"},"OnPress":"/appconsumos_mb/Rules/Ingenio/Validate_Req_Create_Solicitud_Ingenio.js","Image":"sap-icon://save","Enabled":true,"ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading"}]}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"ObjectHeader":{"Subhead":"No. Res: {#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/reserva}","Footnote":"/appconsumos_mb/Rules/formatOrdenId.js","Description":"{#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/orden_desc}","SubstatusText":"Centro: {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/centro}","DetailImageIsCircular":false,"Tags":["#Page:Main/#ClientData/info_user/correo"],"BodyText":"{#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/equipo} -  {#Page:Detalle_Orden_Ingenio/#ClientData/context_binding/equipo_desc} ","HeadlineText":"Almacen: {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/almacen} - {#Page:Filtro_Ingenio/#Control:FormCellListPicker_Almacen_O/#Value/#First/BindingObject/almacen_desc}","StatusPosition":"Stacked","StatusImagePosition":"Leading","SubstatusImagePosition":"Leading"},"_Type":"Section.Type.ObjectHeader","_Name":"SectionObjectHeader0","Visible":true},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"ficha","IsVisible":true,"Separator":false,"Caption":"Ficha Técnico *","PlaceHolder":"Ingresa el número de ficha","KeyboardType":"Number","AlternateInput":"Barcode","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Note","_Name":"observaciones","IsVisible":true,"Separator":false,"Caption":"Observaciones","PlaceHolder":"Ingresa observaciones en la solicitud","MinNumberOfLines":3,"Enabled":true,"IsEditable":true}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell1"},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.Label","_Name":"FormCellLabel0","IsVisible":true,"Separator":true,"Text":"Agregar Material","TextWrap":true},{"_Type":"Control.Type.FormCell.ListPicker","_Name":"material","IsVisible":true,"Separator":false,"AllowMultipleSelection":false,"AllowEmptySelection":true,"Caption":"Material *","Label":"Selecciona un material","DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"PickerPrompt":"Seleciona un material","HelperText":"Verifica que el material seleccionado provenga del almacén donde se realizó el consumo.","IsSelectedSectionEnabled":false,"IsPickerDismissedOnSelection":true,"AllowDefaultValueIfOneItem":false,"IsEditable":true,"Search":{"Mode":"Persistent","Enabled":true,"Placeholder":"Buscar Material...","BarcodeScanner":true},"PickerItems":"/appconsumos_mb/Rules/Ingenio/get_Materiales_Almacenes_Ingenio.js"},{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"cantidad","IsVisible":true,"Separator":false,"Caption":"Cantidad *","PlaceHolder":"Ingresa la cantidad del material","KeyboardType":"Number","AlternateInput":"None","HelperText":"Debe ser un número mayor a 0","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":false,"Styles":{"Image":"Button","Button":"Button"},"Title":"Agregar Material","Alignment":"Right","ButtonType":"Text","Semantic":"Tint","Image":"sap-icon://add-product","ImagePosition":"Leading","Enabled":true,"OnPress":"/appconsumos_mb/Rules/Ingenio/Agregar_Materiales_Solicitud.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"},{"Header":{"_Type":"SectionCommon.Type.Header","_Name":"SectionCommonTypeHeader0","AccessoryType":"None","UseTopPadding":true,"Caption":"Materiales de la Solicitud"},"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Grouping":{"GroupingProperties":[],"Header":{"Items":[]}},"_Type":"Section.Type.ObjectTable","Target":"/appconsumos_mb/Rules/Ingenio/Target_Lista_Materiales.js","_Name":"SectionObjectTable0","Visible":true,"EmptySection":{"Caption":"No hay materiales aún","FooterVisible":false},"ObjectCell":{"ContextMenu":{"Items":[],"PerformFirstActionWithFullSwipe":true,"LeadingItems":[],"TrailingItems":[],"_Type":"ObjectCell.Type.ContextMenu"},"Title":"{Matnr}","Subhead":"Tomado de: {Lgort}","Description":"{Txtmd}","DisplayDescriptionInMobile":true,"StatusText":"Cant: {cant} {Meins}","PreserveIconStackSpacing":false,"AccessoryType":"DetailButton","AccessoryButtonIcon":"sap-icon://delete","AccessoryButtonText":"Borrar","Tags":[],"AvatarStack":{"Avatars":[{"Image":"sap-icon://product"}],"ImageIsCircular":true,"ImageHasBorder":false},"AvatarGrid":{"Avatars":[],"ImageIsCircular":true},"OnAccessoryButtonPress":"/appconsumos_mb/Rules/Ingenio/Borrar_Material_Lista.js","_Type":"ObjectTable.Type.ObjectCell","Selected":false},"Search":{"Mode":"Expandable","Enabled":true,"Placeholder":"Buscar Material..."},"DataPaging":{"ShowLoadingIndicator":false,"PageSize":50},"HighlightSelectedItem":false,"Selection":{"ExitOnLastDeselect":true,"LongPressToEnable":"None","Mode":"None"}}]}],"_Type":"Page","_Name":"Agregar_Solicitud_Ingenio","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"close","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Estás seguro que quieres salir?","Title":"Confirmación","OKCaption":"Aceptar","OnOK":{"Name":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","Properties":{"NavigateBackToPage":"Ingenio"}},"CancelCaption":"Cancelar"}}}],"_Name":"ActionBar2","_Type":"Control.Type.ActionBar","Caption":"Nueva Solicitud Ingenio"},"FioriToolbar":{"_Type":"Control.Type.FioriToolbar","_Name":"FioriToolbar0","Items":[{"_Type":"FioriToolbarItem.Type.Button","_Name":"ToolbarItem0","Visible":true,"Title":"Crear Solicitud Ingenio","Styles":{"Image":"Button2","Button":"Button2"},"OnPress":"/appconsumos_mb/Rules/Ingenio/Validate_Req_Create_Solicitud_Ingenio.js","Image":"sap-icon://save","Enabled":true,"ButtonType":"Primary","Semantic":"Tint","ImagePosition":"Leading"}]}}
 
 /***/ }),
 
@@ -19963,7 +19261,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \*****************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":true},{"Value":"#Page:Main/#ClientData/info_user/correo","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"correo_enviar","IsVisible":true,"Separator":true,"Caption":"Correo Destinatario del Autorizador","PlaceHolder":"Ingresa correo del autorizador","KeyboardType":"Email","Enabled":true,"IsEditable":true},{"Value":"{ap_correo}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"correo_enviar_aux","IsVisible":true,"Separator":true,"Caption":"Correo Destinatario del Auxiliar","PlaceHolder":"Ingresa correo del auxiliar","KeyboardType":"Email","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.InlineSignatureCapture","_Name":"FormCellInlineSignatureCapture0","IsVisible":true,"Separator":true,"Caption":"Firmar Orden Mantenimiento *","ShowTimestampInImage":true,"ShowXMark":true,"ShowUnderline":false,"WatermarkText":"","WatermarkTextMaxLines":3,"HelperText":"Toque para firmar"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Ingenio/getEnabledAutorizar_Ingenio.js","OnPress":"/appconsumos_mb/Rules/Ingenio/ValidarAutorizar_Ingenio.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Autorizar_Solicitud_Ingenio","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la autorización? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Autorizar Solicitud Ingenio"}}
+module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Type":"Control.Type.FilterFeedbackBar"},"_Type":"Control.Type.SectionedTable","_Name":"SectionedTable0","Sections":[{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"_Type":"Section.Type.ProfileHeader","_Name":"SectionProfileHeader0","Visible":true,"ProfileHeader":{"DetailImage":"sap-icon://my-view","DetailImageIsCircular":false,"Headline":"Usuario SAP :","Subheadline":"{#Page:Main/#ClientData/info_user/sapUsr}","Description":""}},{"Separators":{"TopSectionSeparator":false,"BottomSectionSeparator":true,"HeaderSeparator":true,"FooterSeparator":true,"ControlSeparator":true},"Controls":[{"Value":"Abcd12345678xyz","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"pass","IsVisible":true,"Separator":true,"Caption":"Contraseña SAP *","PlaceHolder":"Ingrese sus credenciales SAP","KeyboardType":"Password","AlternateInput":"None","HelperText":"*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.","Enabled":true,"IsEditable":false},{"Value":"#Page:Main/#ClientData/info_user/correo","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"correo_enviar","IsVisible":true,"Separator":true,"Caption":"Correo Destinatario del Autorizador","PlaceHolder":"Ingresa correo del autorizador","KeyboardType":"Email","Enabled":true,"IsEditable":true},{"Value":"{ap_correo}","_Type":"Control.Type.FormCell.SimpleProperty","_Name":"correo_enviar_aux","IsVisible":true,"Separator":true,"Caption":"Correo Destinatario del Auxiliar","PlaceHolder":"Ingresa correo del auxiliar","KeyboardType":"Email","Enabled":true,"IsEditable":true},{"_Type":"Control.Type.FormCell.InlineSignatureCapture","_Name":"FormCellInlineSignatureCapture0","IsVisible":true,"Separator":true,"Caption":"Firmar Orden Mantenimiento *","ShowTimestampInImage":true,"ShowXMark":true,"ShowUnderline":false,"WatermarkText":"","WatermarkTextMaxLines":3,"HelperText":"Toque para firmar"},{"_Type":"Control.Type.FormCell.Button","_Name":"FormCellButton0","IsVisible":true,"Separator":true,"Styles":{"Image":"Button","Button":"Button"},"Title":"Autorizar","Alignment":"Center","ButtonType":"Primary","Semantic":"Tint","Image":"sap-icon://validate","ImagePosition":"Leading","Enabled":"/appconsumos_mb/Rules/Ingenio/getEnabledAutorizar_Ingenio.js","OnPress":"/appconsumos_mb/Rules/Ingenio/ValidarAutorizar_Ingenio.js"}],"Layout":{"NumberOfColumns":1},"Visible":true,"EmptySection":{"FooterVisible":false},"_Type":"Section.Type.FormCell","_Name":"SectionFormCell0"}]}],"_Type":"Page","_Name":"Autorizar_Solicitud_Ingenio","ActionBar":{"Items":[{"_Type":"Control.Type.ActionBarItem","_Name":"ActionBarItem0","Caption":"Item","Icon":"sap-icon://decline","Position":"Right","IsIconCircular":false,"Visible":true,"OnPress":{"Name":"/appconsumos_mb/Actions/GenericMessageBox.action","Properties":{"Message":"¿Seguro que desea cancelar la autorización? Se perderán todos los datos registrados","Title":"Confirmación","OKCaption":"Aceptar","OnOK":"/appconsumos_mb/Actions/CloseModalPage_Cancel.action","CancelCaption":"Cancelar"}}}],"_Name":"ActionBar4","_Type":"Control.Type.ActionBar","Caption":"Autorizar Solicitud Ingenio"}}
 
 /***/ }),
 
@@ -20173,7 +19471,7 @@ module.exports = {"Controls":[{"FilterFeedbackBar":{"ShowAllFilters":false,"_Typ
   \*******************************************/
 /***/ ((module) => {
 
-module.exports = {"MainPage":"/appconsumos_mb/Pages/Main.page","OnExit":"/appconsumos_mb/Actions/app_consumos_prd/Service/UploadOffline.action","OnWillUpdate":"/appconsumos_mb/Rules/Application/OnWillUpdate.js","OnDidUpdate":"/appconsumos_mb/Rules/Service/Initialize.js","Styles":"/appconsumos_mb/Styles/Styles.css","OnSuspend":"/appconsumos_mb/Actions/app_consumos_prd/Service/UploadOffline.action","OnResume":"/appconsumos_mb/Actions/app_consumos_prd/Service/UploadOffline.action","Localization":"/appconsumos_mb/i18n/i18n.properties","_SchemaVersion":"25.6","_Name":"appconsumos_mb","StyleSheets":{"Styles":{"css":"/appconsumos_mb/Styles/Styles.light.css","ios":"/appconsumos_mb/Styles/Styles.light.nss","android":"/appconsumos_mb/Styles/Styles.light.json"}},"SDKStyles":{"ios":"/appconsumos_mb/Styles/Styles.light.nss","android":"/appconsumos_mb/Styles/Styles.light.json"}}
+module.exports = {"MainPage":"/appconsumos_mb/Pages/Main.page","OnLaunch":["/appconsumos_mb/Rules/Service/Initialize.js"],"OnExit":"/appconsumos_mb/Actions/app_consumos_prd/Service/UploadOffline.action","OnWillUpdate":"/appconsumos_mb/Rules/Application/OnWillUpdate.js","OnDidUpdate":"/appconsumos_mb/Rules/Service/Initialize.js","Styles":"/appconsumos_mb/Styles/Styles.css","Version":"/appconsumos_mb/Globals/Application/AppDefinition_Version.global","OnSuspend":"/appconsumos_mb/Actions/app_consumos_prd/Service/UploadOffline.action","OnResume":"/appconsumos_mb/Actions/app_consumos_prd/Service/UploadOffline.action","Localization":"/appconsumos_mb/i18n/i18n.properties","_SchemaVersion":"25.6","_Name":"appconsumos_mb","StyleSheets":{"Styles":{"css":"/appconsumos_mb/Styles/Styles.light.css","ios":"/appconsumos_mb/Styles/Styles.light.nss","android":"/appconsumos_mb/Styles/Styles.light.json"}},"SDKStyles":{"ios":"/appconsumos_mb/Styles/Styles.light.nss","android":"/appconsumos_mb/Styles/Styles.light.json"}}
 
 /***/ }),
 
@@ -20293,7 +19591,7 @@ module.exports = {"_Type":"Action.Type.Message","Message":"Esta acción eliminar
   \*************************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"PopoverItems":[{"Enabled":true,"Icon":"sap-icon://synchronize","OnPress":"/appconsumos_mb/Actions/app_consumos_prd/Service/SyncStartedMessage.action","Title":"Sync Changes","Visible":"$(PLT,true,true,false)"},{"Enabled":true,"Icon":"sap-icon://headset","OnPress":"/appconsumos_mb/Actions/Application/NavToSupport.action","Title":"Support","Visible":true},{"Enabled":true,"Icon":"sap-icon://refresh","OnPress":"/appconsumos_mb/Actions/Application/AppUpdateProgressBanner.action","Title":"Check for Updates","Visible":"$(PLT,true,true,false)"},{"Enabled":true,"Icon":"sap-icon://hint","OnPress":"/appconsumos_mb/Actions/Application/NavToAbout.action","Title":"About","Visible":true},{"Enabled":true,"Icon":"sap-icon://reset","OnPress":"/appconsumos_mb/Actions/Application/ResetMessage.action","Title":"Reset","Visible":true},{"Enabled":true,"Icon":"sap-icon://log","OnPress":"/appconsumos_mb/Actions/Application/Logout.action","Title":"Logout","Visible":"/appconsumos_mb/Rules/Application/ClientIsMultiUserMode.js"}],"_Type":"Action.Type.PopoverMenu"}
+module.exports = {"_Type":"Action.Type.PopoverMenu","PopoverItems":[{"Enabled":true,"Icon":"sap-icon://synchronize","OnPress":"/appconsumos_mb/Actions/app_consumos_prd/Service/SyncStartedMessage.action","Title":"Sincronizar","Visible":"$(PLT,true,true,false)"},{"Enabled":true,"Icon":"sap-icon://headset","OnPress":"/appconsumos_mb/Actions/Application/NavToSupport.action","Title":"Ayuda","Visible":true},{"Enabled":true,"Icon":"sap-icon://refresh","OnPress":"/appconsumos_mb/Actions/Application/AppUpdateProgressBanner.action","Title":"Buscar Actualizaciones","Visible":"$(PLT,true,true,false)"},{"Enabled":true,"Icon":"sap-icon://hint","OnPress":"/appconsumos_mb/Actions/Application/NavToAbout.action","Title":"Acerca de","Visible":true},{"Enabled":true,"Icon":"sap-icon://reset","OnPress":"/appconsumos_mb/Actions/Application/ResetMessage.action","Title":"Salir App","Visible":true},{"Enabled":true,"Icon":"sap-icon://log","OnPress":"/appconsumos_mb/Actions/Application/Logout.action","Title":"Cerrar Sesión","Visible":"/appconsumos_mb/Rules/Application/ClientIsMultiUserMode.js"}]}
 
 /***/ }),
 
@@ -20517,16 +19815,6 @@ module.exports = {"Animated":true,"CompletionMessage":"Logs Uploaded","Completio
 
 /***/ }),
 
-/***/ "./build.definitions/appconsumos_mb/Actions/Mensajes/ms_errorCreateEmpleadoApp.action":
-/*!********************************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Actions/Mensajes/ms_errorCreateEmpleadoApp.action ***!
-  \********************************************************************************************/
-/***/ ((module) => {
-
-module.exports = {"_Type":"Action.Type.Message","ActionResult":{"_Name":"ms_errorCreateEmpleadoApp"},"Message":"Falló en Crear el empleado - {#ActionResults:Create_EmpleadosApp/error}  ","Title":"Error","OKCaption":"Ok"}
-
-/***/ }),
-
 /***/ "./build.definitions/appconsumos_mb/Actions/ZAMANAGE_LOGISTIC/Service/CloseOffline.action":
 /*!************************************************************************************************!*\
   !*** ./build.definitions/appconsumos_mb/Actions/ZAMANAGE_LOGISTIC/Service/CloseOffline.action ***!
@@ -20607,26 +19895,6 @@ module.exports = {"_Type":"Action.Type.ToastMessage","Message":" El servicio de 
 
 /***/ }),
 
-/***/ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadOffline.action":
-/*!*************************************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadOffline.action ***!
-  \*************************************************************************************************/
-/***/ ((module) => {
-
-module.exports = {"_Type":"Action.Type.OfflineOData.Download","ActionResult":{"_Name":"sync"},"OnFailure":"/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action","OnSuccess":"/appconsumos_mb/Rules/ZBODEGA_AGO_SRV/ErrorArchive_CheckForSyncError.js","Service":"/appconsumos_mb/Services/ZBODEGA_AGO_SRV.service","DefiningRequests":[{"Name":"ZBIW_MARDTSet","Query":"ZBIW_MARDTSet","AutomaticallyRetrievesStreams":true}]}
-
-/***/ }),
-
-/***/ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadStartedMessage.action":
-/*!********************************************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadStartedMessage.action ***!
-  \********************************************************************************************************/
-/***/ ((module) => {
-
-module.exports = {"_Type":"Action.Type.ProgressBanner","OnSuccess":"/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadOffline.action","Message":"Descarga en proceso (ERP)...","CompletionMessage":"Descarga Exitosa","CompletionTimeout":3}
-
-/***/ }),
-
 /***/ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/InitializeOffline.action":
 /*!***************************************************************************************************!*\
   !*** ./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/InitializeOffline.action ***!
@@ -20644,36 +19912,6 @@ module.exports = {"_Type":"Action.Type.ODataService.Initialize","ActionResult":{
 /***/ ((module) => {
 
 module.exports = {"_Type":"Action.Type.BannerMessage","Message":"No se pudo inicializar el servicio de datos de la aplicación - {#ActionResults:init/error}","Duration":7,"Animated":true}
-
-/***/ }),
-
-/***/ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action":
-/*!****************************************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action ***!
-  \****************************************************************************************************/
-/***/ ((module) => {
-
-module.exports = {"_Type":"Action.Type.BannerMessage","Message":"La sincronización de los datos (ERP) falló - {#ActionResults:sync/error}","Duration":7,"Animated":true}
-
-/***/ }),
-
-/***/ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncStartedMessage.action":
-/*!****************************************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncStartedMessage.action ***!
-  \****************************************************************************************************/
-/***/ ((module) => {
-
-module.exports = {"_Type":"Action.Type.ProgressBanner","OnFailure":"/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action","OnSuccess":"/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/UploadOffline.action","Message":"Carga de datos del ERP en proceso...","CompletionMessage":"Sincronización Completa","CompletionTimeout":7}
-
-/***/ }),
-
-/***/ "./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/UploadOffline.action":
-/*!***********************************************************************************************!*\
-  !*** ./build.definitions/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/UploadOffline.action ***!
-  \***********************************************************************************************/
-/***/ ((module) => {
-
-module.exports = {"_Type":"Action.Type.OfflineOData.Upload","ActionResult":{"_Name":"sync"},"OnFailure":"/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/SyncFailureMessage.action","OnSuccess":"/appconsumos_mb/Actions/ZBODEGA_AGO_SRV/Service/DownloadStartedMessage.action","Service":"/appconsumos_mb/Services/ZBODEGA_AGO_SRV.service"}
 
 /***/ }),
 
@@ -21413,7 +20651,7 @@ module.exports = {"DestinationName":"ZBODEGA_AGO_SRV","OfflineEnabled":true,"Lan
   \****************************************************************************/
 /***/ ((module) => {
 
-module.exports = {"DestinationName":"app.consumos.prd","OfflineEnabled":true,"LanguageURLParam":"","OnlineOptions":{},"OfflineOptions":{"StoreParameters":{}},"PathSuffix":"","SourceType":"Mobile","ServiceUrl":""}
+module.exports = {"DestinationName":"app.consumos.prd","OfflineEnabled":true,"SourceType":"Mobile"}
 
 /***/ }),
 

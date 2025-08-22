@@ -37,6 +37,7 @@
 					},
 					"Controls": [
 						{
+							"Value": "Abcd12345678xyz",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "pass",
 							"IsVisible": true,
@@ -47,7 +48,7 @@
 							"AlternateInput": "None",
 							"HelperText": "*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.",
 							"Enabled": true,
-							"IsEditable": true
+							"IsEditable": false
 						},
 						{
 							"_Type": "Control.Type.FormCell.InlineSignatureCapture",
