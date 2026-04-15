@@ -27,7 +27,7 @@ export default function get_List_Ingenio_Equipo(context) {
     }
     if (sociedad === 'AI08') {
         // Agrega condición para excluir orden_desc que contiene 'CAMPO, INSPECCION Y MTTO'
-        filtro += ") and not contains(orden_desc, 'CAMPO, INSPECCION Y MTTO')";
+        filtro += ") and not contains(orden_desc, 'CAMPO INSPE Y MTTO')";
     }
 
     let query = filtro + "&$orderby=fecha_creacion desc";

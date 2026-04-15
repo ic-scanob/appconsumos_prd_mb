@@ -40,6 +40,7 @@
 							"Value": "Abcd12345678xyz",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "pass",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Contraseña SAP *",
@@ -48,12 +49,13 @@
 							"AlternateInput": "None",
 							"HelperText": "*Verifica cuidadosamente la contraseña antes de enviarla. Después de 3 intentos fallidos, el usuario será bloqueado.",
 							"Enabled": true,
-							"IsEditable": false
+							"IsEditable": true
 						},
 						{
 							"Value": "#Page:Main/#ClientData/info_user/correo",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "correo_enviar",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Correo Destinatario del Autorizador",
@@ -66,6 +68,7 @@
 							"Value": "{ap_correo}",
 							"_Type": "Control.Type.FormCell.SimpleProperty",
 							"_Name": "correo_enviar_aux",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Correo Destinatario del Auxiliar",
@@ -77,6 +80,7 @@
 						{
 							"_Type": "Control.Type.FormCell.InlineSignatureCapture",
 							"_Name": "FormCellInlineSignatureCapture0",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Caption": "Firmar Orden Mantenimiento *",
@@ -90,6 +94,7 @@
 						{
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "FormCellButton0",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"Styles": {

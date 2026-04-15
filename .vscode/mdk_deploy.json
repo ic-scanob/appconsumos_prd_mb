@@ -1,9 +1,13 @@
 {
-	"Application": "/home/user/projects/appconsumos_mb/Application.app",
+	"Application": "/home/user/projects/appconsumos_prd_mb/Application.app",
 	"Target": "Mobile Services",
 	"OtherApps": [
 		{
 			"Application": "/home/user/projects/appconsumos_mb/Application.app",
+			"Target": "Mobile Services"
+		},
+		{
+			"Application": "/home/user/projects/appconsumos_prd_mb/Application.app",
 			"Target": "Mobile Services"
 		}
 	]

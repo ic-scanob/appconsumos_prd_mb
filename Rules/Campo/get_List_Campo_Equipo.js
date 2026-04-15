@@ -29,7 +29,8 @@ export default function get_List_Campo_Equipo(context) {
     }
 
     if (sociedad === 'AI08') {
-        filtro += ") and contains(orden_desc, 'CAMPO, INSPECCION Y MTTO')";
+        //filtro += ") and contains(orden_desc, 'CAMPO INSPE Y MTTO')";
+        filtro += ")";
     }
 
 
