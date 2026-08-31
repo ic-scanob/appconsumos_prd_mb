@@ -12067,8 +12067,8 @@ function get_List_Campo_Equipo(context) {
     filtro += ")";
   }
   if (sociedad === 'AI08') {
-    //filtro += ") and contains(orden_desc, 'CAMPO INSPE Y MTTO')";
-    filtro += ")";
+    filtro += ") and contains(orden_desc, 'CAMPO INSPE Y MTTO')";
+    //filtro += ")";
   }
   let query = filtro + "&$orderby=fecha_creacion desc";
   return context.read('/appconsumos_mb/Services/app_consumos_prd.service', 'Ordenes', [], query).then(async results => {

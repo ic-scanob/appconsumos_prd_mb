@@ -11,7 +11,8 @@
 		"Destination": [
 			"app.consumos.prd",
 			"ZBODEGA_AGO_SRV",
-			"ZAMANAGE_LOGISTIC"
+			"ZAMANAGE_LOGISTIC",
+			"ALB-Odata-ZAMANAGE_LOGISTIC"
 		],
 		"Type": "standard"
 	},

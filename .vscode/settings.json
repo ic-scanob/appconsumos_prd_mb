@@ -10,6 +10,7 @@
         "right": {
             "visible": true,
             "width": 334
-        }
+        },
+        "device": "tablet"
     }
 }
