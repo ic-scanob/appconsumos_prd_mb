@@ -36,6 +36,7 @@
 						{
 							"_Type": "Control.Type.FormCell.ListPicker",
 							"_Name": "almacen_campo",
+							"RequiredIndicator": false,
 							"IsVisible": true,
 							"Separator": true,
 							"AllowMultipleSelection": false,
@@ -70,6 +71,7 @@
 							}
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "FormCellButton0",
 							"IsVisible": "/appconsumos_mb/Rules/Campo/isVisible_Btn_CrearSolicitudes.js",
@@ -88,6 +90,26 @@
 							"OnPress": "/appconsumos_mb/Rules/Campo/NavTo_List_Campo.js"
 						},
 						{
+							"RequiredIndicator": false,
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton3",
+							"IsVisible": "/appconsumos_mb/Rules/Campo/Equipo/isVisible_Btn_CrearSolicitudesEquipo.js",
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Consumos por Equipo",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://add-equipment",
+							"ImagePosition": "Leading",
+							"Enabled": false,
+							"OnPress": "/appconsumos_mb/Rules/Campo/Equipo/NavTo_List_CampoEquipo.js"
+						},
+						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "FormCellButton1",
 							"IsVisible": true,
@@ -106,6 +128,7 @@
 							"OnPress": "/appconsumos_mb/Rules/Campo/NavTo_List_Sol_Campo.js"
 						},
 						{
+							"RequiredIndicator": false,
 							"_Type": "Control.Type.FormCell.Button",
 							"_Name": "FormCellButton2",
 							"IsVisible": "/appconsumos_mb/Rules/Ingenio/isVisible_Btn_HistoricoSolicitudes.js",

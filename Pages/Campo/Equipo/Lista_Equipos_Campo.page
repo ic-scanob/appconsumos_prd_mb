@@ -1,0 +1,161 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"_Type": "Control.Type.FormCell.ListPicker",
+							"_Name": "filtro_equipos",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"AllowMultipleSelection": false,
+							"AllowEmptySelection": true,
+							"Caption": "Equipo",
+							"DataPaging": {
+								"ShowLoadingIndicator": false,
+								"PageSize": 50
+							},
+							"PickerPrompt": "Selecciona un equipo",
+							"HelperText": "Debes seleccionar al menos un equipo para mostrar el resultado",
+							"OnValueChange": "/appconsumos_mb/Rules/Campo/Equipo/get_List_Campo_EquipoEquipo.js",
+							"IsSelectedSectionEnabled": false,
+							"IsPickerDismissedOnSelection": true,
+							"IsSearchCancelledAfterSelection": false,
+							"AllowDefaultValueIfOneItem": false,
+							"IsEditable": true,
+							"Search": {
+								"Enabled": true,
+								"Placeholder": "Buscar equipo...",
+								"BarcodeScanner": true
+							},
+							"PickerItems": {
+								"Target": {
+									"Service": "/appconsumos_mb/Services/app_consumos_prd.service",
+									"EntitySet": "Equipos",
+									"QueryOptions": "$filter=centro eq '{{#Page:Filtro_Campo/#ClientData/centro}}' and sociedad eq '{{#Page:Main/#ClientData/info_user/sociedad}}'"
+								},
+								"ObjectCell": {
+									"Description": "{equipo_desc}",
+									"PreserveIconStackSpacing": false,
+									"StatusText": "{centro}",
+									"Subhead": "{tipo}",
+									"SubstatusText": "{sociedad}",
+									"Title": "{equipo}",
+									"Visible": true
+								},
+								"ReturnValue": "{equipo}"
+							}
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				},
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Grouping": {
+						"GroupingProperties": [],
+						"Header": {
+							"Items": []
+						}
+					},
+					"Header": {
+						"_Type": "SectionCommon.Type.Header",
+						"_Name": "SectionCommonTypeHeader0",
+						"AccessoryType": "None",
+						"UseTopPadding": true,
+						"Caption": "Equipo seleccionado"
+					},
+					"_Type": "Section.Type.ObjectTable",
+					"Target": "/appconsumos_mb/Rules/Campo/Equipo/Target_Lista_CampoEquipo.js",
+					"_Name": "SectionObjectTable0",
+					"Visible": true,
+					"EmptySection": {
+						"Caption": "No hay Equipos para mostrar",
+						"FooterVisible": false
+					},
+					"ObjectCell": {
+						"ContextMenu": {
+							"Items": [],
+							"PerformFirstActionWithFullSwipe": true,
+							"LeadingItems": [],
+							"TrailingItems": [],
+							"_Type": "ObjectCell.Type.ContextMenu"
+						},
+						"Title": "{equipo}",
+						"Subhead": "{tipo}",
+						"Footnote": "{grupo_plan}",
+						"Description": "{equipo_desc}",
+						"DisplayDescriptionInMobile": true,
+						"StatusText": "{centro}",
+						"SubstatusText": "{sociedad}",
+						"PreserveIconStackSpacing": false,
+						"AccessoryType": "None",
+						"Tags": [],
+						"AvatarStack": {
+							"Avatars": [
+								{
+									"Image": "sap-icon://inventory"
+								}
+							],
+							"ImageIsCircular": false,
+							"ImageHasBorder": false
+						},
+						"AvatarGrid": {
+							"Avatars": [],
+							"ImageIsCircular": false
+						},
+						"OnPress": "/appconsumos_mb/Rules/Campo/Equipo/NavTo_Agregar_Solicitud_CampoEquipo.js",
+						"_Type": "ObjectTable.Type.ObjectCell",
+						"Selected": false
+					},
+					"DataPaging": {
+						"ShowLoadingIndicator": false,
+						"PageSize": 50
+					},
+					"HighlightSelectedItem": false,
+					"Selection": {
+						"ExitOnLastDeselect": true,
+						"LongPressToEnable": "None",
+						"Mode": "None"
+					}
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Lista_Equipos_Campo",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar4",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Lista Equipos Campo"
+	}
+}

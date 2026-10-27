@@ -14,7 +14,7 @@
 						"_Name": "SectionCommonTypeHeader0",
 						"AccessoryType": "None",
 						"UseTopPadding": true,
-						"Caption": "Solicitudes Órdenes Abiertas"
+						"Caption": "Solicitudes"
 					},
 					"Separators": {
 						"TopSectionSeparator": false,

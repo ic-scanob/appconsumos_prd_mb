@@ -7,6 +7,7 @@ export default function set_VisibleBtnAprobar(context) {
     var estado = object.estado
     let clientData = context.evaluateTargetPathForAPI('#Page:Main').getClientData();
     let info = clientData.info_user;
-
-    return estado === 'Aprobado' && info.rol === 'Autorizador';
+    let valor = object.orden;
+   
+    return estado === 'Aprobado' && info.rol === 'Autorizador' && valor !== null && valor !== undefined && valor !== '';
 }

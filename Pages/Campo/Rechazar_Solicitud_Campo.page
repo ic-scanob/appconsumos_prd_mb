@@ -1,0 +1,80 @@
+{
+	"Controls": [
+		{
+			"FilterFeedbackBar": {
+				"ShowAllFilters": false,
+				"_Type": "Control.Type.FilterFeedbackBar"
+			},
+			"_Type": "Control.Type.SectionedTable",
+			"_Name": "SectionedTable0",
+			"Sections": [
+				{
+					"Separators": {
+						"TopSectionSeparator": false,
+						"BottomSectionSeparator": true,
+						"HeaderSeparator": true,
+						"FooterSeparator": true,
+						"ControlSeparator": true
+					},
+					"Controls": [
+						{
+							"RequiredIndicator": false,
+							"_Type": "Control.Type.FormCell.Label",
+							"_Name": "FormCellLabel0",
+							"IsVisible": true,
+							"Separator": true,
+							"Text": "Motivo Rechazo *",
+							"TextWrap": true
+						},
+						{
+							"_Type": "Control.Type.FormCell.Note",
+							"_Name": "observaciones",
+							"RequiredIndicator": false,
+							"IsVisible": true,
+							"Separator": true,
+							"PlaceHolder": "Escriba el motivo de rechazo",
+							"Enabled": true,
+							"IsEditable": true
+						},
+						{
+							"RequiredIndicator": false,
+							"_Type": "Control.Type.FormCell.Button",
+							"_Name": "FormCellButton0",
+							"IsVisible": true,
+							"Separator": true,
+							"Styles": {
+								"Image": "Button",
+								"Button": "Button"
+							},
+							"Title": "Rechazar Solicitud",
+							"Alignment": "Center",
+							"ButtonType": "Primary",
+							"Semantic": "Tint",
+							"Image": "sap-icon://decline",
+							"ImagePosition": "Leading",
+							"Enabled": true,
+							"OnPress": "/appconsumos_mb/Rules/Campo/ValidarRechazar_Campo.js"
+						}
+					],
+					"Layout": {
+						"NumberOfColumns": 1
+					},
+					"Visible": true,
+					"EmptySection": {
+						"FooterVisible": false
+					},
+					"_Type": "Section.Type.FormCell",
+					"_Name": "SectionFormCell0"
+				}
+			]
+		}
+	],
+	"_Type": "Page",
+	"_Name": "Rechazar_Solicitud_Campo",
+	"ActionBar": {
+		"Items": [],
+		"_Name": "ActionBar2",
+		"_Type": "Control.Type.ActionBar",
+		"Caption": "Rechazar Solicitud"
+	}
+}
